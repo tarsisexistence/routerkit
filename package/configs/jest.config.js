@@ -1,7 +1,7 @@
 module.exports = {
   globals: {
     'ts-jest': {
-      tsConfig: `${__dirname}/../tsconfig.spec.json`
+      tsConfig: `${__dirname}/../tsconfig.test.json`
     }
   },
   moduleNameMapper: {

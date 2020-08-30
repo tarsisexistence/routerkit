@@ -17,7 +17,7 @@
       "path": "./projects/test-app/tsconfig.app.json"
     },
     {
-      "path": "./projects/test-app/tsconfig.spec.json"
+      "path": "./projects/test-app/tsconfig.test.json"
     }
   ]
 }

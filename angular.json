@@ -30,7 +30,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["package/tsconfig.lib.json", "package/tsconfig.spec.json"],
+            "tsConfig": ["package/tsconfig.lib.json", "package/tsconfig.test.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -202,7 +202,7 @@
           "options": {
             "main": "fixtures/test-app/src/test.ts",
             "polyfills": "fixtures/test-app/src/polyfills.ts",
-            "tsConfig": "fixtures/test-app/tsconfig.spec.json",
+            "tsConfig": "fixtures/test-app/tsconfig.test.json",
             "karmaConfig": "fixtures/test-app/karma.conf.js",
             "assets": ["fixtures/test-app/src/favicon.ico", "fixtures/test-app/src/assets"],
             "styles": ["fixtures/test-app/src/styles.css"],
@@ -214,7 +214,7 @@
           "options": {
             "tsConfig": [
               "fixtures/test-app/tsconfig.app.json",
-              "fixtures/test-app/tsconfig.spec.json",
+              "fixtures/test-app/tsconfig.test.json",
               "fixtures/test-app/e2e/tsconfig.json"
             ],
             "exclude": ["**/node_modules/**"]
