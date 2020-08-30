@@ -13,17 +13,9 @@ export const generate = (
   scaffoldingPath: string
 ): void => {
   const transformedRoutes = transform(parsedRoutes);
-  const resultFile = ts.createSourceFile(
-    TYPES_FILENAME,
-    '',
-    ts.ScriptTarget.Latest
-  );
+  const resultFile = ts.createSourceFile(TYPES_FILENAME, '', ts.ScriptTarget.Latest);
   const printer = ts.createPrinter({ newLine: ts.NewLineKind.LineFeed });
-  const result = printer.printNode(
-    ts.EmitHint.Unspecified,
-    createTypeTree(transformedRoutes),
-    resultFile
-  );
+  const result = printer.printNode(ts.EmitHint.Unspecified, createTypeTree(transformedRoutes), resultFile);
 
   console.log(result);
 
@@ -33,9 +25,7 @@ export const generate = (
 
 export const includeRoutesTypeIntoTsconfig = (tsconfigPath: string): void => {
   const tsconfigFile = readFileSync(tsconfigPath);
-  const tsconfigJson: { include?: string[] } = JSON.parse(
-    tsconfigFile.toString()
-  );
+  const tsconfigJson: { include?: string[] } = JSON.parse(tsconfigFile.toString());
 
   if (tsconfigJson.include === undefined) {
     tsconfigJson.include = [];

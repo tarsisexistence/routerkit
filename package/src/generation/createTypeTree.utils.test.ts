@@ -1,7 +1,4 @@
-import {
-  handleRoutesWithVariable,
-  hasRouteVariable
-} from './createTypeTree.utils';
+import { handleRoutesWithVariable, hasRouteVariable } from './createTypeTree.utils';
 
 describe('[generation] createTypeTree utils', () => {
   describe('hasRouteVariable', () => {

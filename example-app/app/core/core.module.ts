@@ -12,12 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContentComponent } from './components/content/content.component';
 import { ViewComponent } from './components/view/view.component';
 
-const components = [
-  HeaderComponent,
-  FooterComponent,
-  ContentComponent,
-  ViewComponent
-];
+const components = [HeaderComponent, FooterComponent, ContentComponent, ViewComponent];
 
 /**
  * CoreModule is handling imports
@@ -27,15 +22,7 @@ const components = [
  * on root level (header, footer etc)
  */
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    AppHub,
-    HomeModule,
-    UsersModule
-  ],
+  imports: [CommonModule, FormsModule, HttpClientModule, BrowserAnimationsModule, AppHub, HomeModule, UsersModule],
   declarations: components,
   exports: [AppHub, ...components]
 })

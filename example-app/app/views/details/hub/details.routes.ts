@@ -8,7 +8,6 @@ export const detailsRoutes: Routes = [
   },
   {
     path: 'info',
-    loadChildren: () =>
-      import('example-app/app/views/info/info.module').then(m => m.InfoModule)
+    loadChildren: () => import('example-app/app/views/info/info.module').then(m => m.InfoModule)
   }
 ];

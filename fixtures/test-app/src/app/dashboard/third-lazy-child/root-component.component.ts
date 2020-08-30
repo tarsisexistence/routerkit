@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
       root-component works!
     </p>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class RootComponentComponent {}

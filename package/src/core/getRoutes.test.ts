@@ -18,21 +18,11 @@ describe('core', () => {
       });
 
       test('should return three paths', () => {
-        expect(Array.from(routes.one.two.three)).toEqual([
-          '/',
-          'one',
-          'two',
-          'three'
-        ]);
+        expect(Array.from(routes.one.two.three)).toEqual(['/', 'one', 'two', 'three']);
       });
 
       test('should return three paths when values duplicated', () => {
-        expect(Array.from(routes.one.one.one)).toEqual([
-          '/',
-          'one',
-          'one',
-          'one'
-        ]);
+        expect(Array.from(routes.one.one.one)).toEqual(['/', 'one', 'one', 'one']);
       });
 
       test('should return path with possible Array.prototype.map', () => {
@@ -40,12 +30,7 @@ describe('core', () => {
       });
 
       test('should return path with prop of possible Array.prototype.map', () => {
-        expect(Array.from(routes.one.map.notMap)).toEqual([
-          '/',
-          'one',
-          'map',
-          'notMap'
-        ]);
+        expect(Array.from(routes.one.map.notMap)).toEqual(['/', 'one', 'map', 'notMap']);
       });
     });
 
@@ -82,11 +67,7 @@ describe('core', () => {
     });
 
     test('should return array from getRoutes with possible Array.prototype.map', () => {
-      expect(getRoute(getRoutes<any>().map.slice)).toEqual([
-        '/',
-        'map',
-        'slice'
-      ]);
+      expect(getRoute(getRoutes<any>().map.slice)).toEqual(['/', 'map', 'slice']);
     });
   });
 });

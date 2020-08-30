@@ -8,12 +8,6 @@ const eagerRoute: Route = { path: 'eager', component: EagerComponent };
 
 @NgModule({
   declarations: [RootComponentComponent, EagerComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forChild([
-      { path: '', component: RootComponentComponent },
-      eagerRoute
-    ])
-  ]
+  imports: [CommonModule, RouterModule.forChild([{ path: '', component: RootComponentComponent }, eagerRoute])]
 })
-export class ThirdLazyChildModule { }
+export class ThirdLazyChildModule {}

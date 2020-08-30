@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
       eager works!
     </p>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class EagerComponent {}

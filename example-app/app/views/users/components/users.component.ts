@@ -24,12 +24,6 @@ export class UsersComponent implements OnInit {
   public users: string[];
 
   public ngOnInit(): void {
-    this.users = [
-      'Wilhelm Röntgen',
-      'Henri Becquerel',
-      'Lord Rayleigh',
-      'Philipp Lenard',
-      'J. J. Thomson'
-    ];
+    this.users = ['Wilhelm Röntgen', 'Henri Becquerel', 'Lord Rayleigh', 'Philipp Lenard', 'J. J. Thomson'];
   }
 }

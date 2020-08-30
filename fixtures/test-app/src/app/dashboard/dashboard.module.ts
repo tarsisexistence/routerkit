@@ -23,17 +23,13 @@ import { SecondChildComponent } from './second-child.component';
           },
           {
             path: 'third-child-module',
-            loadChildren: () =>
-              import('./third-lazy-child/third-lazy-child.module').then(
-                m => m.ThirdLazyChildModule
-              )
+            loadChildren: () => import('./third-lazy-child/third-lazy-child.module').then(m => m.ThirdLazyChildModule)
           }
         ]
       },
       {
         path: 'licenses',
-        loadChildren: () =>
-          import('./licences/licences.module').then(m => m.LicencesModule)
+        loadChildren: () => import('./licences/licences.module').then(m => m.LicencesModule)
       },
       {
         path: 'redirect-to-root',

@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
-  template: `
-    <footer class="footer">RouterKit</footer>
-  `,
+  template: ` <footer class="footer">RouterKit</footer> `,
   styles: [
     `
       :host {

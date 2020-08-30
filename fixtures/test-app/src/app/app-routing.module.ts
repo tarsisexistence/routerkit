@@ -6,8 +6,7 @@ const routes: Routes = [
   { path: 'help', component: HelpComponent },
   {
     path: 'admin',
-    loadChildren: () =>
-      import('./admin-panel/admin-panel.module').then(m => m.AdminPanelModule)
+    loadChildren: () => import('./admin-panel/admin-panel.module').then(m => m.AdminPanelModule)
   }
 ];
 

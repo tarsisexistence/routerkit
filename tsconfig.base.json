@@ -12,20 +12,11 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es2015",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "types": [
-      "jest"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "types": ["jest"],
+    "lib": ["es2018", "dom"],
     "paths": {
-      "routerkit": [
-        "./package"
-      ]
+      "routerkit": ["./package"]
     }
   },
   "angularCompilerOptions": {

@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
       <router-outlet></router-outlet>
     </p>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class MainPageComponent {}

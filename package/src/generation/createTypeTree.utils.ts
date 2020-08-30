@@ -1,6 +1,5 @@
-export const hasRouteVariable = (
-  routes: RouterKit.Generation.VirtualRoutes
-): boolean => Object.keys(routes).some(route => route[0] === ':');
+export const hasRouteVariable = (routes: RouterKit.Generation.VirtualRoutes): boolean =>
+  Object.keys(routes).some(route => route[0] === ':');
 
 export const handleRoutesWithVariable = (
   routes: RouterKit.Generation.VirtualRoutes

@@ -19,15 +19,11 @@ export const routes: Routes = [
       },
       {
         path: 'about',
-        loadChildren: () =>
-          import('example-app/app/views/about/about.module').then(
-            m => m.AboutModule
-          )
+        loadChildren: () => import('example-app/app/views/about/about.module').then(m => m.AboutModule)
       },
       {
         path: 'car',
-        loadChildren: () =>
-          import('example-app/app/views/car/car.module').then(m => m.CarModule)
+        loadChildren: () => import('example-app/app/views/car/car.module').then(m => m.CarModule)
       }
     ]
   }

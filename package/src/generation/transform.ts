@@ -12,10 +12,7 @@ export function transform(
   Object.keys(flattenRoutes).forEach(path => {
     const isEndRoute = Object.keys(flattenRoutes[path]).length === 0;
     const isMultipath = path.includes('/');
-    const nextTuple =
-      path === 'root' || isMultipath
-        ? currentTuple.slice()
-        : currentTuple.concat(normalizePath(path));
+    const nextTuple = path === 'root' || isMultipath ? currentTuple.slice() : currentTuple.concat(normalizePath(path));
 
     if (isMultipath) {
       const multiPathState = transformPathToState(path, []);
@@ -43,17 +40,13 @@ export function transform(
               nextTuple
             );
             if (isLeaf(vRoutesNested[separatePath])) {
-              (vRoutesNested[
-                separatePath
-              ] as RouterKit.Generation.VirtualRoutes).root = vRoutesNested[
+              (vRoutesNested[separatePath] as RouterKit.Generation.VirtualRoutes).root = vRoutesNested[
                 separatePath
               ] as RouterKit.Generation.VirtualRoutesLeaf;
             }
 
             Object.keys(transformedNestedRoutes).forEach(route => {
-              (vRoutesNested[
-                separatePath
-              ] as RouterKit.Generation.VirtualRoutes)[route] =
+              (vRoutesNested[separatePath] as RouterKit.Generation.VirtualRoutes)[route] =
                 transformedNestedRoutes[route];
             });
           }
@@ -61,19 +54,14 @@ export function transform(
           vRoutesNested[separatePath] = {
             root: vRoutesNested[separatePath]
           } as RouterKit.Generation.VirtualRoutes;
-          vRoutesNested = vRoutesNested[
-            separatePath
-          ] as RouterKit.Generation.VirtualRoutes;
+          vRoutesNested = vRoutesNested[separatePath] as RouterKit.Generation.VirtualRoutes;
         } else {
           vRoutesNested[separatePath] = vRoutesNested[separatePath] ?? {};
-          vRoutesNested = vRoutesNested[
-            separatePath
-          ] as RouterKit.Generation.VirtualRoutes;
+          vRoutesNested = vRoutesNested[separatePath] as RouterKit.Generation.VirtualRoutes;
         }
       }
     } else if (isEndRoute) {
-      vRoutes[path] =
-        path in vRoutes ? { ...vRoutes[path], root: nextTuple } : nextTuple;
+      vRoutes[path] = path in vRoutes ? { ...vRoutes[path], root: nextTuple } : nextTuple;
     } else {
       const transformedNestedRoutes = transform(
         flattenRoutes[path],

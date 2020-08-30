@@ -1,14 +1,7 @@
 // tslint:disable:max-line-length
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {
-  forwardParams,
-  getRegisteredUnits,
-  getUnit,
-  Secluded,
-  Unit,
-  Units
-} from 'routeshub';
+import { forwardParams, getRegisteredUnits, getUnit, Secluded, Unit, Units } from 'routeshub';
 
 import { Hub } from '../../../hub/app.hub';
 import { AppChildNotes, AppNotes, APP_NOTES_KEY } from '../../../hub/app.notes';
@@ -52,8 +45,6 @@ export class HeaderComponent implements OnInit {
    * router.navigate and forwardParams
    */
   public freshCar(): void {
-    this.router
-      .navigate(forwardParams(this.hub.car.year.state, { year: 2019 }))
-      .catch(console.error);
+    this.router.navigate(forwardParams(this.hub.car.year.state, { year: 2019 })).catch(console.error);
   }
 }

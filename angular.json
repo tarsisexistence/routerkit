@@ -30,10 +30,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "package/tsconfig.lib.json",
-              "package/tsconfig.spec.json"
-            ],
+            "tsConfig": ["package/tsconfig.lib.json", "package/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -148,13 +145,8 @@
             "polyfills": "fixtures/test-app/src/polyfills.ts",
             "tsConfig": "fixtures/test-app/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "fixtures/test-app/src/favicon.ico",
-              "fixtures/test-app/src/assets"
-            ],
-            "styles": [
-              "fixtures/test-app/src/styles.css"
-            ],
+            "assets": ["fixtures/test-app/src/favicon.ico", "fixtures/test-app/src/assets"],
+            "styles": ["fixtures/test-app/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -212,13 +204,8 @@
             "polyfills": "fixtures/test-app/src/polyfills.ts",
             "tsConfig": "fixtures/test-app/tsconfig.spec.json",
             "karmaConfig": "fixtures/test-app/karma.conf.js",
-            "assets": [
-              "fixtures/test-app/src/favicon.ico",
-              "fixtures/test-app/src/assets"
-            ],
-            "styles": [
-              "fixtures/test-app/src/styles.css"
-            ],
+            "assets": ["fixtures/test-app/src/favicon.ico", "fixtures/test-app/src/assets"],
+            "styles": ["fixtures/test-app/src/styles.css"],
             "scripts": []
           }
         },
@@ -230,9 +217,7 @@
               "fixtures/test-app/tsconfig.spec.json",
               "fixtures/test-app/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {

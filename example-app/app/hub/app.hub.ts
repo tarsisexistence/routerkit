@@ -58,15 +58,12 @@ export interface Hub {
 /**
  * Routing configuration
  */
-export const routing: ModuleWithProviders<AppHub> = RouterModule.forRoot(
-  routes,
-  {
-    enableTracing: false,
-    initialNavigation: 'enabled',
-    onSameUrlNavigation: 'reload',
-    scrollPositionRestoration: 'top'
-  }
-);
+export const routing: ModuleWithProviders<AppHub> = RouterModule.forRoot(routes, {
+  enableTracing: false,
+  initialNavigation: 'enabled',
+  onSameUrlNavigation: 'reload',
+  scrollPositionRestoration: 'top'
+});
 
 /**
  * Routing module contains its configuration

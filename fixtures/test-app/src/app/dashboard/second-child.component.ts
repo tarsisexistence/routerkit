@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
       second-children works!
     </p>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class SecondChildComponent {}

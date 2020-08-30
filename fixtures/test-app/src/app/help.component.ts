@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
       help works!
     </p>
   `,
-  styles: [
-  ]
+  styles: []
 })
-export class HelpComponent {
-}
+export class HelpComponent {}

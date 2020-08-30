@@ -177,15 +177,7 @@ describe('[generation] transform', () => {
               ':type': {
                 root: ['/', 'engine', 'string', 'car', 'string'],
                 model: {
-                  ':id': [
-                    '/',
-                    'engine',
-                    'string',
-                    'car',
-                    'string',
-                    'model',
-                    'string'
-                  ]
+                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
                 }
               }
             }
@@ -213,15 +205,7 @@ describe('[generation] transform', () => {
               ':type': {
                 root: ['/', 'engine', 'string', 'car', 'string'],
                 model: {
-                  ':id': [
-                    '/',
-                    'engine',
-                    'string',
-                    'car',
-                    'string',
-                    'model',
-                    'string'
-                  ]
+                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
                 }
               }
             }
@@ -253,15 +237,7 @@ describe('[generation] transform', () => {
               ':type': {
                 root: ['/', 'engine', 'string', 'car', 'string'],
                 model: {
-                  ':id': [
-                    '/',
-                    'engine',
-                    'string',
-                    'car',
-                    'string',
-                    'model',
-                    'string'
-                  ]
+                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
                 }
               }
             }
@@ -293,15 +269,7 @@ describe('[generation] transform', () => {
               ':type': {
                 root: ['/', 'engine', 'string', 'car', 'string'],
                 model: {
-                  ':id': [
-                    '/',
-                    'engine',
-                    'string',
-                    'car',
-                    'string',
-                    'model',
-                    'string'
-                  ]
+                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
                 }
               }
             }
@@ -331,15 +299,7 @@ describe('[generation] transform', () => {
               ':type': {
                 root: ['/', 'engine', 'string', 'car', 'string'],
                 model: {
-                  ':id': [
-                    '/',
-                    'engine',
-                    'string',
-                    'car',
-                    'string',
-                    'model',
-                    'string'
-                  ]
+                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
                 }
               }
             }
@@ -367,15 +327,7 @@ describe('[generation] transform', () => {
               ':type': {
                 root: ['/', 'engine', 'string', 'car', 'string'],
                 model: {
-                  ':id': [
-                    '/',
-                    'engine',
-                    'string',
-                    'car',
-                    'string',
-                    'model',
-                    'string'
-                  ]
+                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
                 }
               }
             }
@@ -405,15 +357,7 @@ describe('[generation] transform', () => {
               ':type': {
                 root: ['/', 'engine', 'string', 'car', 'string'],
                 model: {
-                  ':id': [
-                    '/',
-                    'engine',
-                    'string',
-                    'car',
-                    'string',
-                    'model',
-                    'string'
-                  ]
+                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
                 }
               }
             }
@@ -443,15 +387,7 @@ describe('[generation] transform', () => {
               ':type': {
                 root: ['/', 'engine', 'string', 'car', 'string'],
                 model: {
-                  ':id': [
-                    '/',
-                    'engine',
-                    'string',
-                    'car',
-                    'string',
-                    'model',
-                    'string'
-                  ]
+                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
                 }
               }
             }

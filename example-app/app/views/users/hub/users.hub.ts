@@ -4,10 +4,7 @@ import { createFeature, NavigationModule } from 'routeshub';
 import { UsersChildNotes, UsersNotes, USERS_NOTES_KEY } from './users.notes';
 import { usersRoutes } from './users.routes';
 
-export const usersConnector = createFeature<UsersNotes, UsersChildNotes>(
-  usersRoutes,
-  { key: USERS_NOTES_KEY }
-);
+export const usersConnector = createFeature<UsersNotes, UsersChildNotes>(usersRoutes, { key: USERS_NOTES_KEY });
 
 @NgModule({
   imports: [RouterModule.forChild(usersRoutes)],

@@ -1,10 +1,4 @@
-import {
-  createIndexType,
-  createIntersectionType,
-  createTupleType,
-  createType,
-  createTypeTree
-} from './createTypeTree';
+import { createIndexType, createIntersectionType, createTupleType, createType, createTypeTree } from './createTypeTree';
 
 describe('[generation] createTypeTree', () => {
   describe('createTypeTree', () => {
@@ -164,9 +158,7 @@ describe('[generation] createTypeTree', () => {
 
   describe('createIndexType', () => {
     test('should match indexType of tuple', () => {
-      expect(
-        createIndexType({ name: 'city', value: ['/', 'string'] })
-      ).toMatchSnapshot();
+      expect(createIndexType({ name: 'city', value: ['/', 'string'] })).toMatchSnapshot();
     });
 
     test('should match indexType of typeNodes', () => {
@@ -187,15 +179,11 @@ describe('[generation] createTypeTree', () => {
     });
 
     test('should match regular tuple', () => {
-      expect(
-        createTupleType(['/', 'location', 'map', 'general'])
-      ).toMatchSnapshot();
+      expect(createTupleType(['/', 'location', 'map', 'general'])).toMatchSnapshot();
     });
 
     test('should match tuple with string keywords', () => {
-      expect(
-        createTupleType(['/', 'location', 'map', 'string'])
-      ).toMatchSnapshot();
+      expect(createTupleType(['/', 'location', 'map', 'string'])).toMatchSnapshot();
     });
   });
 });

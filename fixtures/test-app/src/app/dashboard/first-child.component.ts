@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
       first-children works!
     </p>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class FirstChildComponent {}

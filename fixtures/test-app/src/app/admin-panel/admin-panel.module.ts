@@ -6,9 +6,6 @@ import { routes } from './routes';
 
 @NgModule({
   declarations: [AdminPanelComponent, FirstChildComponent],
-  imports: [
-    CommonModule,
-    routes
-  ]
+  imports: [CommonModule, routes]
 })
 export class AdminPanelModule {}

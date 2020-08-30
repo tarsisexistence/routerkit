@@ -1,10 +1,5 @@
 {
-  "extends": [
-    "tslint:recommended",
-    "tslint-angular",
-    "tslint:latest",
-    "tslint-config-prettier"
-  ],
+  "extends": ["tslint:recommended", "tslint-angular", "tslint:latest", "tslint-config-prettier"],
   "rulesDirectory": ["node_modules/codelyzer"],
   "rules": {
     "no-namespace": false,
@@ -90,12 +85,7 @@
     "no-redundant-jsdoc": true,
     "no-return-await": true,
     "no-require-imports": true,
-    "no-unnecessary-class": [
-      true,
-      "allow-constructor-only",
-      "allow-static-only",
-      "allow-empty-class"
-    ],
+    "no-unnecessary-class": [true, "allow-constructor-only", "allow-static-only", "allow-empty-class"],
     "no-unnecessary-initializer": true,
     "no-unused-expression": [true, "allow-fast-null-checks"],
     "no-var-keyword": true,
@@ -111,19 +101,8 @@
     "object-literal-sort-keys": false,
     "object-literal-shorthand": true,
     "object-literal-key-quotes": [true, "as-needed"],
-    "only-arrow-functions": [
-      true,
-      "allow-declarations",
-      "allow-named-functions"
-    ],
-    "one-line": [
-      true,
-      "check-open-brace",
-      "check-else",
-      "check-catch",
-      "check-finally",
-      "check-whitespace"
-    ],
+    "only-arrow-functions": [true, "allow-declarations", "allow-named-functions"],
+    "one-line": [true, "check-open-brace", "check-else", "check-catch", "check-finally", "check-whitespace"],
     "one-variable-per-declaration": [true, "ignore-for-loop"],
     "ordered-imports": [
       true,
@@ -182,12 +161,7 @@
         "variable-declaration": "onespace"
       }
     ],
-    "variable-name": [
-      true,
-      "check-format",
-      "allow-leading-underscore",
-      "ban-keywords"
-    ],
+    "variable-name": [true, "check-format", "allow-leading-underscore", "ban-keywords"],
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
     "use-isnan": true,
