@@ -9,6 +9,8 @@
     "// - NG - //": "------------------------------",
     "start": "ng serve example-app --port 3000",
     "build": "ng build routerkit --prod",
+    "build:schematics": "cd package && yarn build",
+    "build:all": "yarn build && yarn build:schematics",
     "test": "ng test routerkit",
     "lint": "ng lint routerkit",
     "parse": "schematics ./dist/routerkit/collection.json:parse --project example-app",

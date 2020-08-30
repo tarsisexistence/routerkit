@@ -13,14 +13,3 @@ export const getRoutes = <T>(): T => {
 };
 
 export const getRoute = (paths: string[]): string[] => Array.from(paths);
-
-export const proxyThatDoesntWork: string[] = new Proxy([] as string[], {
-  get(target, path): any {
-    if (path in target) {
-      return target[path];
-    } else {
-      const next = [...target, path];
-      return new Proxy(next, this);
-    }
-  }
-});

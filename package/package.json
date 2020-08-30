@@ -1,6 +1,6 @@
 {
-  "name": "routerkit",
-  "description": "A route management library and pattern for Angular",
+  "name": "@routerkit/core",
+  "description": "",
   "version": "0.1.0",
   "author": "Max Tarsis (https://github.com/retarsis)",
   "repository": {
@@ -18,28 +18,22 @@
     "tslib": "2.0.0"
   },
   "scripts": {
-    "build-watch": "../node_modules/.bin/tsc -p tsconfig.routerkit.json --watch",
-    "build": "../node_modules/.bin/tsc -p tsconfig.routerkit.json",
+    "build-watch": "../node_modules/.bin/tsc -p tsconfig.schematics.json --watch",
+    "build": "../node_modules/.bin/tsc -p tsconfig.schematics.json",
     "copy:collection": "cp src/collection.json ../dist/routerkit/collection.json",
     "postbuild": "npm run copy:collection"
   },
   "schematics": "./src/collection.json",
   "keywords": [
     "angular",
-    "angular2",
     "angular-routing",
+    "route",
     "routes",
     "router",
     "routing",
-    "route",
     "routerkit",
     "routeshub",
-    "route-management",
     "management",
-    "state",
-    "store",
-    "typescript",
-    "javascript",
-    "rxjs"
+    "typescript"
   ]
 }
