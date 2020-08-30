@@ -5,7 +5,7 @@ import { Project } from 'ts-morph';
 
 import { parseRoutes } from './parse-routes';
 
-describe('parseProject', () => {
+describe('[parse] parseRoutes', () => {
   const PROJECT_NAME = 'test-app';
   const pathRelativeAngularJSON = '../../../angular.json';
   const pathToJSON = resolve(__dirname, pathRelativeAngularJSON);

@@ -2,7 +2,7 @@ import { getRoute, getRoutes } from './getRoutes';
 
 const routes = getRoutes<any>();
 
-describe('core', () => {
+describe('[getters] core', () => {
   describe('getRoutes', () => {
     describe('for output', () => {
       test('should return default path', () => {
