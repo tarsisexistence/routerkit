@@ -1,0 +1,42 @@
+<header class="header">
+  <a class="logo" [navLink]="app.root.state">
+    <img class="image" src="/assets/logo/white.png" alt="logo" />
+  </a>
+
+  <nav class="menu">
+    <a navLink="{{ about.root.state }}">About</a>
+    <a [navLink]="hub.car.root" [navLinkActive]="['active']">
+      Car
+    </a>
+    <a
+      [navLink]="hub.car.year.state"
+      [navParams]="{ year: 2018 }"
+      [navLinkActive]="['myActiveClass', 'myActiveClass2']"
+    >
+      Car (navLink + navParams)
+    </a>
+
+    <a
+      [navParams]="{ year: 2368 }"
+      [navLink]="hub.car.year.state"
+      [navLinkActive]="['myActiveClass', 'myActiveClass2']"
+    >
+      Car (navLink + navParams (reversed)
+    </a>
+
+    <a (click)="freshCar()">
+      Car (navigate)
+    </a>
+
+    <a [navLink]="hub.details.details.state">
+      Details
+    </a>
+
+    <a [navLink]="hub.home.home.state">
+      Home
+    </a>
+    <span class="link" [navLink]="hub.users.users.state">
+      Users
+    </span>
+  </nav>
+</header>

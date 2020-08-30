@@ -1,0 +1,38 @@
+{
+  "projectName": "routerkit",
+  "projectOwner": "retarsis",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md",
+    "package/README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "retarsis",
+      "name": "Max Tarsis",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/21989873?v=4",
+      "profile": "https://github.com/retarsis",
+      "contributions": [
+        "ideas",
+        "code",
+        "infra",
+        "doc",
+        "projectManagement"
+      ]
+    },
+    {
+      "login": "limitofzero",
+      "name": "Denis Makarov",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/16196664?v=4",
+      "profile": "https://github.com/limitofzero",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
+    }
+  ],
+  "commitConvention": "Angular"
+}

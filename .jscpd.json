@@ -1,0 +1,11 @@
+{
+  "threshold": 0,
+  "reporters": [
+    "console"
+  ],
+  "ignore": [
+    "**/node_modules/**"
+  ],
+  "tokensToSkip": [
+  ]
+}

@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: #434245;
+  padding: 0 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  .image {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.menu {
+  line-height: 64px;
+  background: #434245;
+
+  a,
+  .link {
+    color: #00c984;
+    text-decoration: none;
+  }
+
+  a:not(:last-child)::after,
+  .link:not(:last-child)::after {
+    content: '|';
+    color: white;
+    margin: 0 7px;
+    transform: scaleY(6);
+    display: inline-block;
+  }
+
+  a:hover,
+  .link:hover {
+    transform: scale(1.05);
+  }
+}
+
+.active {
+  font-weight: 900;
+}
