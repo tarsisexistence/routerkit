@@ -20,10 +20,10 @@
   "scripts": {
     "build-watch": "../node_modules/.bin/tsc -p tsconfig.schematics.json --watch",
     "build": "../node_modules/.bin/tsc -p tsconfig.schematics.json",
-    "copy:collection": "cp src/collection.json ../dist/routerkit/collection.json",
+    "copy:collection": "cp collection.json ../dist/routerkit/collection.json",
     "postbuild": "npm run copy:collection"
   },
-  "schematics": "./src/collection.json",
+  "schematics": "./collection.json",
   "keywords": [
     "angular",
     "angular-routing",
