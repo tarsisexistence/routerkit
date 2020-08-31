@@ -1,7 +1,7 @@
 import { Rule, Tree } from '@angular-devkit/schematics';
 
 import { findAngularJSON, getProjectAST, getProjectTsconfigPath, getScaffoldingPath } from './utils.angular';
-import { parseRoutes } from './parse-routes';
+import { parseRoutes } from './parseRoutes';
 import { generate, includeRoutesTypeIntoTsconfig } from '../generation/generate';
 
 export function parse(options: RouterKit.Parse.Options): Rule {

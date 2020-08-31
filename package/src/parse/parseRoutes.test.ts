@@ -3,13 +3,13 @@ import { readFileSync } from 'fs';
 import { WorkspaceSchema } from '@angular-devkit/core/src/experimental/workspace';
 import { Project } from 'ts-morph';
 
-import { parseRoutes } from './parse-routes';
+import { parseRoutes } from './parseRoutes';
 
 describe('[parse] parseRoutes', () => {
   const PROJECT_NAME = 'test-app';
-  const pathRelativeAngularJSON = '../../../angular.json';
-  const pathToJSON = resolve(__dirname, pathRelativeAngularJSON);
-  const content = JSON.parse(readFileSync(pathToJSON).toString()) as WorkspaceSchema;
+  const RELATIVE_PATH_TO_ANGULAR_JSON = '../../../angular.json';
+  const ABSOLUTE_PATH_TO_ANGULAR_JSON = resolve(__dirname, RELATIVE_PATH_TO_ANGULAR_JSON);
+  const content = JSON.parse(readFileSync(ABSOLUTE_PATH_TO_ANGULAR_JSON).toString()) as WorkspaceSchema;
   const relativePathToTS = '../../../fixtures/test-app/tsconfig.app.json';
   const pathToTS = resolve(__dirname, relativePathToTS);
 
