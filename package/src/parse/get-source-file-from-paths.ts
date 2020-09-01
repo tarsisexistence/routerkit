@@ -40,7 +40,7 @@ const tryGetSourceFileByAliasOrThrow = (
     .map(path => {
       const pathWithBase = `${baseUrl}/${path.replace('*', '')}`;
       const resolvedPath = relativeFilePath.replace(maxMatchedAlias.withoutAsterisk, pathWithBase);
-      return project.getSourceFileOrThrow(resolvedPath);
+      return project.getSourceFile(resolvedPath);
     })
     .find(file => !!file);
 
