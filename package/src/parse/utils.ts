@@ -15,7 +15,7 @@ import {
 } from 'ts-morph';
 import { resolve, sep } from 'path';
 import { evaluate } from '@wessberg/ts-evaluator';
-import { getSourceFileFromPathsOrThrow } from './get-source-file-from-paths';
+import { getSourceFileOrThrow } from './get-source-file-from-paths';
 
 export const getRouteModuleForRootExpressions: (
   routerModuleClass: ClassDeclaration
@@ -142,7 +142,7 @@ const parseRoute = (
 const getLazyModuleDeclaration = (project: Project, loadChildren: RouterKit.Parse.LoadChildren): ClassDeclaration => {
   const { path, moduleName } = loadChildren;
   const pathWithExtension = `${path}.ts`;
-  const sourceFile = getSourceFileFromPathsOrThrow(project, pathWithExtension);
+  const sourceFile = getSourceFileOrThrow(project, pathWithExtension);
   return sourceFile.getClassOrThrow(moduleName);
 };
 

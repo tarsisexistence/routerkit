@@ -5,8 +5,10 @@ interface Alias {
   withoutAsterisk: string;
 }
 
-// todo think about naming
-export const getSourceFileFromPathsOrThrow = (project: Project, relativeFilePath: string): SourceFile => {
+/*
+ * Works like another function, but if an path alias is encountered, it tries to find the file by the alias
+ */
+export const getSourceFileOrThrow = (project: Project, relativeFilePath: string): SourceFile => {
   const compilerOptions = project.compilerOptions.get();
   const { paths } = compilerOptions;
 
