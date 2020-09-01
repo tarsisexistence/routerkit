@@ -3,7 +3,7 @@ import * as ts from 'typescript';
 import {
   createValidRouteIdentifier,
   handleRoutesWithVariable,
-  hasRouteVariable,
+  hasIndexRoute,
   validateIdentifierValue
 } from './createTypeTree.utils';
 import { STRING_KEYWORD } from './constants';
@@ -16,6 +16,17 @@ export const createTupleType = (tuple: RouterKit.Generation.VirtualRoutesLeaf): 
         : ts.createLiteralTypeNode(ts.createStringLiteral(segment))
     )
   );
+
+export const createTypeWithIndex = (
+  routes: RouterKit.Generation.VirtualRoutes
+): ts.TypeLiteralNode | ts.IntersectionTypeNode => {
+  const { variable, routesWithoutVariable } = handleRoutesWithVariable(routes);
+  const onlyVariable = Object.keys(routesWithoutVariable).length === 0;
+
+  return onlyVariable
+    ? ts.createTypeLiteralNode([createIndexType(variable)])
+    : createIntersectionType(routesWithoutVariable, variable);
+};
 
 export const createIndexType = (variable: RouterKit.Generation.RouteVariable): ts.IndexSignatureDeclaration =>
   ts.createIndexSignature(
@@ -35,21 +46,14 @@ export const createIndexType = (variable: RouterKit.Generation.RouteVariable): t
     Array.isArray(variable.value) ? createTupleType(variable.value) : createType(variable.value)
   );
 
-export const createIntersectionType = (routes: RouterKit.Generation.VirtualRoutes): ts.IntersectionTypeNode => {
-  const { variable, routesWithoutVariable } = handleRoutesWithVariable(routes);
-  const onlyVariable = Object.keys(routesWithoutVariable).length === 0;
-  const typeNodes: ts.TypeNode[] = [ts.createTypeLiteralNode([createIndexType(variable)])];
-
-  if (!onlyVariable) {
-    typeNodes.unshift(createType(routesWithoutVariable));
-  }
-
-  /**
-   * TODO: it works but semantically wrong since if previous condition is false
-   * then there is no intersection, only index type
-   */
-  return ts.createIntersectionTypeNode(typeNodes);
-};
+export const createIntersectionType = (
+  routesWithoutVariable: RouterKit.Generation.VirtualRoutes,
+  variable: RouterKit.Generation.RouteVariable
+): ts.IntersectionTypeNode =>
+  ts.createIntersectionTypeNode([
+    createType(routesWithoutVariable),
+    ts.createTypeLiteralNode([createIndexType(variable)])
+  ]);
 
 export const createType = (routes: RouterKit.Generation.VirtualRoutes): ts.TypeLiteralNode => {
   const type: ts.TypeElement[] = [];
@@ -61,8 +65,8 @@ export const createType = (routes: RouterKit.Generation.VirtualRoutes): ts.TypeL
 
     if (Array.isArray(virtualRouteValue)) {
       routeValue = createTupleType(virtualRouteValue);
-    } else if (hasRouteVariable(virtualRouteValue)) {
-      routeValue = createIntersectionType(virtualRouteValue);
+    } else if (hasIndexRoute(virtualRouteValue)) {
+      routeValue = createTypeWithIndex(virtualRouteValue);
     } else {
       routeValue = createType(virtualRouteValue);
     }
@@ -85,7 +89,7 @@ export const createTypeTree = (routes: RouterKit.Generation.VirtualRoutes): ts.T
   ts.createTypeAliasDeclaration(
     undefined,
     [ts.createModifier(ts.SyntaxKind.DeclareKeyword)],
-    ts.createIdentifier('RoutelarRoutes'),
+    ts.createIdentifier('RouterKitRoutes'),
     undefined,
-    hasRouteVariable(routes) ? createIntersectionType(routes) : createType(routes)
+    hasIndexRoute(routes) ? createTypeWithIndex(routes) : createType(routes)
   );

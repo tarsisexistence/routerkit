@@ -1,19 +1,19 @@
 import {
   createValidRouteIdentifier,
   handleRoutesWithVariable,
-  hasRouteVariable,
+  hasIndexRoute,
   validateIdentifierValue
 } from './createTypeTree.utils';
 
 describe('[generation] createTypeTree utils', () => {
-  describe('hasRouteVariable', () => {
+  describe('hasIndexRoute', () => {
     test('should return false when empty object', () => {
-      expect(hasRouteVariable({})).toBeFalsy();
+      expect(hasIndexRoute({})).toBeFalsy();
     });
 
     test('should return false when object has not variables', () => {
       expect(
-        hasRouteVariable({
+        hasIndexRoute({
           info: ['/', 'info'],
           location: ['/', 'location']
         })
@@ -22,7 +22,7 @@ describe('[generation] createTypeTree utils', () => {
 
     test('should return false when object has not nested variables', () => {
       expect(
-        hasRouteVariable({
+        hasIndexRoute({
           root: ['/'],
           location: { map: ['/', 'location', 'map'] }
         })
@@ -31,7 +31,7 @@ describe('[generation] createTypeTree utils', () => {
 
     test('should return false when object has nested variable', () => {
       expect(
-        hasRouteVariable({
+        hasIndexRoute({
           root: ['/'],
           location: { ':city': ['/', 'location', 'string'] }
         })
@@ -40,15 +40,35 @@ describe('[generation] createTypeTree utils', () => {
 
     test('should return true when object has variable', () => {
       expect(
-        hasRouteVariable({
+        hasIndexRoute({
           root: ['/'],
           ':city': ['/', 'string']
+        })
+      ).toBeTruthy();
+    });
+
+    test('should return true when object has wildcard of *', () => {
+      expect(
+        hasIndexRoute({
+          root: ['/'],
+          '**': ['/', 'string']
         })
       ).toBeTruthy();
     });
   });
 
   describe('handleRoutesWithVariable', () => {
+    test('should have empty routesWithoutVariable', () => {
+      expect(
+        handleRoutesWithVariable({
+          ':city': ['/', 'string']
+        })
+      ).toEqual({
+        routesWithoutVariable: {},
+        variable: { name: 'city', value: ['/', 'string'] }
+      });
+    });
+
     test('should return both routes without variable and variable data', () => {
       expect(
         handleRoutesWithVariable({
@@ -61,14 +81,41 @@ describe('[generation] createTypeTree utils', () => {
       });
     });
 
-    test('should have empty routesWithoutVariable', () => {
+    test('should return variable instead wildcard', () => {
       expect(
         handleRoutesWithVariable({
-          ':city': ['/', 'string']
+          info: ['/', 'info'],
+          ':city': ['/', 'string'],
+          '**': ['/', 'string']
         })
       ).toEqual({
-        routesWithoutVariable: {},
+        routesWithoutVariable: { info: ['/', 'info'] },
         variable: { name: 'city', value: ['/', 'string'] }
+      });
+    });
+
+    test('should return variable instead wildcard when wildcard is first', () => {
+      expect(
+        handleRoutesWithVariable({
+          '**': ['/', 'string'],
+          ':city': ['/', 'string'],
+          info: ['/', 'info']
+        })
+      ).toEqual({
+        routesWithoutVariable: { info: ['/', 'info'] },
+        variable: { name: 'city', value: ['/', 'string'] }
+      });
+    });
+
+    test('should return wildcard', () => {
+      expect(
+        handleRoutesWithVariable({
+          info: ['/', 'info'],
+          '**': ['/', 'string']
+        })
+      ).toEqual({
+        routesWithoutVariable: { info: ['/', 'info'] },
+        variable: { name: 'wildcard', value: ['/', 'string'] }
       });
     });
   });

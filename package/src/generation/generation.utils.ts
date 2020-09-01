@@ -1,4 +1,5 @@
 import { STRING_KEYWORD } from './constants';
+import { isIndexRoute } from './utils';
 
 export const excludeRoot = (
   routes: RouterKit.Generation.TransformRoutes
@@ -12,6 +13,6 @@ export const excludeRoot = (
   }, {});
 
 // TODO: 'string' signature possibly not safe
-export const normalizePath = (path: string): string => (path[0] === ':' ? STRING_KEYWORD : path);
+export const normalizePath = (path: string): string => (isIndexRoute(path) ? STRING_KEYWORD : path);
 
 export const isLeaf = (node: string[] | Record<any, any>): boolean => Array.isArray(node);
