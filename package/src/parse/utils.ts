@@ -485,3 +485,8 @@ const findClassDeclarationByIdentifier = (id: Identifier): ClassDeclaration | nu
 
   return null;
 };
+
+export const getTypesFileName = (projectName: string) => `${projectName}.routes.d.ts`;
+
+export const getRoutesTypeFilePath = (tsconfigPath: string, fileName: string): string =>
+  resolve(tsconfigPath, '..', fileName);

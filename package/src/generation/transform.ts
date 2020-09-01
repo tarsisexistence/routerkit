@@ -1,4 +1,4 @@
-import { flatRoutes } from './flatRoutes';
+import { flatRoutes } from './utils';
 import { isLeaf, normalizePath } from './generation.utils';
 import { transformPathToState } from '../utils/routeshub.utils';
 

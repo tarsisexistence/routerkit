@@ -1,8 +1,10 @@
 import { Rule, Tree } from '@angular-devkit/schematics';
 
-import { findAngularJSON, getProjectAST, getProjectTsconfigPath, getScaffoldingPath } from './utils.angular';
 import { parseRoutes } from './parseRoutes';
-import { generate, includeRoutesTypeIntoTsconfig } from '../generation/generate';
+import { generate } from '../generation/generate';
+import { includeRoutesTypeIntoTsconfig } from '../generation/utils';
+import { findAngularJSON, getProjectAST, getProjectTsconfigPath } from './utils.angular';
+import { getRoutesTypeFilePath, getTypesFileName } from './utils';
 
 export function parse(options: RouterKit.Parse.Options): Rule {
   return (tree: Tree) => {
@@ -21,9 +23,10 @@ export function parse(options: RouterKit.Parse.Options): Rule {
     if (printOnly) {
       console.log(parsedRoutes);
     } else {
-      const scaffoldingPath = getScaffoldingPath(tsconfigPath);
-      generate(projectAST, parsedRoutes, scaffoldingPath);
-      includeRoutesTypeIntoTsconfig(tsconfigPath);
+      const fileName = getTypesFileName(projectName);
+      const filePath = getRoutesTypeFilePath(tsconfigPath, fileName);
+      generate(projectAST, parsedRoutes, filePath);
+      includeRoutesTypeIntoTsconfig(tsconfigPath, fileName);
     }
 
     return tree;

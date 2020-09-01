@@ -31,8 +31,6 @@ export const getProjectTsconfigPath = (workspace: WorkspaceProject, projectName:
   return resolve(process.cwd(), tsconfigPath);
 };
 
-export const getScaffoldingPath = (tsconfigPath: string): string => resolve(tsconfigPath, '..');
-
 export const getProjectAST = (tsConfigFilePath: string): Project =>
   new Project({ tsConfigFilePath, addFilesFromTsConfig: true });
 
