@@ -1,3 +1,7 @@
+import * as ts from 'typescript';
+
+import { kebabCaseToCamelCase } from './utils';
+
 export const hasRouteVariable = (routes: RouterKit.Generation.VirtualRoutes): boolean =>
   Object.keys(routes).some(route => route[0] === ':');
 
@@ -22,3 +26,9 @@ export const handleRoutesWithVariable = (
       routesWithoutVariable: {}
     }
   );
+
+export const createValidRouteIdentifier = (prop: string) =>
+  prop.includes('-') ? ts.createStringLiteral(prop) : ts.createIdentifier(prop);
+
+export const validateIdentifierValue = (prop: string): string =>
+  prop.includes('-') ? kebabCaseToCamelCase(prop) : prop;

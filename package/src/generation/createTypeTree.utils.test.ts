@@ -1,4 +1,9 @@
-import { handleRoutesWithVariable, hasRouteVariable } from './createTypeTree.utils';
+import {
+  createValidRouteIdentifier,
+  handleRoutesWithVariable,
+  hasRouteVariable,
+  validateIdentifierValue
+} from './createTypeTree.utils';
 
 describe('[generation] createTypeTree utils', () => {
   describe('hasRouteVariable', () => {
@@ -65,6 +70,26 @@ describe('[generation] createTypeTree utils', () => {
         routesWithoutVariable: {},
         variable: { name: 'city', value: ['/', 'string'] }
       });
+    });
+  });
+
+  describe('createValidRouteIdentifier', () => {
+    test('should match createIdentifier', () => {
+      expect(createValidRouteIdentifier('info')).toMatchSnapshot();
+    });
+
+    test('should match createStringLiteral when literal has "-" char', () => {
+      expect(createValidRouteIdentifier('user-center')).toMatchSnapshot();
+    });
+  });
+
+  describe('validateIdentifierValue', () => {
+    test('should return as is when string is valid', () => {
+      expect(validateIdentifierValue('info')).toBe('info');
+    });
+
+    test('should return camelCase when string is invalid', () => {
+      expect(validateIdentifierValue('user-center')).toBe('userCenter');
     });
   });
 });

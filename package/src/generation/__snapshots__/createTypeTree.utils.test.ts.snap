@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[generation] createTypeTree utils createValidRouteIdentifier should match createIdentifier 1`] = `
+IdentifierObject {
+  "autoGenerateFlags": 0,
+  "autoGenerateId": 0,
+  "end": -1,
+  "escapedText": "info",
+  "flags": 8,
+  "kind": 75,
+  "modifierFlagsCache": 0,
+  "originalKeywordKind": undefined,
+  "parent": undefined,
+  "pos": -1,
+  "transformFlags": 0,
+}
+`;
+
+exports[`[generation] createTypeTree utils createValidRouteIdentifier should match createStringLiteral when literal has "-" char 1`] = `
+TokenObject {
+  "end": -1,
+  "flags": 8,
+  "kind": 10,
+  "modifierFlagsCache": 0,
+  "parent": undefined,
+  "pos": -1,
+  "text": "user-center",
+  "transformFlags": 0,
+}
+`;

@@ -33,3 +33,17 @@ export const includeRoutesTypeIntoTsconfig = (tsconfigPath: string, fileName: st
 
   writeFileSync(tsconfigPath, JSON.stringify(tsconfigJson, null, 2));
 };
+
+export const kebabCaseToCamelCase = (prop: string): string => {
+  let str = '';
+  const segments = prop.split('-');
+  str = segments[0];
+
+  for (let i = 1; i < segments.length; i += 1) {
+    const segment = segments[i];
+
+    str += `${segment[0].toUpperCase()}${segment.slice(1).toLowerCase()}`;
+  }
+
+  return str;
+};

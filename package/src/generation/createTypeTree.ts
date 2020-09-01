@@ -1,6 +1,11 @@
 import * as ts from 'typescript';
 
-import { handleRoutesWithVariable, hasRouteVariable } from './createTypeTree.utils';
+import {
+  createValidRouteIdentifier,
+  handleRoutesWithVariable,
+  hasRouteVariable,
+  validateIdentifierValue
+} from './createTypeTree.utils';
 import { STRING_KEYWORD } from './constants';
 
 export const createTupleType = (tuple: RouterKit.Generation.VirtualRoutesLeaf): ts.TupleTypeNode =>
@@ -62,7 +67,15 @@ export const createType = (routes: RouterKit.Generation.VirtualRoutes): ts.TypeL
       routeValue = createType(virtualRouteValue);
     }
 
-    type.push(ts.createPropertySignature(undefined, ts.createIdentifier(route), undefined, routeValue, undefined));
+    const newRecord = ts.createPropertySignature(
+      undefined,
+      createValidRouteIdentifier(route),
+      undefined,
+      routeValue,
+      undefined
+    );
+
+    type.push(newRecord);
   }
 
   return ts.createTypeLiteralNode(type);

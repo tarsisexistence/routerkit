@@ -1,4 +1,4 @@
-import { flatRoutes } from './utils';
+import { flatRoutes, kebabCaseToCamelCase } from './utils';
 
 describe('[generation] utils', () => {
   describe('[generation] flatRoutes', () => {
@@ -130,6 +130,20 @@ describe('[generation] utils', () => {
         map: {},
         car: {}
       });
+    });
+  });
+
+  describe('kebabCaseToCamelCase', () => {
+    test('should return as is', () => {
+      expect(kebabCaseToCamelCase('mysuperstring')).toBe('mysuperstring');
+    });
+
+    test('should transform into camelCase with one dash', () => {
+      expect(kebabCaseToCamelCase('my-superstring')).toBe('mySuperstring');
+    });
+
+    test('should transform into camelCase with multiple dashes', () => {
+      expect(kebabCaseToCamelCase('my-super-string')).toBe('mySuperString');
     });
   });
 });
