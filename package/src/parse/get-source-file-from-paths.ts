@@ -2,7 +2,8 @@ import { Project, SourceFile, ts } from 'ts-morph';
 import Alias = RouterKit.Parse.Alias;
 
 /*
- * Works like another function, but if an path alias is encountered, it tries to find the file by the alias
+ * Works like Project.getSourceFileOrThrow function,
+ * but if an path alias is encountered, it tries to find the file by the alias
  */
 export const getSourceFileOrThrow = (project: Project, relativeFilePath: string): SourceFile => {
   const compilerOptions = project.compilerOptions.get();
