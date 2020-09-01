@@ -11,10 +11,10 @@
   "bugs": "https://github.com/retarsis/routerkit/issues",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0",
-    "@angular/core": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0",
+    "@angular-devkit/core": "^0.8.9 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0",
+    "@angular-devkit/schematics": "^0.8.9 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0",
     "@angular/router": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0",
-    "tslib": "~2.0.0"
+    "tslib": "~2.0.1"
   },
   "scripts": {
     "build-watch": "../node_modules/.bin/tsc -p tsconfig.schematics.json --watch",
