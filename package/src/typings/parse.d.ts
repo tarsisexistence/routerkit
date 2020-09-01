@@ -4,6 +4,11 @@ declare namespace RouterKit.Parse {
     printOnly: boolean;
   }
 
+  interface Alias {
+    originPath: string;
+    withoutAsterisk: string;
+  }
+
   type RouterExpression = 'forRoot' | 'forChild';
 
   interface LoadChildren {

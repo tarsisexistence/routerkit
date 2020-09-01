@@ -1,9 +1,5 @@
 import { Project, SourceFile, ts } from 'ts-morph';
-
-interface Alias {
-  originPath: string;
-  withoutAsterisk: string;
-}
+import Alias = RouterKit.Parse.Alias;
 
 /*
  * Works like another function, but if an path alias is encountered, it tries to find the file by the alias
