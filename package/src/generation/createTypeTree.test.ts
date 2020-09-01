@@ -1,4 +1,11 @@
-import { createIndexType, createIntersectionType, createTupleType, createType, createTypeTree } from './createTypeTree';
+import {
+  createIndexType,
+  createIntersectionType,
+  createTupleType,
+  createType,
+  createTypeTree,
+  createTypeWithIndex
+} from './createTypeTree';
 
 describe('[generation] createTypeTree', () => {
   describe('createTypeTree', () => {
@@ -137,22 +144,40 @@ describe('[generation] createTypeTree', () => {
     });
   });
 
-  describe('createIntersectionType', () => {
-    test('should match intersection with TypeLiteralNode and Index type', () => {
+  describe('createTypeWithIndex', () => {
+    test('should match IntersectionTypeNode', () => {
       expect(
-        createIntersectionType({
+        createTypeWithIndex({
           info: ['/', 'info'],
           ':city': ['/', 'string']
         })
       ).toMatchSnapshot();
     });
 
-    test('should match intersection with only index type inside', () => {
+    test('should match only index type inside of type TypeLiteralNode', () => {
       expect(
-        createIntersectionType({
+        createTypeWithIndex({
           ':city': ['/', 'string']
         })
       ).toMatchSnapshot();
+    });
+  });
+
+  describe('createIntersectionType', () => {
+    test('should match IntersectionTypeNode', () => {
+      expect(
+        createIntersectionType(
+          {
+            info: ['/', 'info']
+          },
+          { name: 'city', value: ['/', 'string'] }
+        )
+      ).toMatchSnapshot();
+    });
+
+    test('should match IntersectionTypeNode with empty TypeLiteralNode of routes without variable and index type of TypeLiteralNode', () => {
+      // {} & { [city: string]: ['/', 'string'] }
+      expect(createIntersectionType({}, { name: 'city', value: ['/', 'string'] })).toMatchSnapshot();
     });
   });
 

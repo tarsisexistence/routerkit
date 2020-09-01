@@ -9,7 +9,7 @@ describe('[parse] utils', () => {
 
   describe('getRoutesTypeFilePath', () => {
     test('should return path to declaration routes type', () => {
-      expect(getRoutesTypeFilePath('/root/tsconfig.json', 'example')).toBe('/root/example.routes.d.ts');
+      expect(getRoutesTypeFilePath('/root/tsconfig.json', 'example.routes.d.ts')).toBe('/root/example.routes.d.ts');
     });
   });
 });
