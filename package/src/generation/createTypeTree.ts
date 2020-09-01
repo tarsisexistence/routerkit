@@ -26,7 +26,7 @@ export const createIndexType = (variable: RouterKit.Generation.RouteVariable): t
         undefined,
         undefined,
         undefined,
-        ts.createIdentifier(variable.name),
+        ts.createIdentifier(validateIdentifierValue(variable.name)),
         undefined,
         ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
         undefined
