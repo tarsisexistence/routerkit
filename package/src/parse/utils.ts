@@ -189,7 +189,7 @@ export const findRouteChildren = (routerType: Type, module: ClassDeclaration) =>
   while (modules.length) {
     const currentModule = modules.shift() as ClassDeclaration;
     const imports = getImportsFromModuleDeclaration(currentModule);
-    const { routerExpressions, moduleExpressions } = divideRouterExpressionsAndModules(imports, routerType);
+    const { routerExpressions, moduleExpressions } = divideRouterExpressionsAndModulesDeclarations(imports, routerType);
 
     routerModules.push(...routerExpressions);
     modules.unshift(...moduleExpressions);
@@ -199,7 +199,7 @@ export const findRouteChildren = (routerType: Type, module: ClassDeclaration) =>
 };
 
 // todo need refactoring
-const divideRouterExpressionsAndModules = (modules: Node[], routerType: Type) => {
+const divideRouterExpressionsAndModulesDeclarations = (modules: Node[], routerType: Type) => {
   const routerExpressions: CallExpression[] = [];
   const moduleDeclarations: ClassDeclaration[] = [];
 
