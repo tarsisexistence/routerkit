@@ -16,7 +16,6 @@ import {
 import { resolve, sep } from 'path';
 import { evaluate } from '@wessberg/ts-evaluator';
 import { getSourceFileOrThrow } from './get-source-file-from-paths';
-
 export const getRouteModuleForRootExpressions: (
   routerModuleClass: ClassDeclaration
 ) => ArrayLiteralExpression | null = (routerModuleClass: ClassDeclaration): ArrayLiteralExpression | null => {
@@ -207,26 +206,12 @@ const divideRouterExpressionsAndModulesDeclarations = (modules: Node[], routerTy
   const moduleDeclarations: ClassDeclaration[] = [];
   const isRouterType = isClassHasTheSameType.bind(null, routerType);
 
-  for (const module of modules) {
-
-    if (Node.isIdentifier(module)) {
-      const decl = findModuleDeclarationOrExpressionByIdentifier(module);
-
-      if (decl) {
-        if (Node.isClassDeclaration(decl)) {
-          moduleDeclarations.push(decl);
-        } else if (Node.isCallExpression(decl)) {
-          const expr = getModuleDeclarationFromExpression(decl);
-          if (expr) {
-            isRouterType(expr) ? routerExpressions.push(decl) : moduleDeclarations.push(expr);
-          }
-        }
-      }
-    } else if (Node.isCallExpression(module)) {
-      const decl = getModuleDeclarationFromExpression(module);
-      if (decl) {
-        isRouterType(decl) ? routerExpressions.push(module) : moduleDeclarations.push(decl);
-      }
+  for (const node of modules) {
+    const parsedNode = parseIdFromImportsArray(node, isRouterType);
+    if (parsedNode) {
+      Node.isCallExpression(parsedNode) ?
+        routerExpressions.push(parsedNode) :
+        moduleDeclarations.push(parsedNode);
     }
   }
 
@@ -234,6 +219,33 @@ const divideRouterExpressionsAndModulesDeclarations = (modules: Node[], routerTy
     routerExpressions,
     moduleDeclarations
   };
+};
+
+const parseIdFromImportsArray = (
+  node: Node,
+  isRouter: (clazz: ClassDeclaration) => boolean
+): ClassDeclaration | CallExpression | null => {
+  if (Node.isIdentifier(node)) {
+    const decl = findModuleDeclarationOrExpressionByIdentifier(node);
+
+    if (decl) {
+      if (Node.isClassDeclaration(decl)) {
+        return decl;
+      } else if (Node.isCallExpression(decl)) {
+        const expr = getModuleDeclarationFromExpression(decl);
+        if (expr) {
+          return isRouter(expr) ? decl : expr;
+        }
+      }
+    }
+  } else if (Node.isCallExpression(node)) {
+    const decl = getModuleDeclarationFromExpression(node);
+    if (decl) {
+      return isRouter(decl) ? node : decl;
+    }
+  }
+
+  return null;
 };
 
 const isClassHasTheSameType = (type: Type<ts.Type>, clazz: ClassDeclaration): boolean => {
@@ -467,10 +479,10 @@ export const getAppModule = (project: Project, path: string): ClassDeclaration =
 /*
  * return module declaration(class declarations) by id
  * example:
- * imports: [BrowserModule] => export class BrowserModule
+ * imports: [BrowserModule] => export class BrowserModule node
  * or return module expression
  * example:
- * imports [ module ] => const module = ModuleName.forRoot/ModuleName.forChild
+ * imports [ module ] => const module = ModuleName.forRoot/ModuleName.forChild node
  */
 const findModuleDeclarationOrExpressionByIdentifier = (id: Identifier): ClassDeclaration | CallExpression | null => {
   // todo decide what to do if there are more then one declaration
