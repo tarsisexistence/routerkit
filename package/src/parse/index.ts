@@ -1,8 +1,8 @@
 import { Rule, Tree } from '@angular-devkit/schematics';
 
 import { parseRoutes } from './parseRoutes';
-import { generate } from '../generation/generate';
-import { includeRoutesTypeIntoTsconfig } from '../generation/utils';
+import { generateRoutesType } from '../generation/generateRoutesType';
+import { generateFile, includeRoutesTypeIntoTsconfig } from '../generation/utils';
 import { findAngularJSON, getProjectAST, getProjectTsconfigPath } from './utils.angular';
 import { getRoutesTypeFilePath, getTypesFileName } from './utils';
 
@@ -25,7 +25,9 @@ export function parse(options: RouterKit.Parse.Options): Rule {
     } else {
       const fileName = getTypesFileName(projectName);
       const filePath = getRoutesTypeFilePath(tsconfigPath, fileName);
-      generate(projectAST, parsedRoutes, filePath);
+      const routesType = generateRoutesType(parsedRoutes, fileName);
+      console.log(routesType);
+      generateFile({ project: projectAST, filePath, output: routesType });
       includeRoutesTypeIntoTsconfig(tsconfigPath, fileName);
     }
 
