@@ -207,7 +207,7 @@ const divideRouterExpressionsAndModulesDeclarations = (modules: Node[], routerTy
   const isRouterType = isClassHasTheSameType.bind(null, routerType);
 
   for (const node of modules) {
-    const parsedNode = parseIdFromImportsArray(node, isRouterType);
+    const parsedNode = getModuleDeclarationOrCallExpressionById(node, isRouterType);
     if (parsedNode) {
       Node.isCallExpression(parsedNode) ?
         routerExpressions.push(parsedNode) :
@@ -221,7 +221,7 @@ const divideRouterExpressionsAndModulesDeclarations = (modules: Node[], routerTy
   };
 };
 
-const parseIdFromImportsArray = (
+const getModuleDeclarationOrCallExpressionById = (
   node: Node,
   isRouter: (clazz: ClassDeclaration) => boolean
 ): ClassDeclaration | CallExpression | null => {
