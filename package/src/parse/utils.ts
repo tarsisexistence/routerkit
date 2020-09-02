@@ -9,7 +9,6 @@ import {
   Project,
   PropertyAccessExpression,
   SourceFile,
-  ts,
   Type,
   TypeChecker
 } from 'ts-morph';
@@ -87,7 +86,7 @@ export const getRouterModuleCallExpressions: (
 
 export const parseRoutes = (
   routes: ArrayLiteralExpression,
-  routerType: Type<ts.Type>,
+  routerType: Type,
   project: Project
 ): RouterKit.Parse.RouteTree => {
   let root: RouterKit.Parse.RouteTree = {};
@@ -115,7 +114,7 @@ export const parseRoutes = (
 
 const parseRoute = (
   route: ObjectLiteralExpression,
-  routerType: Type<ts.Type>,
+  routerType: Type,
   project: Project
 ): RouterKit.Parse.RouteTree | null => {
   const root: RouterKit.Parse.RouteTree = {};
@@ -254,7 +253,7 @@ const getModuleDeclarationOrRouterExpressionFromCall = (
   return null;
 };
 
-const isClassHasTheSameType = (type: Type<ts.Type>, clazz: ClassDeclaration): boolean => {
+const isClassHasTheSameType = (type: Type, clazz: ClassDeclaration): boolean => {
   const classType = clazz.getType();
   return classType === type;
 };
