@@ -12,7 +12,6 @@ export const excludeRoot = (
     return acc;
   }, {});
 
-// TODO: 'string' signature possibly not safe
 export const normalizePath = (path: string): string => (isIndexRoute(path) ? STRING_KEYWORD : path);
 
 export const isLeaf = (node: string[] | Record<any, any>): boolean => Array.isArray(node);
