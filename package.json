@@ -58,7 +58,7 @@
     "all-contributors-cli": "6.17.2",
     "codelyzer": "5.2.2",
     "husky": "4.2.5",
-    "jest": "26.2.2",
+    "jest": "26.4.2",
     "lint-staged": "10.2.11",
     "ng-packagr": "10.0.3",
     "prettier": "2.0.5",
