@@ -8,7 +8,7 @@ import { getRoutesTypeFilePath, getTypesFileName } from './utils';
 
 export function parse(options: RouterKit.Parse.Options): Rule {
   return (tree: Tree) => {
-    const { project: projectName, printOnly } = options;
+    const { project: projectName, dryRun } = options;
 
     if (!projectName) {
       throw new Error('Project name expected');
@@ -20,7 +20,7 @@ export function parse(options: RouterKit.Parse.Options): Rule {
     const projectAST = getProjectAST(tsconfigPath);
     const parsedRoutes = parseRoutes(workspace, projectAST);
 
-    if (printOnly) {
+    if (dryRun) {
       console.log(parsedRoutes);
     } else {
       const fileName = getTypesFileName(projectName);

@@ -2,10 +2,10 @@
 
 <a href="https://routeshub.gitbook.io/docs"><img src="https://github.com/maktarsis/routeshub/raw/master/docs/assets/logo.png" align="right" alt=""></a>
 
-The next-gen typed **[Angular]** routes
+The next-gen typed **Angular** routes
 
 - **Typing.** Type-safe Angular routes.
-- **Script.** Just an Angular schematic which parses application and produces a type of project routes.
+- **Transparency.** Just an Angular schematic parses application and produces a type.
 - **Map.** Provides the ability to look at the route map of the application.
 - **Scoped.** Designed to output routes type per application.
 - **Declarative DX.** An all-new Angular routes experience.

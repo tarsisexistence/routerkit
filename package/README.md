@@ -2,7 +2,7 @@
 
 <a href="https://routeshub.gitbook.io/docs"><img src="https://github.com/maktarsis/routeshub/raw/master/docs/assets/logo.png" align="right" alt=""></a>
 
-The next-gen typed **[Angular]** routes
+The next-gen typed **Angular** routes
 
 - **Typing.** Type-safe Angular routes.
 - **Script.** Just an Angular schematic which parses application and produces a type of project routes.
