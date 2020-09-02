@@ -1,4 +1,5 @@
 import { transform } from './transform';
+import { STRING_KEYWORD } from './constants';
 
 describe('[generation] transform', () => {
   test('should return empty routes', () => {
@@ -23,6 +24,15 @@ describe('[generation] transform', () => {
     ).toEqual({
       home: ['/', 'home']
     });
+  });
+
+  test('should transform string route name to proper output without string keyword', () => {
+    const output = transform({
+      string: {}
+    });
+
+    expect(output.string[1]).toBe('string');
+    expect(output.string[1]).not.toBe(STRING_KEYWORD);
   });
 
   test('should transform not flatten routes', () => {
@@ -68,7 +78,7 @@ describe('[generation] transform', () => {
     ).toEqual({
       home: ['/', 'home'],
       engine: {
-        ':year': ['/', 'engine', 'string']
+        ':year': ['/', 'engine', STRING_KEYWORD]
       }
     });
   });
@@ -84,7 +94,7 @@ describe('[generation] transform', () => {
       home: ['/', 'home'],
       engine: {
         root: ['/', 'engine'],
-        ':year': ['/', 'engine', 'string']
+        ':year': ['/', 'engine', STRING_KEYWORD]
       }
     });
   });
@@ -112,14 +122,14 @@ describe('[generation] transform', () => {
       info: ['/', 'info'],
 
       engine: {
-        ':year': ['/', 'engine', 'string']
+        ':year': ['/', 'engine', STRING_KEYWORD]
       },
 
       users: {
         root: ['/', 'users'],
         ':id': {
-          root: ['/', 'users', 'string'],
-          profile: ['/', 'users', 'string', 'profile']
+          root: ['/', 'users', STRING_KEYWORD],
+          profile: ['/', 'users', STRING_KEYWORD, 'profile']
         }
       }
     });
@@ -138,20 +148,20 @@ describe('[generation] transform', () => {
       users: {
         root: ['/', 'users'],
         ':id': {
-          profile: ['/', 'users', 'string', 'profile'],
-          settings: ['/', 'users', 'string', 'settings']
+          profile: ['/', 'users', STRING_KEYWORD, 'profile'],
+          settings: ['/', 'users', STRING_KEYWORD, 'settings']
         }
       },
       admin: {
         root: ['/', 'admin'],
         collaborators: ['/', 'admin', 'collaborators'],
-        ':id': ['/', 'admin', 'string']
+        ':id': ['/', 'admin', STRING_KEYWORD]
       },
       pages: {
         root: ['/', 'pages'],
         articles: {
           today: ['/', 'pages', 'articles', 'today'],
-          ':date': ['/', 'pages', 'articles', 'string']
+          ':date': ['/', 'pages', 'articles', STRING_KEYWORD]
         }
       }
     });
@@ -172,12 +182,12 @@ describe('[generation] transform', () => {
         engine: {
           root: ['/', 'engine'],
           ':year': {
-            root: ['/', 'engine', 'string'],
+            root: ['/', 'engine', STRING_KEYWORD],
             car: {
               ':type': {
-                root: ['/', 'engine', 'string', 'car', 'string'],
+                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
-                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
+                  ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
               }
             }
@@ -200,12 +210,12 @@ describe('[generation] transform', () => {
         engine: {
           root: ['/', 'engine'],
           ':year': {
-            root: ['/', 'engine', 'string'],
+            root: ['/', 'engine', STRING_KEYWORD],
             car: {
               ':type': {
-                root: ['/', 'engine', 'string', 'car', 'string'],
+                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
-                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
+                  ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
               }
             }
@@ -235,9 +245,9 @@ describe('[generation] transform', () => {
           ':year': {
             car: {
               ':type': {
-                root: ['/', 'engine', 'string', 'car', 'string'],
+                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
-                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
+                  ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
               }
             }
@@ -267,9 +277,9 @@ describe('[generation] transform', () => {
           ':year': {
             car: {
               ':type': {
-                root: ['/', 'engine', 'string', 'car', 'string'],
+                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
-                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
+                  ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
               }
             }
@@ -297,9 +307,9 @@ describe('[generation] transform', () => {
           ':year': {
             car: {
               ':type': {
-                root: ['/', 'engine', 'string', 'car', 'string'],
+                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
-                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
+                  ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
               }
             }
@@ -325,9 +335,9 @@ describe('[generation] transform', () => {
           ':year': {
             car: {
               ':type': {
-                root: ['/', 'engine', 'string', 'car', 'string'],
+                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
-                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
+                  ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
               }
             }
@@ -355,9 +365,9 @@ describe('[generation] transform', () => {
           ':year': {
             car: {
               ':type': {
-                root: ['/', 'engine', 'string', 'car', 'string'],
+                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
-                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
+                  ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
               }
             }
@@ -385,9 +395,9 @@ describe('[generation] transform', () => {
           ':year': {
             car: {
               ':type': {
-                root: ['/', 'engine', 'string', 'car', 'string'],
+                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
-                  ':id': ['/', 'engine', 'string', 'car', 'string', 'model', 'string']
+                  ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
               }
             }
