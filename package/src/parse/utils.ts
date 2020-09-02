@@ -42,20 +42,23 @@ const findRouterModuleArgumentValue = (routerExpr: CallExpression): ArrayLiteral
   if (Node.isArrayLiteralExpression(firstArg)) {
     return firstArg;
   } else if (Node.isIdentifier(firstArg)) {
-    return tryFindIdentifierValue(firstArg);
+    return tryFindIdentifierValue(firstArg, Node.isArrayLiteralExpression);
   }
   // todo for spread forRoot(...array)
   return null;
 };
 
-const tryFindIdentifierValue = (id: Identifier): ArrayLiteralExpression | null => {
+const tryFindIdentifierValue = <T extends Node>(
+  id: Identifier,
+  valueTypeChecker: (node: Node) => node is T
+): T | null => {
   const defs = id.getDefinitionNodes();
 
   for (const def of defs) {
     // expression.expression1.varName
-    if (def && Node.isVariableDeclaration(def)) {
+    if (Node.isVariableDeclaration(def)) {
       const initializer = def.getInitializer();
-      if (initializer && Node.isArrayLiteralExpression(initializer)) {
+      if (initializer && valueTypeChecker(initializer)) {
         return initializer;
       }
     }
@@ -96,12 +99,9 @@ export const parseRoutes = (
     if (Node.isObjectLiteralExpression(el)) {
       parsedRoute = parseRoute(el, routerType, project);
     } else if (Node.isIdentifier(el)) {
-      const def = el.getDefinitionNodes()?.[0];
-      if (Node.isVariableDeclaration(def)) {
-        const initializer = def.getInitializer();
-        if (initializer && Node.isObjectLiteralExpression(initializer)) {
-          parsedRoute = parseRoute(initializer, routerType, project);
-        }
+      const value = tryFindIdentifierValue(el, Node.isObjectLiteralExpression);
+      if (value) {
+        parsedRoute = parseRoute(value, routerType, project);
       }
     }
 
@@ -311,7 +311,7 @@ const parseImports = (importsArg: Node): ArrayLiteralExpression | null => {
     }
 
     if (Node.isIdentifier(imports)) {
-      return tryFindIdentifierValue(imports);
+      return tryFindIdentifierValue(imports, Node.isArrayLiteralExpression);
     } else if (Node.isArrayLiteralExpression(imports)) {
       return imports;
     } // todo find other cases (imports: [...imports]
