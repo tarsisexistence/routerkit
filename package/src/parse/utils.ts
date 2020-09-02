@@ -41,13 +41,13 @@ const findRouterModuleArgumentValue = (routerExpr: CallExpression): ArrayLiteral
   if (Node.isArrayLiteralExpression(firstArg)) {
     return firstArg;
   } else if (Node.isIdentifier(firstArg)) {
-    return tryFindIdentifierValue(firstArg, Node.isArrayLiteralExpression);
+    return tryFindVariableValue(firstArg, Node.isArrayLiteralExpression);
   }
   // todo for spread forRoot(...array)
   return null;
 };
 
-const tryFindIdentifierValue = <T extends Node>(
+const tryFindVariableValue = <T extends Node>(
   id: Identifier,
   valueTypeChecker: (node: Node) => node is T
 ): T | null => {
@@ -98,7 +98,7 @@ export const parseRoutes = (
     if (Node.isObjectLiteralExpression(el)) {
       parsedRoute = parseRoute(el, routerType, project);
     } else if (Node.isIdentifier(el)) {
-      const value = tryFindIdentifierValue(el, Node.isObjectLiteralExpression);
+      const value = tryFindVariableValue(el, Node.isObjectLiteralExpression);
       if (value) {
         parsedRoute = parseRoute(value, routerType, project);
       }
@@ -310,7 +310,7 @@ const parseImports = (importsArg: Node): ArrayLiteralExpression | null => {
     }
 
     if (Node.isIdentifier(imports)) {
-      return tryFindIdentifierValue(imports, Node.isArrayLiteralExpression);
+      return tryFindVariableValue(imports, Node.isArrayLiteralExpression);
     } else if (Node.isArrayLiteralExpression(imports)) {
       return imports;
     } // todo find other cases (imports: [...imports]
