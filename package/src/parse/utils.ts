@@ -205,24 +205,27 @@ export const findRouteChildren = (routerType: Type, module: ClassDeclaration) =>
 const divideRouterExpressionsAndModulesDeclarations = (modules: Node[], routerType: Type) => {
   const routerExpressions: CallExpression[] = [];
   const moduleDeclarations: ClassDeclaration[] = [];
+  const isRouterType = isClassHasTheSameType.bind(null, routerType);
 
   for (const module of modules) {
+
     if (Node.isIdentifier(module)) {
       const decl = findModuleDeclarationOrExpressionByIdentifier(module);
-      if (decl && Node.isClassDeclaration(decl)) {
-        moduleDeclarations.push(decl);
-      } else if (decl && Node.isCallExpression(decl)) {
-        const expr = getModuleDeclarationFromExpression(decl);
-        if (expr) {
-          const declType = expr.getType();
-          declType === routerType ? routerExpressions.push(decl) : moduleDeclarations.push(expr);
+
+      if (decl) {
+        if (Node.isClassDeclaration(decl)) {
+          moduleDeclarations.push(decl);
+        } else if (Node.isCallExpression(decl)) {
+          const expr = getModuleDeclarationFromExpression(decl);
+          if (expr) {
+            isRouterType(expr) ? routerExpressions.push(decl) : moduleDeclarations.push(expr);
+          }
         }
       }
     } else if (Node.isCallExpression(module)) {
       const decl = getModuleDeclarationFromExpression(module);
       if (decl) {
-        const declType = decl.getType();
-        declType === routerType ? routerExpressions.push(module) : moduleDeclarations.push(decl);
+        isRouterType(decl) ? routerExpressions.push(module) : moduleDeclarations.push(decl);
       }
     }
   }
@@ -231,6 +234,11 @@ const divideRouterExpressionsAndModulesDeclarations = (modules: Node[], routerTy
     routerExpressions,
     moduleDeclarations
   };
+};
+
+const isClassHasTheSameType = (type: Type<ts.Type>, clazz: ClassDeclaration): boolean => {
+  const classType = clazz.getType();
+  return classType === type;
 };
 
 /*
