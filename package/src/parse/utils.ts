@@ -232,17 +232,23 @@ const getModuleDeclarationOrCallExpressionById = (
       if (Node.isClassDeclaration(decl)) {
         return decl;
       } else if (Node.isCallExpression(decl)) {
-        const expr = getModuleDeclarationFromExpression(decl);
-        if (expr) {
-          return isRouter(expr) ? decl : expr;
-        }
+        return getModuleDeclarationOrRouterExpressionFromCall(decl, isRouter);
       }
     }
   } else if (Node.isCallExpression(node)) {
-    const decl = getModuleDeclarationFromExpression(node);
-    if (decl) {
-      return isRouter(decl) ? node : decl;
-    }
+    return getModuleDeclarationOrRouterExpressionFromCall(node, isRouter);
+  }
+
+  return null;
+};
+
+const getModuleDeclarationOrRouterExpressionFromCall = (
+  call: CallExpression,
+  isRouter: (clazz: ClassDeclaration) => boolean
+): CallExpression | ClassDeclaration | null => {
+  const decl = getModuleDeclarationFromExpression(call);
+  if (decl) {
+    return isRouter(decl) ? call : decl;
   }
 
   return null;
