@@ -24,13 +24,7 @@
     "contributors:add": "npx all-contributors add",
     "contributors:generate": "npx all-contributors generate",
     "// - PUBLICATION - //": "------------------------------",
-    "move:separate": "move ts3.5 dist/routerkit",
-    "copy:separate": "copy tsconfig.json ts3.5",
-    "downlevel:separate": "npx downlevel-dts . ts3.5 && yarn copy:separate && yarn move:separate",
-    "downlevel": "npx downlevel-dts dist/routerkit dist/routerkit",
-    "publication:prepare": "yarn build && yarn downlevel",
-    "publication:publish": "cd dist/routerkit && npm publish",
-    "publication": "yarn publication:prepare && yarn publication:publish"
+    "publicate": "cd dist/routerkit && npm publish --access=public"
   },
   "dependencies": {
     "@angular/animations": "10.0.8",
