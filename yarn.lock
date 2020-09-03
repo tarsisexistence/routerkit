@@ -10575,12 +10575,12 @@ rollup@^2.8.0:
   optionalDependencies:
     fsevents "~2.1.2"
 
-routeshub@4.2.1:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/routeshub/-/routeshub-4.2.1.tgz#e2ced32b0ea3f1bcab7f412387665d2d7fd79a79"
-  integrity sha512-EmCr0GrF/g21YkGHiJUyQThdKt+UsAiQupRoYzSAufviuIXAj1U9NBgmSo+nScJsowHVWSRYFrBhyUlwXSK7ig==
+routeshub@4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/routeshub/-/routeshub-4.2.2.tgz#0d80a6ccc13021fc69e451fe5ac48380b0f919b4"
+  integrity sha512-srCyNHO2s2gm60f9S43mJGI2YHqsN2dRcEgp4yXhgnjKI1ePMFUK8F0Nom40uCWnvL89jUz05EizTGFB7lageA==
   dependencies:
-    tslib "2.0.0"
+    tslib "2.0.1"
 
 rsvp@^4.8.4:
   version "4.8.5"

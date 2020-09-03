@@ -37,7 +37,7 @@
     "@angular/router": "10.0.8",
     "@wessberg/ts-evaluator": "0.0.26",
     "hammerjs": "2.0.8",
-    "routeshub": "4.2.1",
+    "routeshub": "4.2.2",
     "rxjs": "6.6.2",
     "zone.js": "0.10.3"
   },
