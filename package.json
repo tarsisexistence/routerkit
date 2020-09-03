@@ -59,7 +59,7 @@
     "codelyzer": "5.2.2",
     "husky": "4.2.5",
     "jest": "26.4.2",
-    "lint-staged": "10.2.11",
+    "lint-staged": "10.3.0",
     "ng-packagr": "10.0.3",
     "prettier": "2.0.5",
     "protractor": "7.0.0",
