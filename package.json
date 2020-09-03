@@ -61,7 +61,7 @@
     "jest": "26.4.2",
     "lint-staged": "10.2.11",
     "ng-packagr": "10.0.3",
-    "prettier": "2.0.5",
+    "prettier": "2.1.1",
     "protractor": "7.0.0",
     "snyk": "1.369.3",
     "ts-morph": "7.3.0",
