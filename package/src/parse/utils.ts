@@ -422,10 +422,9 @@ const parseLoadChildrenFunction = (fnNode: CallExpression): RouterKit.Parse.Load
   return null;
 };
 
-// todo remove any
 const evaluateExpression = (node: Expression, morphTypeChecker: TypeChecker): string | null => {
-  const compilerNode: any = node.compilerNode;
-  const typeChecker: any = morphTypeChecker.compilerObject;
+  const compilerNode = node.compilerNode;
+  const typeChecker = morphTypeChecker.compilerObject;
   const result = evaluate({
     node: compilerNode,
     typeChecker

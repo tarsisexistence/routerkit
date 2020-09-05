@@ -2,7 +2,7 @@
 
 <a href="https://routeshub.gitbook.io/docs"><img src="https://github.com/maktarsis/routeshub/raw/master/docs/assets/logo.png" align="right" alt=""></a>
 
-Typed **Angular** routes
+Strict typed **Angular** routes
 
 - **Typing.** Type-safe Angular routes.
 - **Transparency.** Only 1 script to run before and 1 function for use.

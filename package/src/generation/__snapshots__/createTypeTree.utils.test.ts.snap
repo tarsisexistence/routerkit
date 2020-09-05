@@ -2,12 +2,10 @@
 
 exports[`[generation] createTypeTree utils createValidRouteIdentifier should match createIdentifier 1`] = `
 IdentifierObject {
-  "autoGenerateFlags": 0,
-  "autoGenerateId": 0,
   "end": -1,
   "escapedText": "info",
   "flags": 8,
-  "kind": 75,
+  "kind": 78,
   "modifierFlagsCache": 0,
   "originalKeywordKind": undefined,
   "parent": undefined,
@@ -20,10 +18,12 @@ exports[`[generation] createTypeTree utils createValidRouteIdentifier should mat
 TokenObject {
   "end": -1,
   "flags": 8,
+  "hasExtendedUnicodeEscape": undefined,
   "kind": 10,
   "modifierFlagsCache": 0,
   "parent": undefined,
   "pos": -1,
+  "singleQuote": undefined,
   "text": "user-center",
   "transformFlags": 0,
 }
