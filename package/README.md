@@ -2,14 +2,12 @@
 
 <a href="https://routeshub.gitbook.io/docs"><img src="https://github.com/maktarsis/routeshub/raw/master/docs/assets/logo.png" align="right" alt=""></a>
 
-The next-gen typed **Angular** routes
+Typed **Angular** routes
 
 - **Typing.** Type-safe Angular routes.
-- **Script.** Just an Angular schematic which parses application and produces a type of project routes.
+- **Transparency.** Only 1 script to run before and 1 function for use.
 - **Map.** Provides the ability to look at the route map of the application.
-- **Scoped.** Designed to output routes type per application.
 - **Declarative DX.** An all-new Angular routes experience.
-- **Tiny.** Extra small size which doesn't overload the production build.
 
 <br/>
 
@@ -26,12 +24,14 @@ Bonus: by getting the type of routes, we get a "big picture" of our application 
 
 ## What does it do?
 
-- a script which is an Angular schematic
+a script:
 - parses Angular project
 - finds connected routes
 - generates a type of project routes
 - includes type in the tsconfig
-- provides API for declarative routes usage
+
+a function:
+- returns you route tree based on your routes type
 
 <br/>
 
@@ -41,8 +41,9 @@ Bonus: by getting the type of routes, we get a "big picture" of our application 
 - does not add boilerplate at all
 - does not increase (almost) production build
 - does not bind to constant use (easy to stop)
+- does not get the deep structure of the routes, just what you actually use
 
-This means that you can use this library for free.
+It turns out that you will use it for free.
 
 <br/>
 
