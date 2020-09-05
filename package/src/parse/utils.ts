@@ -14,6 +14,7 @@ import {
 } from 'ts-morph';
 import { resolve, sep } from 'path';
 import { evaluate } from '@wessberg/ts-evaluator';
+
 import { getSourceFileOrThrow } from './get-source-file-from-paths';
 export const getRouteModuleForRootExpressions: (
   routerModuleClass: ClassDeclaration

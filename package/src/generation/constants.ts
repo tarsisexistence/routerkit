@@ -1,1 +1,1 @@
-export const STRING_KEYWORD = 'string';
+export const STRING_KEYWORD = 'STRING_KEYWORD';

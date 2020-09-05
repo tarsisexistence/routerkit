@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync } from 'fs';
+import { Project } from 'ts-morph';
 
 import { excludeRoot } from './generation.utils';
 
@@ -51,3 +52,15 @@ export const kebabCaseToCamelCase = (prop: string): string => {
 export const isVariable = (route: string): boolean => route[0] === ':';
 export const isWildcard = (route: string): boolean => route.slice(0, 2) === '**';
 export const isIndexRoute = (route: string): boolean => isVariable(route) || isWildcard(route);
+
+export const generateFile = ({
+  project,
+  filePath,
+  output
+}: {
+  project: Project;
+  filePath: string;
+  output: string;
+}): void => {
+  project.createSourceFile(filePath, output, { overwrite: true }).saveSync();
+};

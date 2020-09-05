@@ -1,14 +1,14 @@
 import { Rule, Tree } from '@angular-devkit/schematics';
 
 import { parseRoutes } from './parseRoutes';
-import { generate } from '../generation/generate';
-import { includeRoutesTypeIntoTsconfig } from '../generation/utils';
+import { generateRoutesType } from '../generation/generateRoutesType';
+import { generateFile, includeRoutesTypeIntoTsconfig } from '../generation/utils';
 import { findAngularJSON, getProjectAST, getProjectTsconfigPath } from './utils.angular';
 import { getRoutesTypeFilePath, getTypesFileName } from './utils';
 
 export function parse(options: RouterKit.Parse.Options): Rule {
   return (tree: Tree) => {
-    const { project: projectName, printOnly } = options;
+    const { project: projectName, dryRun } = options;
 
     if (!projectName) {
       throw new Error('Project name expected');
@@ -20,12 +20,14 @@ export function parse(options: RouterKit.Parse.Options): Rule {
     const projectAST = getProjectAST(tsconfigPath);
     const parsedRoutes = parseRoutes(workspace, projectAST);
 
-    if (printOnly) {
+    if (dryRun) {
       console.log(parsedRoutes);
     } else {
       const fileName = getTypesFileName(projectName);
       const filePath = getRoutesTypeFilePath(tsconfigPath, fileName);
-      generate(projectAST, parsedRoutes, filePath);
+      const routesType = generateRoutesType(parsedRoutes, fileName);
+      console.log(routesType);
+      generateFile({ project: projectAST, filePath, output: routesType });
       includeRoutesTypeIntoTsconfig(tsconfigPath, fileName);
     }
 

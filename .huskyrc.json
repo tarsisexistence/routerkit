@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "pre-commit": "ng build && npm test && lint-staged",
+    "pre-commit": "ng build:all && yarn test && lint-staged",
     "post-commit": "git update-index -g",
     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
   }

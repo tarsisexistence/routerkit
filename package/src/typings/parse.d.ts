@@ -1,7 +1,7 @@
 declare namespace RouterKit.Parse {
   interface Options {
     project: string;
-    printOnly: boolean;
+    dryRun: boolean;
   }
 
   interface Alias {
