@@ -181,7 +181,7 @@ const createModuleRouteTree = (
 /**
  * Get Module Declaration, parse imports, find route modules and parse them
  */
-export const findRouteChildren = (routerType: Type, module: ClassDeclaration) => {
+export const findRouteChildren = (routerType: Type, module: ClassDeclaration): CallExpression[] => {
   const routerModules: CallExpression[] = [];
   const modules = [module];
 
@@ -209,9 +209,7 @@ const divideRouterExpressionsAndModulesDeclarations = (modules: Node[], routerTy
   for (const node of modules) {
     const parsedNode = getModuleDeclarationOrCallExpressionById(node, isRouterType);
     if (parsedNode) {
-      Node.isCallExpression(parsedNode) ?
-        routerExpressions.push(parsedNode) :
-        moduleDeclarations.push(parsedNode);
+      Node.isCallExpression(parsedNode) ? routerExpressions.push(parsedNode) : moduleDeclarations.push(parsedNode);
     }
   }
 
@@ -424,9 +422,10 @@ const parseLoadChildrenFunction = (fnNode: CallExpression): RouterKit.Parse.Load
   return null;
 };
 
+// todo remove any
 const evaluateExpression = (node: Expression, morphTypeChecker: TypeChecker): string | null => {
-  const compilerNode = node.compilerNode;
-  const typeChecker = morphTypeChecker.compilerObject;
+  const compilerNode: any = node.compilerNode;
+  const typeChecker: any = morphTypeChecker.compilerObject;
   const result = evaluate({
     node: compilerNode,
     typeChecker
