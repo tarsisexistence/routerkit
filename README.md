@@ -11,7 +11,7 @@ Strict typed **Angular** routes
 
 <br/>
 
-![Example](assets/gif-low-1.gif)
+![Example](assets/medium.gif)
 
 <br/>
 
