@@ -7,6 +7,7 @@ New approach to Angular routes:
 - **Type-safe:** Get auto-completion and type checking for @angular/router routes. Works with Lazy routes! 
 - **Easy to setup:** Only 1 script to run before and 1 function for use
 - **Consice** `[routerLink]="routes.a.b.c"` instead of `[routerLink]="['a','b','c']"`
+- **0.2kb** All the magic happens on the type level, runtime part is very small
 
 <br/>
 
