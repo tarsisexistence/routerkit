@@ -69,7 +69,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'details-link',
-  template: `<a [routerLink]="['profile', 'users', 689]">Details</a>`
+  template: `<a [routerLink]="['profile', 'users', userId]">Details</a>`
 })
 export class DetailsLinkComponent {}
 ```
@@ -82,7 +82,7 @@ import { getRoutes } from '@routerkit/core';
 
 @Component({
   selector: 'details-link',
-  template: `<a [routerLink]="routes.profile.users[689]">Details</a>`
+  template: `<a [routerLink]="routes.profile.users[userId]">Details</a>`
 })
 export class DetailsLinkComponent {
   public routes = getRoutes<RouterKit.Routes>();
