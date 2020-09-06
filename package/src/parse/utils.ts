@@ -48,6 +48,14 @@ const findRouterModuleArgumentValue = (routerExpr: CallExpression): ArrayLiteral
   return null;
 };
 
+const tryFindPropertyAccessExpressionValue = <T extends Node>(
+  expression: PropertyAccessExpression,
+  valueTypeChecker: (node: Node) => node is T
+) => {
+  const id = expression.getNameNode();
+  return tryFindVariableValue(id, valueTypeChecker);
+};
+
 const tryFindVariableValue = <T extends Node>(
   id: Identifier,
   valueTypeChecker: (node: Node) => node is T
@@ -56,7 +64,7 @@ const tryFindVariableValue = <T extends Node>(
 
   for (const def of defs) {
     // expression.expression1.varName
-    if (Node.isVariableDeclaration(def)) {
+    if (Node.isVariableDeclaration(def) || Node.isPropertyAssignment(def)) {
       const initializer = def.getInitializer();
       if (initializer && valueTypeChecker(initializer)) {
         return initializer;
@@ -439,6 +447,8 @@ const getPropertyValue = (node: ObjectLiteralExpression, property: string): Expr
     const initializer = objectProperty.getInitializer();
     if (initializer && Node.isIdentifier(initializer)) {
       return tryFindVariableValue(initializer, Node.isExpression);
+    } else if (initializer && Node.isPropertyAccessExpression(initializer)) {
+      return tryFindPropertyAccessExpressionValue(initializer, Node.isExpression);
     }
 
     return initializer || null;
