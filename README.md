@@ -6,7 +6,7 @@ New approach to Angular routes:
 
 - **Type-safe:** Get auto-completion and type checking for @angular/router routes. Works with Lazy routes! 
 - **Easy to setup:** Only 1 script to run before and 1 function for use
-- **Consice** `routerLink="routes.a.b.c"` instead of `routerLink="['a','b','c']"`
+- **Consice** `[routerLink]="routes.a.b.c"` instead of `[routerLink]="['a','b','c']"`
 
 <br/>
 
@@ -54,7 +54,7 @@ npm install @routerkit/core  #  yarn add @routerkit/core
 
 ### Schematic
 
-If you use [@angular/cli](https://cli.angular.io/), you can run schematic to generate the routes type:
+You can run [Angular schematic](https://cli.angular.io/) to generate the routes type:
 
 ```sh
 ng g @routerkit/core:parse --project YOUR_PROJECT_NAME
