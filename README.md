@@ -11,6 +11,10 @@ Strict typed **Angular** routes
 
 <br/>
 
+![Example](assets/gif-low-1.gif)
+
+<br/>
+
 ## What problems does it solve?
 
 - Prevents errors, typos with route paths

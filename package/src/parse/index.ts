@@ -6,23 +6,22 @@ import { generateRoutesType } from '../generation/generateRoutesType';
 import { generateFile, includeRoutesTypeIntoTsconfig } from '../generation/utils';
 import { findAngularJSON, getProjectAST, getProjectTsconfigPath } from './utils.angular';
 import { getRoutesTypeFilePath, getTypesFileName } from './utils';
-import { space, taskFail, taskFinish, taskStart } from '../utils/common.utils';
+import { space, taskFinish, taskStart } from '../utils/common.utils';
 
 export function parse(options: RouterKit.Parse.Options): Rule {
   return (tree: Tree) => {
     const { project: projectName, dryRun } = options;
-    const projectSpinner = ora(taskStart('Reading project')).start();
 
     if (!projectName) {
-      projectSpinner.fail(taskFail('Project name expected'));
-      process.exit(1);
+      throw new Error('Project name expected.');
     }
 
+    const projectSpinner = ora(taskStart('Analyzing project')).start();
     const angularJson = findAngularJSON(tree);
     const workspace = angularJson.projects[projectName];
     const tsconfigPath = getProjectTsconfigPath(workspace, projectName);
     const projectAST = getProjectAST(tsconfigPath);
-    projectSpinner.succeed(taskFinish('Project read'));
+    projectSpinner.succeed(taskFinish('Project analyzed'));
 
     const parsingSpinner = ora(taskStart('Parsing routes')).start();
     const parsedRoutes = parseRoutes(workspace, projectAST);
