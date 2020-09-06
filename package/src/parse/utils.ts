@@ -436,7 +436,12 @@ const evaluateExpression = (node: Expression, morphTypeChecker: TypeChecker): st
 const getPropertyValue = (node: ObjectLiteralExpression, property: string): Expression | null => {
   const objectProperty = node.getProperty(property);
   if (objectProperty && Node.isPropertyAssignment(objectProperty)) {
-    return objectProperty.getInitializer() || null;
+    const initializer = objectProperty.getInitializer();
+    if (initializer && Node.isIdentifier(initializer)) {
+      return tryFindVariableValue(initializer, Node.isExpression);
+    }
+
+    return initializer || null;
   }
 
   return null;
