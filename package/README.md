@@ -1,6 +1,6 @@
 # RouterKit
 
-<a href="https://routeshub.gitbook.io/docs"><img src="https://github.com/maktarsis/routeshub/raw/master/docs/assets/logo.png" align="right" alt=""></a>
+<a href="https://routeshub.gitbook.io/docs"><img src="https://raw.githubusercontent.com/retarsis/routeshub/master/docs/assets/logo.png" align="right" alt="" /></a>
 
 Strict typed **Angular** routes
 
@@ -8,6 +8,12 @@ Strict typed **Angular** routes
 - **Transparency.** Only 1 script to run before and 1 function for use.
 - **Map.** Provides the ability to look at the route map of the application.
 - **Declarative DX.** An all-new Angular routes experience.
+
+<br/>
+
+## Showcase
+
+<img src="https://raw.githubusercontent.com/retarsis/routerkit/master/assets/medium.gif" align="center">
 
 <br/>
 

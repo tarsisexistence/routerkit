@@ -1,6 +1,6 @@
 # RouterKit
 
-<a href="https://routeshub.gitbook.io/docs"><img src="https://github.com/maktarsis/routeshub/raw/master/docs/assets/logo.png" align="right" alt=""></a>
+<a href="https://routeshub.gitbook.io/docs"><img src="https://raw.githubusercontent.com/retarsis/routeshub/master/docs/assets/logo.png" align="right" alt="" /></a>
 
 Strict typed **Angular** routes
 
@@ -11,7 +11,9 @@ Strict typed **Angular** routes
 
 <br/>
 
-![Example](assets/medium.gif)
+## Showcase
+
+<img src="https://raw.githubusercontent.com/retarsis/routerkit/master/assets/medium.gif" align="center">
 
 <br/>
 
