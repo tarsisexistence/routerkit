@@ -48,6 +48,14 @@ const findRouterModuleArgumentValue = (routerExpr: CallExpression): ArrayLiteral
   return null;
 };
 
+const tryFindPropertyAccessExpressionValue = <T extends Node>(
+  expression: PropertyAccessExpression,
+  valueTypeChecker: (node: Node) => node is T
+) => {
+  const id = expression.getNameNode();
+  return tryFindVariableValue(id, valueTypeChecker);
+};
+
 const tryFindVariableValue = <T extends Node>(
   id: Identifier,
   valueTypeChecker: (node: Node) => node is T
@@ -56,7 +64,7 @@ const tryFindVariableValue = <T extends Node>(
 
   for (const def of defs) {
     // expression.expression1.varName
-    if (Node.isVariableDeclaration(def)) {
+    if (Node.isVariableDeclaration(def) || Node.isPropertyAssignment(def)) {
       const initializer = def.getInitializer();
       if (initializer && valueTypeChecker(initializer)) {
         return initializer;
@@ -434,13 +442,16 @@ const evaluateExpression = (node: Expression, morphTypeChecker: TypeChecker): st
 };
 
 const getPropertyValue = (node: ObjectLiteralExpression, property: string): Expression | null => {
-  for (const objectProperty of node.getProperties()) {
-    if (Node.isPropertyAssignment(objectProperty)) {
-      const name = objectProperty.getName();
-      if (name === property) {
-        return objectProperty.getInitializer() || null;
-      }
+  const objectProperty = node.getProperty(property);
+  if (objectProperty && Node.isPropertyAssignment(objectProperty)) {
+    const initializer = objectProperty.getInitializer();
+    if (initializer && Node.isIdentifier(initializer)) {
+      return tryFindVariableValue(initializer, Node.isExpression);
+    } else if (initializer && Node.isPropertyAccessExpression(initializer)) {
+      return tryFindPropertyAccessExpressionValue(initializer, Node.isExpression);
     }
+
+    return initializer || null;
   }
 
   return null;
