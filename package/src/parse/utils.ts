@@ -434,13 +434,9 @@ const evaluateExpression = (node: Expression, morphTypeChecker: TypeChecker): st
 };
 
 const getPropertyValue = (node: ObjectLiteralExpression, property: string): Expression | null => {
-  for (const objectProperty of node.getProperties()) {
-    if (Node.isPropertyAssignment(objectProperty)) {
-      const name = objectProperty.getName();
-      if (name === property) {
-        return objectProperty.getInitializer() || null;
-      }
-    }
+  const objectProperty = node.getProperty(property);
+  if (objectProperty && Node.isPropertyAssignment(objectProperty)) {
+    return objectProperty.getInitializer() || null;
   }
 
   return null;
