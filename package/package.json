@@ -14,7 +14,7 @@
     "@wessberg/ts-evaluator": "0.0.26",
     "ts-morph": "8.1.0",
     "tslib": "2.0.1",
-    "ora": "5.0.0"
+    "ora": "5.1.0"
   },
   "peerDependencies": {
     "@angular/router": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0",
