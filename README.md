@@ -1,13 +1,19 @@
 # RouterKit
 
-<a href="https://routeshub.gitbook.io/docs"><img src="https://github.com/maktarsis/routeshub/raw/master/docs/assets/logo.png" align="right" alt=""></a>
+<a href="https://routeshub.gitbook.io/docs"><img src="https://raw.githubusercontent.com/retarsis/routerkit/master/assets/logo.png" align="right" alt="logo" /></a>
 
-Strict typed **Angular** routes
+New approach to Angular routes:
 
-- **Typing.** Type-safe Angular routes.
-- **Transparency.** Only 1 script to run before and 1 function for use.
-- **Map.** Provides the ability to look at the route map of the application.
-- **Declarative DX.** An all-new Angular routes experience.
+- **Type-safe:** Get auto-completion and type checking for @angular/router routes. Works with Lazy routes! 
+- **Easy to setup:** Only 1 script to run before and 1 function for use
+- **Consice** `[routerLink]="routes.a.b.c"` instead of `[routerLink]="['a','b','c']"`
+- **0.2kb** All the magic happens on the type level, runtime part is very small
+
+<br/>
+
+## Showcase
+
+<img src="https://raw.githubusercontent.com/retarsis/routerkit/master/assets/medium-short.gif" alt="Gif demostrating the process of installing the package." align="center" alt="showcase gif">
 
 <br/>
 
@@ -22,34 +28,22 @@ Bonus: by getting the type of routes, we get a "big picture" of our application 
 
 <br/>
 
-## What does it do?
+## How does it work?
 
-a script:
-- parses Angular project
-- finds connected routes
-- generates a type of project routes
-- includes type in the tsconfig
+[script](https://github.com/retarsis/routerkit/blob/master/package/src/parse/index.ts):
+- parses your Angular project
+- traverses generated AST, extracting route information and following lazy routes
+- generates generates a TypeScript `type` (see example )containing all your routing information.
+- includes the generated type in your `tsconfig.json`
 
-a function:
-- returns you route tree based on your routes type
-
-<br/>
-
-## What it doesn't do?
-
-- does not add complexity to the project
-- does not add boilerplate at all
-- does not increase (almost) production build
-- does not bind to constant use (easy to stop)
-- does not get the deep structure of the routes, just what you actually use
-
-It turns out that you will use it for free.
+[function](https://github.com/retarsis/routerkit/blob/1e9e55c8e66b44a1ac1d841a0f5aacc3d28b2989/package/src/core/getRoutes.ts#L1):
+- returns you route tree based on your routes type with appropriate JavaScript object structure
 
 <br/>
 
 ## Install
 
-First, you have to install the package from npm:
+Install the package from [npm](https://www.npmjs.com/):
 
 ```sh
 npm install @routerkit/core  #  yarn add @routerkit/core
@@ -61,7 +55,7 @@ npm install @routerkit/core  #  yarn add @routerkit/core
 
 ### Schematic
 
-Run schematic to generate routes type:
+You can run [Angular schematic](https://cli.angular.io/) to generate the routes type:
 
 ```sh
 ng g @routerkit/core:parse --project YOUR_PROJECT_NAME
@@ -76,12 +70,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'details-link',
-  template: `<a [routerLink]="['profile', 'details']">Details</a>`
+  template: `<a [routerLink]="['profile', 'users', userId]">Details</a>`
 })
 export class DetailsLinkComponent {}
 ```
 
-After
+After:
 
 ```typescript
 import { Component } from '@angular/core';
@@ -89,7 +83,7 @@ import { getRoutes } from '@routerkit/core';
 
 @Component({
   selector: 'details-link',
-  template: `<a [routerLink]="routes.profile.details">Details</a>`
+  template: `<a [routerLink]="routes.profile.users[userId]">Details</a>`
 })
 export class DetailsLinkComponent {
   public routes = getRoutes<RouterKit.Routes>();
