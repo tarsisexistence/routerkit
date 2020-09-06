@@ -41,7 +41,7 @@ export function parse(options: RouterKit.Parse.Options): Rule {
 
       const updatingTsconfigSpinner = ora(taskStart('Generating type')).start();
       includeRoutesTypeIntoTsconfig(tsconfigPath, fileName);
-      updatingTsconfigSpinner.succeed(taskFinish('Tsconfig is up-to-date', tsconfigPath));
+      updatingTsconfigSpinner.succeed(taskFinish('Project tsconfig is up-to-date', tsconfigPath));
     }
 
     space();
