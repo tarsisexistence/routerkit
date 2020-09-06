@@ -19,8 +19,8 @@
     "@angular/router": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0"
   },
   "scripts": {
-    "build-watch": "../node_modules/.bin/tsc -p tsconfig.schematics.json --watch",
     "build": "../node_modules/.bin/tsc -p tsconfig.schematics.json",
+    "build:watch": "../node_modules/.bin/tsc -p tsconfig.schematics.json --watch",
     "copy:collection": "cp collection.json ../dist/routerkit/collection.json",
     "postbuild": "npm run copy:collection"
   },
