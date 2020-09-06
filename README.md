@@ -30,10 +30,10 @@ Bonus: by getting the type of routes, we get a "big picture" of our application 
 ## How does it work?
 
 [script](https://github.com/retarsis/routerkit/blob/master/package/src/parse/index.ts):
-- parses you Angular project
-- graverses generated AST extracting route information and following lazy routes
+- parses your Angular project
+- traverses generated AST, extracting route information and following lazy routes
 - generates generates a TypeScript `type` (see example )containing all your routing information.
-- includes the generated type in your tsconfig
+- includes the generated type in your `tsconfig.json`
 
 [function](https://github.com/retarsis/routerkit/blob/1e9e55c8e66b44a1ac1d841a0f5aacc3d28b2989/package/src/core/getRoutes.ts#L1):
 - returns you route tree based on your routes type with appropriate JavaScript object structure
