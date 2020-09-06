@@ -54,7 +54,7 @@ npm install @routerkit/core  #  yarn add @routerkit/core
 
 ### Schematic
 
-If you use [@angular.cli](https://cli.angular.io/), you can run schematic to generate the routes type:
+If you use [@angular/cli](https://cli.angular.io/), you can run schematic to generate the routes type:
 
 ```sh
 ng g @routerkit/core:parse --project YOUR_PROJECT_NAME
