@@ -31,7 +31,8 @@ describe('[parse] parseRoutes', () => {
       admin: {
         root: {
           root: {},
-          second: {}
+          second: {},
+          third: {}
         }
       }
     };
