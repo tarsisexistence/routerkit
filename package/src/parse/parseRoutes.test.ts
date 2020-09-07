@@ -30,7 +30,9 @@ describe('[parse] parseRoutes', () => {
       'redirect-to-root': {},
       admin: {
         root: {
-          root: {}
+          root: {},
+          second: {},
+          third: {}
         }
       }
     };
