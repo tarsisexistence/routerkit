@@ -14,7 +14,7 @@ A new approach to Angular routes:
 
 ## Showcase
 
-<img src="https://raw.githubusercontent.com/retarsis/routerkit/master/assets/medium-short.gif" alt="Gif demonstrating the process of installing the package." align="center">
+<img src="https://raw.githubusercontent.com/retarsis/routerkit/master/assets/concise.gif" alt="Gif demonstrating the process of running schematic script." align="center">
 
 <br/>
 
