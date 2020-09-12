@@ -3,7 +3,7 @@ import { Rule, Tree } from '@angular-devkit/schematics';
 
 import { parseRoutes } from './parseRoutes';
 import { generateRoutesType } from '../generation/generateRoutesType';
-import { generateFile, includeRoutesTypeIntoTsconfig } from '../generation/utils';
+import { generateFile } from '../generation/utils';
 import { findAngularJSON, getProjectAST, getProjectTsconfigPath } from './utils.angular';
 import { getRoutesTypeFilePath, getTypesFileName } from './utils';
 import { space, taskFinish, taskStart } from '../utils/common.utils';
@@ -38,9 +38,12 @@ export function parse(options: RouterKit.Parse.Options): Rule {
       generateFile({ project: projectAST, filePath, output: routesType });
       generatingFileSpinner.succeed(taskFinish('Output generated', filePath));
 
-      const updatingTsconfigSpinner = ora(taskStart('Generating type')).start();
-      includeRoutesTypeIntoTsconfig(tsconfigPath, fileName);
-      updatingTsconfigSpinner.succeed(taskFinish('Project tsconfig is up-to-date', tsconfigPath));
+      /**
+       * TODO: resolve later
+       * const updatingTsconfigSpinner = ora(taskStart('Generating type')).start();
+       * includeRoutesTypeIntoTsconfig(tsconfigPath, fileName);
+       * updatingTsconfigSpinner.succeed(taskFinish('Project tsconfig is up-to-date', tsconfigPath));
+       */
     }
 
     space();
