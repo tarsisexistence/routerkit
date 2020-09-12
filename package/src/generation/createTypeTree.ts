@@ -88,8 +88,8 @@ export const createType = (routes: RouterKit.Generation.VirtualRoutes): ts.TypeL
 export const createTypeTree = (routes: RouterKit.Generation.VirtualRoutes): ts.TypeAliasDeclaration =>
   ts.createTypeAliasDeclaration(
     undefined,
-    [ts.createModifier(ts.SyntaxKind.DeclareKeyword)],
-    ts.createIdentifier('RouterKitRoutes'),
+    [ts.createModifier(ts.SyntaxKind.ExportKeyword)],
+    ts.createIdentifier('TypedRoutes'),
     undefined,
     hasIndexRoute(routes) ? createTypeWithIndex(routes) : createType(routes)
   );

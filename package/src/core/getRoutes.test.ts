@@ -1,4 +1,4 @@
-import { getRoute, getRoutes } from './getRoutes';
+import { getPaths, getRoutes } from './getRoutes';
 
 const routes = getRoutes<any>();
 
@@ -53,21 +53,21 @@ describe('[getters] core', () => {
     });
   });
 
-  describe('getRoute', () => {
+  describe('getPaths', () => {
     test('should return array from array', () => {
-      expect(getRoute(['/', 'a', 'b'])).toEqual(['/', 'a', 'b']);
+      expect(getPaths(['/', 'a', 'b'])).toEqual(['/', 'a', 'b']);
     });
 
     test('should return array from empty getRoutes', () => {
-      expect(getRoute(getRoutes())).toEqual(['/']);
+      expect(getPaths(getRoutes())).toEqual(['/']);
     });
 
     test('should return array from getRoutes', () => {
-      expect(getRoute(getRoutes<any>().a.b)).toEqual(['/', 'a', 'b']);
+      expect(getPaths(getRoutes<any>().a.b)).toEqual(['/', 'a', 'b']);
     });
 
     test('should return array from getRoutes with possible Array.prototype.map', () => {
-      expect(getRoute(getRoutes<any>().map.slice)).toEqual(['/', 'map', 'slice']);
+      expect(getPaths(getRoutes<any>().map.slice)).toEqual(['/', 'map', 'slice']);
     });
   });
 });

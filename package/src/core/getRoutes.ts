@@ -10,4 +10,4 @@ export const getRoutes = <T>(): T => {
   return (proxy as unknown) as T;
 };
 
-export const getRoute = (paths: string[]): string[] => Array.from(paths);
+export const getPaths = (paths: string[]): string[] => Array.from(paths);
