@@ -1,3 +1,11 @@
+# 0.4.0 2020-09-12
+
+- Changed generated routes type name (was "RouterKitTypes, became "TypedRoutes")
+- Changed generated routes type keyword (was "declare", became "export")
+- The update of tsconfig paused, now needed manual import of the routes type
+- Renamed API (was "getRoute", became "getPaths")
+- Updated documentation
+
 # 0.3.1 2020-09-12
 
 - Updated documentation
