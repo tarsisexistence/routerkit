@@ -4,11 +4,11 @@
 
 A new approach to Angular routes:
 
-- **Type-safe:** Auto-completion and type checking for @angular/router routes.
-- **Easy setup:** Only 1 script to run before and 1 function for use.
-- **Concise** `[routerLink]="routes.one.two.three"` instead of `[routerLink]="['one','two','three']"`
-- **Versatile**. Supports modern and old fashion lazy routes syntax, and certainly eager routes.
-- **Tiny** ~0.2kb. All the magic happens on the type level, runtime API is only one small function.
+- **Type-safe.** Auto-completion and type checking for @angular/router routes.
+- **Easy setup.** Only 1 script to run before and 1 function for use.
+- **Concise.** `[routerLink]="routes.one.two.three"` instead of `[routerLink]="['one','two','three']"`
+- **Versatile.** Supports modern and old fashion lazy routes syntax, and certainly eager routes.
+- **Tiny.** ~0.2kb. All the magic happens on the type level, runtime API is only one small function.
 
 <br/>
 

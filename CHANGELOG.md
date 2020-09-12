@@ -1,16 +1,21 @@
-# 0.3.0 2019-09-07
+# 0.3.1 2020-09-12
+
+- Updated documentation
+- Updated dependencies
+
+# 0.3.0 2020-09-07
 
 - Added variable and enum paths support
 - Reduced api size
-- Rewritten documentation (again 😅) 
+- Rewritten documentation (again 😅)
 
-# 0.2.0 2019-09-06
+# 0.2.0 2020-09-06
 
 - Fixed few parse edge cases
 - Updated core dependencies
 - Rewritten documentation
 
-# 0.1.2 2019-09-02
+# 0.1.2 2020-09-02
 
 Initial release
 
