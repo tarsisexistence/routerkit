@@ -67,21 +67,21 @@ ng g @routerkit/core:parse --project YOUR_PROJECT_NAME
 
 ### App
 
-Before:
+**Before:**
 
 ```typescript
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'user-details-link',
-  template: `<a routerLink="/profile/users/{{usersId}}">User Details</a>`
+  template: `<a routerLink="/profile/users/{{ usersId }}">User Details</a>`
 })
 export class UserComponent {
-    usersId = 42;
+  usersId = 42;
 }
 ```
 
-After:
+**After:**
 
 ```typescript
 import { Component } from '@angular/core';
@@ -94,23 +94,23 @@ import { TypedRoutes } from '{PATH_TO_TYPE}/{PROJECT_NAME}.routes.d.ts';
   template: `<a routerLink="{{ routes.profile.users['5'] }}">User Details</a>`
 })
 export class UserComponent {
-    routes = getRoutes<TypedRoutes>();
-    usersId = 42;
+  routes = getRoutes<TypedRoutes>();
+  usersId = 42;
 }
 ```
 
 <br/>
 
-_Tip: if you prefer [routerLink] directive you can use `asArray` property_
+_Tip: if you prefer [routerLink] directive you can use `asArray` (asString is available too) property_
 
-Before:
-```angular2html
-<a [routerLink]="['/', 'profile', 'users', userId]">User Details</a>
+**Before:**
+
+```html
+<a [routerLink]="['/', 'profile', 'users', userId]">Navigate</a>
 ```
 
-After
-```angular2html
-<a [routerLink]="routes.profile.users[userId].asArray">User Details</a>
-```
+**After:**
 
-_Bonus: `asString` is available too, but `routerLink` directive automatically calls `toString()`_
+```html
+<a [routerLink]="routes.profile.users[userId].asArray">Navigate</a>
+```
