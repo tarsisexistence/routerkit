@@ -1,1 +1,1 @@
-export * from './core/getRoutes';
+export * from './core';
