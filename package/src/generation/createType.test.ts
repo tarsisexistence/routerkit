@@ -1,18 +1,22 @@
 import {
-  createIndexType,
-  createIntersectionType,
-  createTupleType,
+  createIndexTypeNode,
+  createIntersectionTypeNode,
+  createTupleTypeNode,
   createType,
-  createTypeTree,
-  createTypeWithIndex
-} from './createTypeTree';
+  createTypeNode,
+  createTypeNodeWithIndex,
+  createTypeReferenceNodeOfTuple,
+  createTypeTree
+} from './createType';
 
-describe('[generation] createTypeTree', () => {
-  describe('createTypeTree', () => {
-    test('should match for empty routes', () => {
-      expect(createTypeTree({})).toMatchSnapshot();
+describe('[generation] createType', () => {
+  describe('createType', () => {
+    test('should match snapshot', () => {
+      expect(createType({ home: ['/', 'home'] })).toMatchSnapshot();
     });
+  });
 
+  describe('createTypeTree', () => {
     test('should match for routes with intersection in front', () => {
       // type Routes = { root: ['/'] } & { [city: string]: ['/', string] };
       expect(
@@ -76,14 +80,14 @@ describe('[generation] createTypeTree', () => {
     });
   });
 
-  describe('createType', () => {
+  describe('createTypeNode', () => {
     test('should match empty routes', () => {
-      expect(createType({})).toMatchSnapshot();
+      expect(createTypeNode({})).toMatchSnapshot();
     });
 
     test('should match regular routes', () => {
       expect(
-        createType({
+        createTypeNode({
           root: ['/'],
           home: ['/', 'home'],
           about: ['/', 'about'],
@@ -96,7 +100,7 @@ describe('[generation] createTypeTree', () => {
 
     test('should match nested regular routes', () => {
       expect(
-        createType({
+        createTypeNode({
           root: ['/'],
           home: {
             place: ['/', 'home', 'place']
@@ -120,7 +124,7 @@ describe('[generation] createTypeTree', () => {
 
     test('should match routes with children intersection', () => {
       expect(
-        createType({
+        createTypeNode({
           root: ['/'],
           home: {
             ':place': ['/', 'home', 'string']
@@ -144,10 +148,10 @@ describe('[generation] createTypeTree', () => {
     });
   });
 
-  describe('createTypeWithIndex', () => {
+  describe('createTypeNodeWithIndex', () => {
     test('should match IntersectionTypeNode', () => {
       expect(
-        createTypeWithIndex({
+        createTypeNodeWithIndex({
           info: ['/', 'info'],
           ':city': ['/', 'string']
         })
@@ -156,17 +160,17 @@ describe('[generation] createTypeTree', () => {
 
     test('should match only index type inside of type TypeLiteralNode', () => {
       expect(
-        createTypeWithIndex({
+        createTypeNodeWithIndex({
           ':city': ['/', 'string']
         })
       ).toMatchSnapshot();
     });
   });
 
-  describe('createIntersectionType', () => {
+  describe('createIntersectionTypeNode', () => {
     test('should match IntersectionTypeNode', () => {
       expect(
-        createIntersectionType(
+        createIntersectionTypeNode(
           {
             info: ['/', 'info']
           },
@@ -177,18 +181,18 @@ describe('[generation] createTypeTree', () => {
 
     test('should match IntersectionTypeNode with empty TypeLiteralNode of routes without variable and index type of TypeLiteralNode', () => {
       // {} & { [city: string]: ['/', 'string'] }
-      expect(createIntersectionType({}, { name: 'city', value: ['/', 'string'] })).toMatchSnapshot();
+      expect(createIntersectionTypeNode({}, { name: 'city', value: ['/', 'string'] })).toMatchSnapshot();
     });
   });
 
-  describe('createIndexType', () => {
+  describe('createIndexTypeNode', () => {
     test('should match indexType of tuple', () => {
-      expect(createIndexType({ name: 'city', value: ['/', 'string'] })).toMatchSnapshot();
+      expect(createIndexTypeNode({ name: 'city', value: ['/', 'string'] })).toMatchSnapshot();
     });
 
     test('should match indexType of typeNodes', () => {
       expect(
-        createIndexType({
+        createIndexTypeNode({
           name: 'city',
           value: {
             street: ['/', 'string', 'street']
@@ -198,17 +202,31 @@ describe('[generation] createTypeTree', () => {
     });
   });
 
-  describe('createTupleType', () => {
+  describe('createTupleTypeNode', () => {
     test('should match empty tuple', () => {
-      expect(createTupleType([])).toMatchSnapshot();
+      expect(createTupleTypeNode([])).toMatchSnapshot();
     });
 
     test('should match regular tuple', () => {
-      expect(createTupleType(['/', 'location', 'map', 'general'])).toMatchSnapshot();
+      expect(createTupleTypeNode(['/', 'location', 'map', 'general'])).toMatchSnapshot();
     });
 
-    test('should match tuple with string keywords', () => {
-      expect(createTupleType(['/', 'location', 'map', 'string'])).toMatchSnapshot();
+    test('should match tuple with string keyword', () => {
+      expect(createTupleTypeNode(['/', 'location', 'map', 'string'])).toMatchSnapshot();
+    });
+  });
+
+  describe('createTypeReferenceNodeOfTuple', () => {
+    test('should match snapshot of empty tuple', () => {
+      expect(createTypeReferenceNodeOfTuple([])).toMatchSnapshot();
+    });
+
+    test('should match snapshot with tuple of regular tuple', () => {
+      expect(createTypeReferenceNodeOfTuple(['/', 'location', 'map', 'general'])).toMatchSnapshot();
+    });
+
+    test('should match snapshot with tuple with string keyword', () => {
+      expect(createTypeReferenceNodeOfTuple(['/', 'location', 'map', 'string'])).toMatchSnapshot();
     });
   });
 });

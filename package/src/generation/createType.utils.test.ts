@@ -1,11 +1,13 @@
 import {
+  createImportRouteType,
+  createStringLiteral,
   createValidRouteIdentifier,
   handleRoutesWithVariable,
   hasIndexRoute,
   validateIdentifierValue
-} from './createTypeTree.utils';
+} from './createType.utils';
 
-describe('[generation] createTypeTree utils', () => {
+describe('[generation] createType utils', () => {
   describe('hasIndexRoute', () => {
     test('should return false when empty object', () => {
       expect(hasIndexRoute({})).toBeFalsy();
@@ -120,6 +122,12 @@ describe('[generation] createTypeTree utils', () => {
     });
   });
 
+  describe('createStringLiteral', () => {
+    test('should match snapshot', () => {
+      expect(createStringLiteral('someString')).toMatchSnapshot();
+    });
+  });
+
   describe('createValidRouteIdentifier', () => {
     test('should match createIdentifier', () => {
       expect(createValidRouteIdentifier('info')).toMatchSnapshot();
@@ -137,6 +145,12 @@ describe('[generation] createTypeTree utils', () => {
 
     test('should return camelCase when string is invalid', () => {
       expect(validateIdentifierValue('user-center')).toBe('userCenter');
+    });
+  });
+
+  describe('createImportRouteType', () => {
+    test('should match snapshot', () => {
+      expect(createImportRouteType()).toMatchSnapshot();
     });
   });
 });

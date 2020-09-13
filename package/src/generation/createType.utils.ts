@@ -1,6 +1,7 @@
 import * as ts from 'typescript';
 
 import { isIndexRoute, isVariable, isWildcard, kebabCaseToCamelCase } from './utils';
+import { PACKAGE_NAME, TYPED_ROUTE_TYPE_NAME } from './constants';
 
 export const hasIndexRoute = (routes: RouterKit.Generation.VirtualRoutes): boolean =>
   Object.keys(routes).some(route => isIndexRoute(route));
@@ -35,8 +36,22 @@ export const handleRoutesWithVariable = (
     }
   );
 
+export const createStringLiteral = (value: string): ts.StringLiteral => ts.createStringLiteral(value, true);
+
 export const createValidRouteIdentifier = (prop: string) =>
-  prop.includes('-') ? ts.createStringLiteral(prop) : ts.createIdentifier(prop);
+  prop.includes('-') ? createStringLiteral(prop) : ts.createIdentifier(prop);
 
 export const validateIdentifierValue = (prop: string): string =>
   prop.includes('-') ? kebabCaseToCamelCase(prop) : prop;
+
+export const createImportRouteType = (): ts.ImportDeclaration =>
+  ts.createImportDeclaration(
+    undefined,
+    undefined,
+    ts.createImportClause(
+      undefined,
+      ts.createNamedImports([ts.createImportSpecifier(undefined, ts.createIdentifier(TYPED_ROUTE_TYPE_NAME))]),
+      false
+    ),
+    createStringLiteral(PACKAGE_NAME)
+  );

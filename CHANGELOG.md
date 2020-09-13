@@ -1,3 +1,9 @@
+# 0.5.0 2020-09-13
+
+- Add support for toString()
+- Updated API for proxy (now available properties "asArray" and "asString" to get pure value from the prototypes)
+- Updated documentation
+
 # 0.4.0 2020-09-12
 
 - Changed generated routes type name (was "RouterKitTypes, became "TypedRoutes")
@@ -8,8 +14,8 @@
 
 # 0.3.1 2020-09-12
 
-- Updated documentation
 - Updated dependencies
+- Updated documentation
 
 # 0.3.0 2020-09-07
 
