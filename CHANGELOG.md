@@ -1,3 +1,10 @@
+# 0.6.0 2020-09-13
+
+- Add support for length property
+- Add support for callable Array.prototype properties
+- Fix not exported TypedRoute
+- Not updated documentation for the first time 😄
+
 # 0.5.0 2020-09-13
 
 - Add support for toString()
