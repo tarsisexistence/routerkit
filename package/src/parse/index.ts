@@ -24,10 +24,7 @@ export function parse(options: RouterKit.Parse.Options): Rule {
     projectSpinner.succeed(taskFinish('Project analyzed'));
 
     const parsingSpinner = ora(taskStart('Parsing routes')).start();
-    const now = Date.now();
     const parsedRoutes = parseRoutes(workspace, projectAST);
-    const end = Date.now();
-    console.log(`Time: ${(end - now) / 1000}`);
     parsingSpinner.succeed(taskFinish('Routes parsed', JSON.stringify(parsedRoutes, null, 4)));
 
     if (!dryRun) {
