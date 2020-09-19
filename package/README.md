@@ -47,10 +47,10 @@ Bonus: by getting the type of routes, we get a "big picture" of our application 
 
 ## Install
 
-Install the package from [npm](https://www.npmjs.com/):
+Install the package via [Angular schematic](https://angular.io/guide/schematics-for-libraries):
 
 ```sh
-npm install @routerkit/core  #  yarn add @routerkit/core
+ng add @routerkit/core
 ```
 
 <br/>
@@ -59,7 +59,7 @@ npm install @routerkit/core  #  yarn add @routerkit/core
 
 ### Schematic
 
-You can run [Angular schematic](https://cli.angular.io/) to generate the routes type:
+You can run [Angular schematic](https://angular.io/guide/schematics) to generate the routes type:
 
 ```sh
 ng g @routerkit/core:parse --project YOUR_PROJECT_NAME
