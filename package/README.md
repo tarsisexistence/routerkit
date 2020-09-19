@@ -8,7 +8,7 @@ A new approach to Angular routes:
 - **Easy setup.** Only 1 script to run before and 2 functions for use.
 - **Concise.** `[routerLink]="routes.one.two.three"` instead of `[routerLink]="['one','two','three']"`
 - **Versatile.** Supports modern and old fashion lazy routes syntax, and certainly eager routes.
-- **Tiny.** ~0.2kb. All the magic happens on the type level, runtime API is only one small function.
+- **Tiny.** ~0.4kb. All the magic happens on the type level, runtime API is only one small function.
 
 <br/>
 
