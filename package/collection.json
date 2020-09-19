@@ -1,9 +1,16 @@
 {
+  "extends": ["@schematics/angular"],
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
+    "ng-add": {
+      "factory": "./add/index#ngAdd",
+      "aliases": ["routerkit-init"],
+      "description": "Add and install RouterKit in package.json",
+      "schema": "schema.add.json"
+    },
     "parse": {
-      "description": "Parse the project and generate routes type",
       "factory": "./parse/index#parse",
+      "description": "Parse the project and generate routes type",
       "schema": "schema.parse.json"
     }
   }

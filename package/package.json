@@ -23,8 +23,10 @@
   "scripts": {
     "build": "../node_modules/.bin/tsc -p tsconfig.schematics.json",
     "build:watch": "../node_modules/.bin/tsc -p tsconfig.schematics.json --watch",
+    "copy:add": "cp schema.add.json ../dist/routerkit/schema.add.json",
+    "copy:parse": "cp schema.parse.json ../dist/routerkit/schema.parse.json",
+    "copy:schemas": "yarn copy:add && yarn copy:parse",
     "copy:collection": "cp collection.json ../dist/routerkit/collection.json",
-    "copy:schemas": "cp schema.parse.json ../dist/routerkit/schema.parse.json",
     "postbuild": "yarn copy:collection && yarn copy:schemas"
   },
   "schematics": "./collection.json",

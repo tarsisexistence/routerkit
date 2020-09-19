@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "SchematicsRouterKitNgAdd",
+  "title": "@routerkit/core ng-add schema",
+  "type": "object",
+  "properties": {
+    "skipInstall": {
+      "type": "boolean",
+      "description": "The flag to skip package installing.",
+      "default": false
+    }
+  }
+}
