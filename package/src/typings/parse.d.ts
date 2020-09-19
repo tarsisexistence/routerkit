@@ -1,5 +1,5 @@
 declare namespace RouterKit.Parse {
-  interface Options {
+  interface Schema {
     project: string;
     dryRun: boolean;
   }

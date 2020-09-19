@@ -24,7 +24,8 @@
     "build": "../node_modules/.bin/tsc -p tsconfig.schematics.json",
     "build:watch": "../node_modules/.bin/tsc -p tsconfig.schematics.json --watch",
     "copy:collection": "cp collection.json ../dist/routerkit/collection.json",
-    "postbuild": "npm run copy:collection"
+    "copy:schemas": "cp schema.parse.json ../dist/routerkit/schema.parse.json",
+    "postbuild": "yarn copy:collection && yarn copy:schemas"
   },
   "schematics": "./collection.json",
   "keywords": [

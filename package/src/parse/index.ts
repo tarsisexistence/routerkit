@@ -8,7 +8,7 @@ import { findAngularJSON, getProjectAST, getProjectTsconfigPath } from './utils.
 import { getRoutesTypeFilePath, getTypesFileName } from './utils';
 import { space, taskFinish, taskStart } from '../utils/common.utils';
 
-export function parse(options: RouterKit.Parse.Options): Rule {
+export function parse(options: RouterKit.Parse.Schema): Rule {
   return (tree: Tree) => {
     const { project: projectName, dryRun } = options;
 
