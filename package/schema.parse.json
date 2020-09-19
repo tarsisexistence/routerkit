@@ -1,15 +1,16 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "routerkit-ng-add",
-  "title": "@routerkit/core parse schematic",
+  "id": "SchematicsRouterKitParse",
+  "title": "@routerkit/core parse schema",
   "type": "object",
   "properties": {
     "project": {
       "type": "string",
-      "description": "Name of the project",
-      "$default": {
-        "$source": "projectName"
-      }
+      "description": "Name of the project"
+    },
+    "dryRun": {
+      "type": "boolean",
+      "description": "Parse project without touching filesystem"
     }
   },
   "required": ["project"]

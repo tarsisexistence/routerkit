@@ -10,6 +10,7 @@
     },
     "parse": {
       "factory": "./parse/index#parse",
+      "aliases": ["routerkit-parse"],
       "description": "Parse the project and generate routes type",
       "schema": "schema.parse.json"
     }
