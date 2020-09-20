@@ -1,4 +1,7 @@
 # RouterKit
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <a href="https://routeshub.gitbook.io/docs"><img src="https://raw.githubusercontent.com/retarsis/routerkit/master/assets/logo.png" align="right" alt="logo" /></a>
 
@@ -114,3 +117,22 @@ _Tip: if you prefer [routerLink] directive you can use `asArray` (asString is av
 ```html
 <a [routerLink]="routes.profile.users[userId].asArray">Navigate</a>
 ```
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/retarsis"><img src="https://avatars1.githubusercontent.com/u/21989873?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Max Tarsis</b></sub></a><br /><a href="#ideas-retarsis" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

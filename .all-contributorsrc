@@ -9,6 +9,7 @@
   ],
   "imageSize": 100,
   "commit": true,
+  "commitConvention": "angular",
   "contributors": [
     {
       "login": "retarsis",
@@ -16,23 +17,9 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/21989873?v=4",
       "profile": "https://github.com/retarsis",
       "contributions": [
-        "ideas",
-        "code",
-        "infra",
-        "doc",
-        "projectManagement"
-      ]
-    },
-    {
-      "login": "limitofzero",
-      "name": "Denis Makarov",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/16196664?v=4",
-      "profile": "https://github.com/limitofzero",
-      "contributions": [
-        "code",
         "ideas"
       ]
     }
   ],
-  "commitConvention": "Angular"
+  "contributorsPerLine": 7
 }
