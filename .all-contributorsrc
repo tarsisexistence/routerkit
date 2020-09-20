@@ -51,6 +51,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "LayZeeDK",
+      "name": "Lars Gyrup Brink Nielsen",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6364586?v=4",
+      "profile": "https://indepth.dev/author/layzee/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7
