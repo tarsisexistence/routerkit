@@ -1,7 +1,7 @@
 {
   "name": "@routerkit/core",
   "description": "the next-gen typed angular routes",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "author": "Max Tarsis (https://github.com/retarsis)",
   "repository": {
     "type": "git",

@@ -1,13 +1,20 @@
+# 0.7.0 2020-09-20
+
+- New ng-add schematic
+- Updated contributors
+- Updated dependencies
+- Added project contributors docs section
+
 # 0.6.0 2020-09-13
 
-- Add support for length property
-- Add support for callable Array.prototype properties
-- Fix not exported TypedRoute
+- Added support of "length" proxy property
+- Added support of callable Array.prototype properties
+- Fixed not exported TypedRoute
 - Not updated documentation for the first time 😄
 
 # 0.5.0 2020-09-13
 
-- Add support for toString()
+- Added support for toString()
 - Updated API for proxy (now available properties "asArray" and "asString" to get pure value from the prototypes)
 - Updated documentation
 
