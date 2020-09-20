@@ -127,7 +127,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/retarsis"><img src="https://avatars1.githubusercontent.com/u/21989873?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Max Tarsis</b></sub></a><br /><a href="#ideas-retarsis" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/retarsis"><img src="https://avatars1.githubusercontent.com/u/21989873?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Max Tarsis</b></sub></a><br /><a href="#ideas-retarsis" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/retarsis/routerkit/commits?author=retarsis" title="Code">💻</a> <a href="#infra-retarsis" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/retarsis/routerkit/commits?author=retarsis" title="Documentation">📖</a> <a href="#projectManagement-retarsis" title="Project Management">📆</a></td>
   </tr>
 </table>
 
