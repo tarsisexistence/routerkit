@@ -33,6 +33,15 @@
         "ideas",
         "code"
       ]
+    },
+    {
+      "login": "kirjs",
+      "name": "Kirill Cherkashin",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/2545357?v=4",
+      "profile": "https://twitter.com/kirjs",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7
