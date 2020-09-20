@@ -1,6 +1,6 @@
 # RouterKit
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <a href="https://routeshub.gitbook.io/docs"><img src="https://raw.githubusercontent.com/retarsis/routerkit/master/assets/logo.png" align="right" alt="logo" /></a>
@@ -128,6 +128,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/retarsis"><img src="https://avatars1.githubusercontent.com/u/21989873?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Max Tarsis</b></sub></a><br /><a href="#ideas-retarsis" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/retarsis/routerkit/commits?author=retarsis" title="Code">💻</a> <a href="#infra-retarsis" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/retarsis/routerkit/commits?author=retarsis" title="Documentation">📖</a> <a href="#projectManagement-retarsis" title="Project Management">📆</a></td>
+    <td align="center"><a href="https://github.com/limitofzero"><img src="https://avatars1.githubusercontent.com/u/16196664?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Макаров Денис</b></sub></a><br /><a href="#ideas-limitofzero" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/retarsis/routerkit/commits?author=limitofzero" title="Code">💻</a></td>
   </tr>
 </table>
 

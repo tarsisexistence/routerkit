@@ -23,6 +23,16 @@
         "doc",
         "projectManagement"
       ]
+    },
+    {
+      "login": "limitofzero",
+      "name": "Макаров Денис",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/16196664?v=4",
+      "profile": "https://github.com/limitofzero",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
