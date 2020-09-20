@@ -1,7 +1,4 @@
 # RouterKit
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <a href="https://routeshub.gitbook.io/docs"><img src="https://raw.githubusercontent.com/retarsis/routerkit/master/assets/logo.png" align="right" alt="logo" /></a>
 
@@ -117,6 +114,8 @@ _Tip: if you prefer [routerLink] directive you can use `asArray` (asString is av
 ```html
 <a [routerLink]="routes.profile.users[userId].asArray">Navigate</a>
 ```
+
+<br/>
 
 ## Contributors ✨
 
