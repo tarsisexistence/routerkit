@@ -22,7 +22,7 @@
 
 - Changed generated routes type name (was "RouterKitTypes, became "TypedRoutes")
 - Changed generated routes type keyword (was "declare", became "export")
-- The update of tsconfig paused, now needed manual import of the routes type
+- Paused tsconfig.json update (now needed manual import of the routes type)
 - Renamed API (was "getRoute", became "getPaths")
 - Updated documentation
 

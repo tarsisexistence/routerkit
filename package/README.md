@@ -91,7 +91,7 @@ import { TypedRoutes } from '{PATH_TO_TYPE}/{PROJECT_NAME}.routes.d.ts';
 
 @Component({
   selector: 'user-details-link',
-  template: `<a routerLink="{{ routes.profile.users['5'] }}">User Details</a>`
+  template: `<a routerLink="{{ routes.profile.users[usersId] }}">User Details</a>`
 })
 export class UserComponent {
   routes = getRoutes<TypedRoutes>();
