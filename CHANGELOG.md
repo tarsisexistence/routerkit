@@ -1,6 +1,10 @@
+# 0.7.2 2020-09-22
+
+- Fixed nx typescript "paths"
+
 # 0.7.0 2020-09-20
 
-- New ng-add schematic
+- Introduced new ng-add schematic
 - Updated contributors
 - Updated dependencies
 - Added project contributors docs section
