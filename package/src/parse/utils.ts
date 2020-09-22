@@ -1,5 +1,6 @@
 import {
   ArrayLiteralExpression,
+  ArrowFunction,
   CallExpression,
   ClassDeclaration,
   Expression,
@@ -148,7 +149,7 @@ const parseRoute = (
 
 const getLazyModuleDeclaration = (project: Project, loadChildren: RouterKit.Parse.LoadChildren): ClassDeclaration => {
   const { path, moduleName } = loadChildren;
-  const pathWithExtension = `${path}.ts`;
+  const pathWithExtension = path.endsWith('.ts') ? path : `${path}.ts`;
   const sourceFile = getSourceFileOrThrow(project, pathWithExtension);
   return sourceFile.getClassOrThrow(moduleName);
 };
@@ -416,15 +417,28 @@ const parseLoadChildrenFunction = (fnNode: CallExpression): RouterKit.Parse.Load
 
   const args = fnNode.getArguments()?.[0];
   if (args && Node.isArrowFunction(args)) {
-    const body = args.getBody();
-    if (Node.isPropertyAccessExpression(body)) {
-      parsedLoadChildren.moduleName = body.getName();
-    }
+    return parseLazyModuleArrowFn(args);
   }
 
   const { path, moduleName } = parsedLoadChildren;
   if (typeof path === 'string' && moduleName) {
     return { path, moduleName };
+  }
+
+  return null;
+};
+
+const parseLazyModuleArrowFn = (node: ArrowFunction): RouterKit.Parse.LoadChildren | null => {
+  const body = node.getBody();
+  if (Node.isPropertyAccessExpression(body)) {
+    const module = body.getNameNode();
+    const clazz = findClassDeclarationByIdentifier(module);
+    if (clazz) {
+      return {
+        path: clazz.getSourceFile().getFilePath(),
+        moduleName: module.getText()
+      };
+    }
   }
 
   return null;
