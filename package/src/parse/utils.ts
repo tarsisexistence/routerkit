@@ -16,6 +16,9 @@ import {
 import { resolve, sep } from 'path';
 import { evaluate } from '@wessberg/ts-evaluator';
 
+// already parsed modules
+const parsedModules = new Set<Type>();
+
 import { getSourceFileOrThrow } from './get-source-file-from-paths';
 export const getRouteModuleForRootExpressions: (
   routerModuleClass: ClassDeclaration
@@ -196,11 +199,21 @@ export const findRouteChildren = (routerType: Type, module: ClassDeclaration): C
 
   while (modules.length) {
     const currentModule = modules.shift() as ClassDeclaration;
+    if (parsedModules.has(currentModule.getType())) {
+      console.log(currentModule.getType().getText());
+      continue;
+    }
+
     const imports = getImportsFromModuleDeclaration(currentModule);
+
     const { routerExpressions, moduleDeclarations } = divideRouterExpressionsAndModulesDeclarations(
       imports,
       routerType
     );
+
+    if (!routerExpressions.length) {
+      parsedModules.add(currentModule.getType());
+    }
 
     routerModules.push(...routerExpressions);
     modules.unshift(...moduleDeclarations);
