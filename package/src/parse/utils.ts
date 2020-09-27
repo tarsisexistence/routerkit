@@ -97,6 +97,7 @@ export const getRouterModuleCallExpressions: (
 export const parseRoutes = (
   routes: ArrayLiteralExpression,
   routerType: Type,
+  parsedModules: Set<Type>,
   project: Project
 ): RouterKit.Parse.RouteTree => {
   let root: RouterKit.Parse.RouteTree = {};
@@ -106,11 +107,11 @@ export const parseRoutes = (
     let parsedRoute: RouterKit.Parse.RouteTree | null = null;
 
     if (Node.isObjectLiteralExpression(el)) {
-      parsedRoute = parseRoute(el, routerType, project);
+      parsedRoute = parseRoute(el, routerType, parsedModules, project);
     } else if (Node.isIdentifier(el)) {
       const value = tryFindVariableValue(el, Node.isObjectLiteralExpression);
       if (value) {
-        parsedRoute = parseRoute(value, routerType, project);
+        parsedRoute = parseRoute(value, routerType, parsedModules, project);
       }
     }
 
@@ -125,6 +126,7 @@ export const parseRoutes = (
 const parseRoute = (
   route: ObjectLiteralExpression,
   routerType: Type,
+  parsedModules: Set<Type>,
   project: Project
 ): RouterKit.Parse.RouteTree | null => {
   const root: RouterKit.Parse.RouteTree = {};
@@ -138,10 +140,10 @@ const parseRoute = (
 
   if (loadChildren) {
     const lazyModule = getLazyModuleDeclaration(project, loadChildren);
-    const lazyModuleRouteTree = createModuleRouteTree(project, lazyModule, routerType);
+    const lazyModuleRouteTree = createModuleRouteTree(project, lazyModule, parsedModules, routerType);
     root[routeName] = { ...lazyModuleRouteTree };
   } else {
-    root[routeName] = readChildren(route, routerType, project);
+    root[routeName] = readChildren(route, routerType, parsedModules, project);
   }
 
   return root;
@@ -161,25 +163,27 @@ export const createProjectRouteTree = (
   routerType: Type
 ): RouterKit.Parse.RouteTree => {
   let root: RouterKit.Parse.RouteTree = {};
-  const eagersTree = createModuleRouteTree(project, appModule, routerType);
+  const parsedModules = new Set<Type>();
+  const eagersTree = createModuleRouteTree(project, appModule, parsedModules, routerType);
   root = { ...root, ...eagersTree };
 
-  const parsedRoot = parseRoutes(forRootExpr, routerType, project);
+  const parsedRoot = parseRoutes(forRootExpr, routerType, parsedModules, project);
   return { ...root, ...parsedRoot };
 };
 
 const createModuleRouteTree = (
   project: Project,
   module: ClassDeclaration,
+  parsedModules: Set<Type>,
   routerType: Type
 ): RouterKit.Parse.RouteTree => {
   let root: RouterKit.Parse.RouteTree = {};
 
-  const eagerForChildExpr = findRouteChildren(routerType, module);
+  const eagerForChildExpr = findRouteChildren(routerType, module, parsedModules);
   for (const forChildExpr of eagerForChildExpr) {
     const routes = findRouterModuleArgumentValue(forChildExpr);
     if (routes) {
-      const parsed = parseRoutes(routes, routerType, project);
+      const parsed = parseRoutes(routes, routerType, parsedModules, project);
       root = { ...root, ...parsed };
     }
   }
@@ -190,17 +194,30 @@ const createModuleRouteTree = (
 /**
  * Get Module Declaration, parse imports, find route modules and parse them
  */
-export const findRouteChildren = (routerType: Type, module: ClassDeclaration): CallExpression[] => {
+export const findRouteChildren = (
+  routerType: Type,
+  module: ClassDeclaration,
+  parsedModules: Set<Type>
+): CallExpression[] => {
   const routerModules: CallExpression[] = [];
   const modules = [module];
 
   while (modules.length) {
     const currentModule = modules.shift() as ClassDeclaration;
+    if (parsedModules.has(currentModule.getType())) {
+      continue;
+    }
+
     const imports = getImportsFromModuleDeclaration(currentModule);
+
     const { routerExpressions, moduleDeclarations } = divideRouterExpressionsAndModulesDeclarations(
       imports,
       routerType
     );
+
+    if (!routerExpressions.length) {
+      parsedModules.add(currentModule.getType());
+    }
 
     routerModules.push(...routerExpressions);
     modules.unshift(...moduleDeclarations);
@@ -337,11 +354,16 @@ const readPath = (node: ObjectLiteralExpression, typeChecker: TypeChecker): stri
   return '/';
 };
 
-const readChildren = (node: ObjectLiteralExpression, routerType: Type, project: Project): RouterKit.Parse.RouteTree => {
+const readChildren = (
+  node: ObjectLiteralExpression,
+  routerType: Type,
+  parsedModules: Set<Type>,
+  project: Project
+): RouterKit.Parse.RouteTree => {
   let root: RouterKit.Parse.RouteTree = {};
   const expression = getPropertyValue(node, 'children');
   if (expression && Node.isArrayLiteralExpression(expression)) {
-    const routes = parseRoutes(expression, routerType, project);
+    const routes = parseRoutes(expression, routerType, parsedModules, project);
     root = { ...root, ...routes };
   } // todo case, where children is a variable
 
