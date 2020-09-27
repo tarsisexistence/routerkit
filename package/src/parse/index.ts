@@ -10,6 +10,7 @@ import { space, taskFinish, taskStart } from '../utils/common.utils';
 
 export function parse(options: RouterKit.Parse.Schema): Rule {
   return (tree: Tree) => {
+    const startTime = Date.now();
     const { project: projectName, dryRun } = options;
 
     if (!projectName) {
@@ -17,14 +18,20 @@ export function parse(options: RouterKit.Parse.Schema): Rule {
     }
 
     const projectSpinner = ora(taskStart('Analyzing project')).start();
+    const startAnalyzing = Date.now();
     const angularJson = findAngularJSON(tree);
     const workspace = angularJson.projects[projectName];
     const tsconfigPath = getProjectTsconfigPath(workspace, projectName);
     const projectAST = getProjectAST(tsconfigPath);
+    const endAnalyzing = Date.now();
+    console.log('Analyze phase: ', endAnalyzing - startAnalyzing);
     projectSpinner.succeed(taskFinish('Project analyzed'));
 
     const parsingSpinner = ora(taskStart('Parsing routes')).start();
+    const start = Date.now();
     const parsedRoutes = parseRoutes(workspace, projectAST);
+    const end = Date.now();
+    console.log('Parsed time: ', end - start);
     parsingSpinner.succeed(taskFinish('Routes parsed', JSON.stringify(parsedRoutes, null, 4)));
 
     if (!dryRun) {
@@ -45,6 +52,9 @@ export function parse(options: RouterKit.Parse.Schema): Rule {
        * updatingTsconfigSpinner.succeed(taskFinish('Project tsconfig is up-to-date', tsconfigPath));
        */
     }
+
+    const endTime = Date.now();
+    console.log('Whole time: ', endTime - startTime);
 
     space();
 
