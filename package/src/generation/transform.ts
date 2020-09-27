@@ -11,10 +11,10 @@ export function transform(
 
   Object.keys(flattenRoutes).forEach(path => {
     const isEndRoute = Object.keys(flattenRoutes[path]).length === 0;
-    const isMultipath = path.includes('/');
-    const nextTuple = path === 'root' || isMultipath ? currentTuple.slice() : currentTuple.concat(normalizePath(path));
+    const isMultiPath = path.includes('/');
+    const nextTuple = path === 'root' || isMultiPath ? currentTuple.slice() : currentTuple.concat(normalizePath(path));
 
-    if (isMultipath) {
+    if (isMultiPath) {
       const multiPathState = transformPathToState(path, []);
       let vRoutesNested = vRoutes;
 

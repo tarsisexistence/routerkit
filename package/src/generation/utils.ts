@@ -11,8 +11,7 @@ export function flatRoutes(
   }
 
   const flattenRoutes = flatRoutes(routes.root);
-
-  const normalizedRoutes = Object.keys(routes.root).length > 0 ? excludeRoot(routes) : routes;
+  const normalizedRoutes = Object.keys(routes.root).length === 0 ? routes : excludeRoot(routes);
 
   return {
     ...normalizedRoutes,
