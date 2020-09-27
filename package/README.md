@@ -20,12 +20,9 @@ A new approach to Angular routes:
 
 ## What problems does it solve?
 
-- Prevents errors, typos with route paths
+- Prevents errors, typos, mistakes with route paths
 - Reduces the number of magic strings
-- Collects all routes into one "big picture" of the particular application
-
-These factors ultimately affect the quality of the software.
-Bonus: by getting the type of routes, we get a "big picture" of our application routes, which allows us to quickly understand how the application works for end-users.
+- Collects all routes into one "big picture" of the particular angular project
 
 <br/>
 
