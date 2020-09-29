@@ -1,0 +1,47 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debugging Schematics - parse",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/node_modules/@angular/cli/bin/ng",
+      "args": [ 
+        "g",
+        "@routerkit/core:parse",
+        "--project",
+        "example-app",
+      ],
+      "sourceMaps": true,
+      "outFiles": [
+        "${workspaceFolder}/dist/routerkit/**/*.js"
+      ],
+      "outputCapture": "std",
+      "preLaunchTask": "npm: build:all",
+    }, 
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debugging Schematics - ngAdd",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/node_modules/@angular/cli/bin/ng",
+      "args": [
+        "add",
+        "./dist/routerkit/",
+        "--skipInstall",
+      ],
+      "sourceMaps": true,
+      "outFiles": [
+        "${workspaceFolder}/dist/routerkit/**/*.js"
+      ],
+      "outputCapture": "std",
+      "preLaunchTask": "npm: build:all",
+      "postDebugTask": "restore package*.json",
+    }
+  ]
+}
