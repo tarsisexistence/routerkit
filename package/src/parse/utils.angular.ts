@@ -10,7 +10,6 @@ export const findAngularJSON = (tree: Tree): WorkspaceSchema => {
     throw new Error("angular.json doesn't exist");
   }
 
-  // TODO: why toString then parse
   const content = angularJson.toString();
   return JSON.parse(content);
 };

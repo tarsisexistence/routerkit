@@ -1,26 +1,30 @@
 import * as ora from 'ora';
 import { Rule, Tree } from '@angular-devkit/schematics';
+import { resolve } from 'path';
 
 import { parseRoutes } from './parseRoutes';
 import { generateRoutesType } from '../generation/generateRoutesType';
 import { generateFile } from '../generation/utils';
 import { findAngularJSON, getProjectAST, getProjectTsconfigPath } from './utils.angular';
-import { getRoutesTypeFilePath, getTypesFileName } from './utils';
 import { space, taskFinish, taskStart } from '../utils/common.utils';
+import { findFilePath } from '../utils/fs.utils';
 
 export function parse(options: RouterKit.Parse.Schema): Rule {
   return (tree: Tree) => {
     const { project: projectName, dryRun } = options;
+    const ROOT_DIR = findFilePath(process.cwd());
 
     if (!projectName) {
       throw new Error('Project name expected.');
+    } else if (ROOT_DIR === null) {
+      throw new Error("Can't find angular.json");
     }
 
     const projectSpinner = ora(taskStart('Analyzing project')).start();
     const angularJson = findAngularJSON(tree);
     const workspace = angularJson.projects[projectName];
-    const tsconfigPath = getProjectTsconfigPath(workspace, projectName);
-    const projectAST = getProjectAST(tsconfigPath);
+    const TSCONFIG_PATH = getProjectTsconfigPath(workspace, projectName);
+    const projectAST = getProjectAST(TSCONFIG_PATH);
     projectSpinner.succeed(taskFinish('Project analyzed'));
 
     const parsingSpinner = ora(taskStart('Parsing routes')).start();
@@ -29,8 +33,8 @@ export function parse(options: RouterKit.Parse.Schema): Rule {
 
     if (!dryRun) {
       const generatingTypeSpinner = ora(taskStart('Generating type')).start();
-      const fileName = getTypesFileName(projectName);
-      const filePath = getRoutesTypeFilePath(tsconfigPath, fileName);
+      const fileName = `${projectName}.routes.d.ts`;
+      const filePath = resolve(ROOT_DIR, fileName);
       const routesType = generateRoutesType(parsedRoutes, fileName);
       generatingTypeSpinner.succeed(taskFinish('Type generated'));
 
