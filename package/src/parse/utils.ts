@@ -221,7 +221,7 @@ export const findRouteChildren = (
     }
 
     routerModules.push(...routerExpressions);
-    modules.push(...moduleDeclarations);
+    modules.unshift(...moduleDeclarations);
   }
 
   return routerModules;
