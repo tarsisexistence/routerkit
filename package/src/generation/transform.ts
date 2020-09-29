@@ -2,15 +2,13 @@ import { flatRoutes } from './utils';
 import { isLeaf, normalizePath } from './generation.utils';
 import { transformPathToState } from '../utils/routeshub.utils';
 
-export function transform(
+function transformer(
   routes: RouterKit.Generation.TransformRoutes,
   vRoutes: RouterKit.Generation.VirtualRoutes = {},
-  currentTuple = ['/']
+  currentTuple: string[]
 ): RouterKit.Generation.VirtualRoutes {
-  const flattenRoutes = flatRoutes(routes);
-
-  Object.keys(flattenRoutes).forEach(path => {
-    const isEndRoute = Object.keys(flattenRoutes[path]).length === 0;
+  Object.keys(routes).forEach(path => {
+    const isEndRoute = Object.keys(routes[path]).length === 0;
     const isMultiPath = path.includes('/');
     const nextTuple = path === 'root' || isMultiPath ? currentTuple.slice() : currentTuple.concat(normalizePath(path));
 
@@ -34,8 +32,8 @@ export function transform(
           } else {
             vRoutesNested[separatePath] = vRoutesNested[separatePath] ?? {};
 
-            const transformedNestedRoutes = transform(
-              flattenRoutes[path],
+            const transformedNestedRoutes = transformer(
+              routes[path],
               vRoutesNested[separatePath] as RouterKit.Generation.VirtualRoutes,
               nextTuple
             );
@@ -63,8 +61,8 @@ export function transform(
     } else if (isEndRoute) {
       vRoutes[path] = path in vRoutes ? { ...vRoutes[path], root: nextTuple } : nextTuple;
     } else {
-      const transformedNestedRoutes = transform(
-        flattenRoutes[path],
+      const transformedNestedRoutes = transformer(
+        routes[path],
         vRoutes[path] as RouterKit.Generation.VirtualRoutes,
         nextTuple
       );
@@ -78,4 +76,14 @@ export function transform(
   });
 
   return vRoutes;
+}
+
+export function transform(routes: RouterKit.Generation.TransformRoutes): RouterKit.Generation.VirtualRoutes {
+  const flattenRoutes = flatRoutes(routes);
+
+  if (Object.keys(flattenRoutes).length === 0 && 'root' in routes) {
+    flattenRoutes.root = {};
+  }
+
+  return transformer(flattenRoutes, {}, ['/']);
 }

@@ -1,110 +1,103 @@
 import { flatRoutes, kebabCaseToCamelCase } from './utils';
 
 describe('[generation] utils', () => {
-  describe('[generation] flatRoutes', () => {
-    test('should return the same when no root', () => {
-      expect(
-        flatRoutes({
-          home: {},
-          location: {}
-        })
-      ).toEqual({
-        home: {},
-        location: {}
-      });
+  describe('flatRoutes', () => {
+    test('should not flat when empty', () => {
+      expect(flatRoutes({})).toEqual({});
     });
 
-    test('should return the same when empty root', () => {
+    test('should flat single root', () => {
+      expect(flatRoutes({ root: {} })).toEqual({});
+    });
+
+    test('should not flat when no root', () => {
+      expect(
+        flatRoutes({
+          a: {},
+          b: {},
+          c: {}
+        })
+      ).toEqual({ a: {}, b: {}, c: {} });
+    });
+
+    test('should not flat when root is empty', () => {
       expect(
         flatRoutes({
           root: {},
-          home: {},
-          location: {}
+          a: {},
+          b: {}
+        })
+      ).toEqual({ root: {}, a: {}, b: {} });
+    });
+
+    test('should flat root on next level', () => {
+      expect(
+        flatRoutes({
+          a: { root: {} }
+        })
+      ).toEqual({
+        a: {}
+      });
+    });
+
+    test('should flat nested route of root', () => {
+      expect(
+        flatRoutes({
+          root: { a: {} }
+        })
+      ).toEqual({
+        a: {}
+      });
+    });
+
+    test('should not flat root on next level when there is another route', () => {
+      expect(
+        flatRoutes({
+          a: { root: {}, b: {} }
+        })
+      ).toEqual({
+        a: { root: {}, b: {} }
+      });
+    });
+
+    test('should flat root on next level with another route', () => {
+      expect(
+        flatRoutes({
+          root: { root: {}, b: {} }
         })
       ).toEqual({
         root: {},
-        home: {},
-        location: {}
+        b: {}
       });
     });
 
-    test('should flat one lvl deep nested routes inside root', () => {
+    test('should flat second level of nesting', () => {
       expect(
         flatRoutes({
-          root: {
-            map: {},
-            car: {}
-          },
-          home: {},
-          location: {}
+          a: { root: { root: {} } }
         })
       ).toEqual({
-        location: {},
-        home: {},
-        map: {},
-        car: {}
+        a: {}
       });
     });
 
-    test('should flat one lvl deep nested routes inside root with empty root', () => {
+    test('should flat second level of nesting nesting with other routes', () => {
       expect(
         flatRoutes({
-          root: {
-            root: {},
-            map: {},
-            car: {}
-          },
-          home: {},
-          location: {}
+          a: { root: { root: { b: {}, c: {} } } }
         })
       ).toEqual({
-        root: {},
-        location: {},
-        home: {},
-        map: {},
-        car: {}
+        a: { b: {}, c: {} }
       });
     });
 
-    test('should flat two lvl deep nested routes inside root', () => {
+    test('should flat second level of nesting nesting with other routes and root', () => {
       expect(
         flatRoutes({
-          root: {
-            root: {
-              map: {},
-              car: {}
-            }
-          },
-          home: {},
-          location: {}
+          a: { root: { root: { root: {}, b: {}, c: {} } } }
         })
       ).toEqual({
-        location: {},
-        home: {},
-        map: {},
-        car: {}
-      });
-    });
-
-    test('should flat two lvl deep nested routes inside root with empty root', () => {
-      expect(
-        flatRoutes({
-          root: {
-            root: {
-              root: {},
-              map: {},
-              car: {}
-            }
-          },
-          home: {},
-          location: {}
-        })
-      ).toEqual({
-        root: {},
-        location: {},
-        home: {},
-        map: {},
-        car: {}
+        a: { root: {}, b: {}, c: {} }
       });
     });
 
@@ -116,19 +109,19 @@ describe('[generation] utils', () => {
               root: {
                 nest: {}
               },
-              map: {},
-              car: {}
+              a: {},
+              b: {}
             }
           },
-          home: {},
-          location: {}
+          c: {},
+          d: {}
         })
       ).toEqual({
-        nest: {},
-        location: {},
-        home: {},
-        map: {},
-        car: {}
+        a: {},
+        b: {},
+        c: {},
+        d: {},
+        nest: {}
       });
     });
   });

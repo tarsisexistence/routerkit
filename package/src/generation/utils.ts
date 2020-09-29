@@ -1,24 +1,6 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { Project } from 'ts-morph';
 
-import { excludeRoot } from './generation.utils';
-
-export function flatRoutes(
-  routes: RouterKit.Generation.TransformRoutes
-): Omit<RouterKit.Generation.TransformRoutes, 'root'> {
-  if (routes.root === undefined) {
-    return routes;
-  }
-
-  const flattenRoutes = flatRoutes(routes.root);
-  const normalizedRoutes = Object.keys(routes.root).length === 0 ? routes : excludeRoot(routes);
-
-  return {
-    ...normalizedRoutes,
-    ...flattenRoutes
-  };
-}
-
 export const includeRoutesTypeIntoTsconfig = (tsconfigPath: string, fileName: string): void => {
   const tsconfigFile = readFileSync(tsconfigPath);
   const tsconfigJson: { include?: string[] } = JSON.parse(tsconfigFile.toString());
@@ -63,3 +45,35 @@ export const generateFile = ({
 }): void => {
   project.createSourceFile(filePath, output, { overwrite: true }).saveSync();
 };
+
+export function flatRoutes(
+  routes: RouterKit.Generation.TransformRoutes
+): Omit<RouterKit.Generation.TransformRoutes, 'root'> {
+  let result: Record<string, any> = {};
+
+  const routesKeys = Object.keys(routes);
+  const routesLength = routesKeys.length;
+
+  for (const route of routesKeys) {
+    const flattenRoutes = flatRoutes(routes[route]);
+
+    if (route === 'root') {
+      const isEmptyRootRoute = Object.keys(flattenRoutes).length === 0;
+
+      if (isEmptyRootRoute && routesLength === 1) {
+        return {};
+      } else if (isEmptyRootRoute && routesLength > 1) {
+        result.root = {};
+      } else {
+        result = {
+          ...result,
+          ...flattenRoutes
+        };
+      }
+    } else {
+      result[route] = flattenRoutes;
+    }
+  }
+
+  return result;
+}
