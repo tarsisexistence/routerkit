@@ -84,7 +84,7 @@ export class UserComponent {
 import { Component } from '@angular/core';
 
 import { getRoutes } from '@routerkit/core';
-import { TypedRoutes } from '{PATH_TO_TYPE}/{PROJECT_NAME}.routes.d.ts';
+import { TypedRoutes } from '{ROOT}/{PROJECT_NAME}.routes.d.ts';
 
 @Component({
   selector: 'user-details-link',
