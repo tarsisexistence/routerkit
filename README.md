@@ -128,6 +128,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://twitter.com/kirjs"><img src="https://avatars0.githubusercontent.com/u/2545357?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kirill Cherkashin</b></sub></a><br /><a href="#ideas-kirjs" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/retarsis/routerkit/commits?author=kirjs" title="Documentation">📖</a></td>
     <td align="center"><a href="https://thekiba.io/"><img src="https://avatars0.githubusercontent.com/u/1910515?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrew Grekov</b></sub></a><br /><a href="#ideas-thekiba" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://indepth.dev/author/layzee/"><img src="https://avatars1.githubusercontent.com/u/6364586?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lars Gyrup Brink Nielsen</b></sub></a><br /><a href="https://github.com/retarsis/routerkit/commits?author=LayZeeDK" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/JoepKockelkorn"><img src="https://avatars3.githubusercontent.com/u/12891645?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joep Kockelkorn</b></sub></a><br /><a href="https://github.com/retarsis/routerkit/issues?q=author%3AJoepKockelkorn" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

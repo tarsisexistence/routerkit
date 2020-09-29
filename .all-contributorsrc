@@ -61,6 +61,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "JoepKockelkorn",
+      "name": "Joep Kockelkorn",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/12891645?v=4",
+      "profile": "https://github.com/JoepKockelkorn",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7
