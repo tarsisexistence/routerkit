@@ -202,9 +202,9 @@ export const findRouteChildren = (
   const routerModules: CallExpression[] = [];
   const modules = [module];
 
-  while (modules.length) {
-    const currentModule = modules.shift() as ClassDeclaration;
-    if (parsedModules.has(currentModule.getType())) {
+  for (let i = 0; i < modules.length; i++) {
+    const currentModule = modules[i];
+    if (i !== 0 && parsedModules.has(currentModule.getType())) {
       continue;
     }
 
@@ -220,14 +220,17 @@ export const findRouteChildren = (
     }
 
     routerModules.push(...routerExpressions);
-    modules.unshift(...moduleDeclarations);
+    modules.push(...moduleDeclarations);
   }
 
   return routerModules;
 };
 
 // todo need refactoring
-const divideRouterExpressionsAndModulesDeclarations = (modules: Node[], routerType: Type) => {
+const divideRouterExpressionsAndModulesDeclarations = (modules: Node[], routerType: Type): {
+  routerExpressions: CallExpression[],
+  moduleDeclarations: ClassDeclaration[]
+} => {
   const routerExpressions: CallExpression[] = [];
   const moduleDeclarations: ClassDeclaration[] = [];
   const isRouterType = isClassHasTheSameType.bind(null, routerType);
