@@ -196,15 +196,16 @@ const createModuleRouteTree = (
  */
 export const findRouteChildren = (
   routerType: Type,
-  module: ClassDeclaration,
+  rootModule: ClassDeclaration,
   parsedModules: Set<Type>
 ): CallExpression[] => {
   const routerModules: CallExpression[] = [];
-  const modules = [module];
+  const modules = [rootModule];
 
   while (modules.length) {
     const currentModule = modules.shift() as ClassDeclaration;
-    if (parsedModules.has(currentModule.getType())) {
+
+    if (currentModule !== rootModule && parsedModules.has(currentModule.getType())) {
       continue;
     }
 
@@ -227,7 +228,13 @@ export const findRouteChildren = (
 };
 
 // todo need refactoring
-const divideRouterExpressionsAndModulesDeclarations = (modules: Node[], routerType: Type) => {
+const divideRouterExpressionsAndModulesDeclarations = (
+  modules: Node[],
+  routerType: Type
+): {
+  routerExpressions: CallExpression[];
+  moduleDeclarations: ClassDeclaration[];
+} => {
   const routerExpressions: CallExpression[] = [];
   const moduleDeclarations: ClassDeclaration[] = [];
   const isRouterType = isClassHasTheSameType.bind(null, routerType);
