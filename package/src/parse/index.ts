@@ -20,14 +20,14 @@ export function parse(options: RouterKit.Parse.Schema): Rule {
       throw new Error("Can't find angular.json");
     }
 
-    const projectSpinner = ora(taskStart('Analyzing project')).start();
+    const projectSpinner = ora({ text: taskStart('Analyzing project'), stream: process.stdout }).start();
     const angularJson = findAngularJSON(tree);
     const workspace = angularJson.projects[projectName];
     const TSCONFIG_PATH = getProjectTsconfigPath(workspace, projectName);
     const projectAST = getProjectAST(TSCONFIG_PATH);
     projectSpinner.succeed(taskFinish('Project analyzed'));
 
-    const parsingSpinner = ora(taskStart('Parsing routes')).start();
+    const parsingSpinner = ora({ text: taskStart('Parsing routes'), stream: process.stdout }).start();
     const parsedRoutes = parseRoutes(workspace, projectAST);
     parsingSpinner.succeed(taskFinish('Routes parsed', JSON.stringify(parsedRoutes, null, 4)));
 
