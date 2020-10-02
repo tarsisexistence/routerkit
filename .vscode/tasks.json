@@ -10,11 +10,11 @@
 			"detail": "yarn build && yarn build:schematics"
 		},
 		{
-			"type": "npm",
-			"script": "chore:restore-package-json",
+			"type": "shell",
+			"command": "git clean -f package-lock.json && git checkout package.json",
 			"problemMatcher": [],
 			"label": "restore package*.json",
-			"detail": ""
+			"detail": "Remove what's been added to package.json(`@routerkit/core: file:dist/routerkit`) after launching the debugger with `ngAdd` option"
 		}
 	]
 }
