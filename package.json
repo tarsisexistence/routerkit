@@ -15,7 +15,6 @@
     "test": "ng test routerkit",
     "lint": "ng lint routerkit",
     "parse": "schematics ./dist/routerkit/collection.json:parse --project example-app",
-    "chore:restore-package-json": "git clean -f package-lock.json && git checkout package.json",
     "// - SNYK - //": "------------------------------",
     "snyk:test": "snyk test",
     "snyk:wizard": "snyk wizard",
