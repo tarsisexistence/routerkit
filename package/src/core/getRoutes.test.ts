@@ -185,6 +185,24 @@ describe('[getters] core', () => {
         });
       });
     });
+
+    describe('when empty path', () => {
+      test('should return default tuple with slash when Array.from', () => {
+        expect(Array.from(routes.ROOT)).toEqual(['/']);
+      });
+
+      test('should return default tuple with slash when asArray', () => {
+        expect(routes.ROOT.asArray).toEqual(['/']);
+      });
+
+      test('should return default tuple with slash when asString', () => {
+        expect(routes.ROOT.asString).toBe('/');
+      });
+
+      test('should return default tuple with slash when toString', () => {
+        expect(routes.ROOT.toString()).toBe('/');
+      });
+    });
   });
 
   describe('getPaths', () => {

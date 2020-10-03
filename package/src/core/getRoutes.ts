@@ -1,32 +1,33 @@
 import { getRouteFromPaths } from './getRoutes.utils';
+import { EMPTY_PATH } from '../generation/constants';
 
 export const getRoutes = <T>(): T => {
   const proxy = new Proxy(['/'], {
     get(target: string[], path): string[] {
-      target = Array.from(target);
+      const targetArray = Array.from(target);
 
       switch (true) {
         // TODO: add warning about potential mistake when some route "length" path
         case path === 'length':
-          return target.length as any;
+          return targetArray.length as any;
 
         case path === 'toString':
-          return (() => getRouteFromPaths(target)) as any;
+          return (() => getRouteFromPaths(targetArray)) as any;
 
         case path === 'asString':
-          return getRouteFromPaths(target) as any;
+          return getRouteFromPaths(targetArray) as any;
 
         case path === 'asArray': {
-          return Array.from(target);
+          return Array.from(targetArray);
         }
 
         case path === Symbol.iterator:
-          return Array.prototype[Symbol.iterator].bind(target);
+          return Array.prototype[Symbol.iterator].bind(targetArray);
 
-        case target[path as any] !== undefined: {
-          const updatedTargetPath = Array.prototype[path as any].bind(target);
-          Object.defineProperty(updatedTargetPath, 'length', { get: () => target.length + 1 });
-          const nextTuple = [...target, path];
+        case path in targetArray: {
+          const updatedTargetPath = Array.prototype[path as any].bind(targetArray);
+          Object.defineProperty(updatedTargetPath, 'length', { get: () => targetArray.length + 1 });
+          const nextTuple = [...targetArray, path];
           updatedTargetPath[Symbol.iterator] = Array.prototype[Symbol.iterator].bind(nextTuple);
 
           for (let i = 0; i < nextTuple.length; i += 1) {
@@ -36,8 +37,10 @@ export const getRoutes = <T>(): T => {
           return new Proxy(updatedTargetPath, this);
         }
 
-        default:
-          return new Proxy([...target, path], this) as string[];
+        default: {
+          const nextTuple = path === EMPTY_PATH ? targetArray : [...targetArray, path];
+          return new Proxy(nextTuple, this) as string[];
+        }
       }
     }
   });
