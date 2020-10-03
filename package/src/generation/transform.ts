@@ -28,7 +28,7 @@ function transformer(
               separatePath in vRoutesNested
                 ? {
                     ...vRoutesNested[separatePath],
-                    root: nextTuple
+                    [EMPTY_PATH]: nextTuple
                   }
                 : nextTuple;
           } else {
@@ -40,7 +40,7 @@ function transformer(
               nextTuple
             );
             if (isLeaf(vRoutesNested[separatePath])) {
-              (vRoutesNested[separatePath] as RouterKit.Generation.VirtualRoutes).root = vRoutesNested[
+              (vRoutesNested[separatePath] as RouterKit.Generation.VirtualRoutes)[EMPTY_PATH] = vRoutesNested[
                 separatePath
               ] as RouterKit.Generation.VirtualRoutesLeaf;
             }
@@ -52,7 +52,7 @@ function transformer(
           }
         } else if (isLeaf(vRoutesNested[separatePath])) {
           vRoutesNested[separatePath] = {
-            root: vRoutesNested[separatePath]
+            [EMPTY_PATH]: vRoutesNested[separatePath]
           } as RouterKit.Generation.VirtualRoutes;
           vRoutesNested = vRoutesNested[separatePath] as RouterKit.Generation.VirtualRoutes;
         } else {
@@ -61,7 +61,7 @@ function transformer(
         }
       }
     } else if (isEndRoute) {
-      vRoutes[path] = path in vRoutes ? { ...vRoutes[path], root: nextTuple } : nextTuple;
+      vRoutes[path] = path in vRoutes ? { ...vRoutes[path], [EMPTY_PATH]: nextTuple } : nextTuple;
     } else {
       const transformedNestedRoutes = transformer(
         routes[path],
@@ -70,7 +70,7 @@ function transformer(
       );
       vRoutes[path] = isLeaf(vRoutes[path])
         ? ({
-            root: vRoutes[path],
+            [EMPTY_PATH]: vRoutes[path],
             ...transformedNestedRoutes
           } as RouterKit.Generation.VirtualRoutes)
         : transformedNestedRoutes;
@@ -84,7 +84,7 @@ export function transform(routes: RouterKit.Generation.TransformRoutes): RouterK
   const flattenRoutes = flatRoutes(routes);
 
   if (Object.keys(flattenRoutes).length === 0 && EMPTY_PATH in routes) {
-    flattenRoutes.root = {};
+    flattenRoutes[EMPTY_PATH] = {};
   }
 
   return transformer(flattenRoutes, {}, ['/']);

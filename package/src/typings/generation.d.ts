@@ -4,14 +4,14 @@ declare namespace RouterKit.Generation {
 
   interface TransformRoutes {
     [route: string]: TransformRoutes | TransformRoutesLeaf;
-    root?: TransformRoutes | TransformRoutesLeaf;
+    ROOT?: TransformRoutes | TransformRoutesLeaf;
   }
 
   type VirtualRoutesLeaf = string[];
 
   interface VirtualRoutes {
     [route: string]: VirtualRoutes | VirtualRoutesLeaf;
-    root?: VirtualRoutesLeaf;
+    ROOT?: VirtualRoutesLeaf;
   }
 
   interface RouteVariable {

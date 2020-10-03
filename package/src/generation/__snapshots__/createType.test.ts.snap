@@ -1234,7 +1234,7 @@ NodeObject {
       "modifiers": undefined,
       "name": IdentifierObject {
         "end": -1,
-        "escapedText": "root",
+        "escapedText": "ROOT",
         "flags": 8,
         "kind": 78,
         "modifierFlagsCache": 0,
@@ -2144,7 +2144,7 @@ NodeObject {
       "modifiers": undefined,
       "name": IdentifierObject {
         "end": -1,
-        "escapedText": "root",
+        "escapedText": "ROOT",
         "flags": 8,
         "kind": 78,
         "modifierFlagsCache": 0,
@@ -2755,7 +2755,7 @@ NodeObject {
       "modifiers": undefined,
       "name": IdentifierObject {
         "end": -1,
-        "escapedText": "root",
+        "escapedText": "ROOT",
         "flags": 8,
         "kind": 78,
         "modifierFlagsCache": 0,
@@ -4616,7 +4616,7 @@ NodeObject {
         "modifiers": undefined,
         "name": IdentifierObject {
           "end": -1,
-          "escapedText": "root",
+          "escapedText": "ROOT",
           "flags": 8,
           "kind": 78,
           "modifierFlagsCache": 0,
@@ -5446,7 +5446,7 @@ NodeObject {
                   "modifiers": undefined,
                   "name": IdentifierObject {
                     "end": -1,
-                    "escapedText": "root",
+                    "escapedText": "ROOT",
                     "flags": 8,
                     "kind": 78,
                     "modifierFlagsCache": 0,
@@ -5620,7 +5620,7 @@ NodeObject {
                         "modifiers": undefined,
                         "name": IdentifierObject {
                           "end": -1,
-                          "escapedText": "root",
+                          "escapedText": "ROOT",
                           "flags": 8,
                           "kind": 78,
                           "modifierFlagsCache": 0,
@@ -6101,7 +6101,7 @@ NodeObject {
                   "modifiers": undefined,
                   "name": IdentifierObject {
                     "end": -1,
-                    "escapedText": "root",
+                    "escapedText": "ROOT",
                     "flags": 8,
                     "kind": 78,
                     "modifierFlagsCache": 0,
@@ -6623,7 +6623,7 @@ NodeObject {
                   "modifiers": undefined,
                   "name": IdentifierObject {
                     "end": -1,
-                    "escapedText": "root",
+                    "escapedText": "ROOT",
                     "flags": 8,
                     "kind": 78,
                     "modifierFlagsCache": 0,
@@ -7055,7 +7055,7 @@ NodeObject {
               "modifiers": undefined,
               "name": IdentifierObject {
                 "end": -1,
-                "escapedText": "root",
+                "escapedText": "ROOT",
                 "flags": 8,
                 "kind": 78,
                 "modifierFlagsCache": 0,
@@ -7605,7 +7605,7 @@ NodeObject {
             "modifiers": undefined,
             "name": IdentifierObject {
               "end": -1,
-              "escapedText": "root",
+              "escapedText": "ROOT",
               "flags": 8,
               "kind": 78,
               "modifierFlagsCache": 0,

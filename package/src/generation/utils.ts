@@ -65,7 +65,7 @@ export function flatRoutes(
       if (isEmptyRootRoute && routesLength === 1) {
         return {};
       } else if (isEmptyRootRoute && routesLength > 1) {
-        result.root = {};
+        result[EMPTY_PATH] = {};
       } else {
         result = {
           ...result,

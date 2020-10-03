@@ -18,10 +18,10 @@ describe('[generation] createType', () => {
 
   describe('createTypeTree', () => {
     test('should match for routes with intersection in front', () => {
-      // type Routes = { root: ['/'] } & { [city: string]: ['/', string] };
+      // type Routes = { ROOT: ['/'] } & { [city: string]: ['/', string] };
       expect(
         createTypeTree({
-          root: ['/'],
+          ROOT: ['/'],
           ':city': ['/', 'string']
         })
       ).toMatchSnapshot();
@@ -30,7 +30,7 @@ describe('[generation] createType', () => {
     test('should match for example routes', () => {
       expect(
         createTypeTree({
-          root: ['/'],
+          ROOT: ['/'],
           home: ['/', 'home'],
           about: ['/', 'about'],
           car: ['/', 'car'],
@@ -42,9 +42,9 @@ describe('[generation] createType', () => {
           },
 
           users: {
-            root: ['/', 'users'],
+            ROOT: ['/', 'users'],
             ':id': {
-              root: ['/', 'users', 'string'],
+              ROOT: ['/', 'users', 'string'],
               profile: ['/', 'users', 'string', 'profile']
             }
           }
@@ -57,19 +57,19 @@ describe('[generation] createType', () => {
         createTypeTree({
           home: ['/', 'home'],
           users: {
-            root: ['/', 'users'],
+            ROOT: ['/', 'users'],
             ':id': {
               profile: ['/', 'users', 'string', 'profile'],
               settings: ['/', 'users', 'string', 'settings']
             }
           },
           admin: {
-            root: ['/', 'admin'],
+            ROOT: ['/', 'admin'],
             collaborators: ['/', 'admin', 'collaborators'],
             ':id': ['/', 'admin', 'string']
           },
           pages: {
-            root: ['/', 'pages'],
+            ROOT: ['/', 'pages'],
             articles: {
               today: ['/', 'pages', 'articles', 'today'],
               ':date': ['/', 'pages', 'articles', 'string']
@@ -88,7 +88,7 @@ describe('[generation] createType', () => {
     test('should match regular routes', () => {
       expect(
         createTypeNode({
-          root: ['/'],
+          ROOT: ['/'],
           home: ['/', 'home'],
           about: ['/', 'about'],
           car: ['/', 'car'],
@@ -101,7 +101,7 @@ describe('[generation] createType', () => {
     test('should match nested regular routes', () => {
       expect(
         createTypeNode({
-          root: ['/'],
+          ROOT: ['/'],
           home: {
             place: ['/', 'home', 'place']
           },
@@ -125,7 +125,7 @@ describe('[generation] createType', () => {
     test('should match routes with children intersection', () => {
       expect(
         createTypeNode({
-          root: ['/'],
+          ROOT: ['/'],
           home: {
             ':place': ['/', 'home', 'string']
           },

@@ -25,7 +25,7 @@ describe('[generation] createType utils', () => {
     test('should return false when object has not nested variables', () => {
       expect(
         hasIndexRoute({
-          root: ['/'],
+          ROOT: ['/'],
           location: { map: ['/', 'location', 'map'] }
         })
       ).toBeFalsy();
@@ -34,7 +34,7 @@ describe('[generation] createType utils', () => {
     test('should return false when object has nested variable', () => {
       expect(
         hasIndexRoute({
-          root: ['/'],
+          ROOT: ['/'],
           location: { ':city': ['/', 'location', 'string'] }
         })
       ).toBeFalsy();
@@ -43,7 +43,7 @@ describe('[generation] createType utils', () => {
     test('should return true when object has variable', () => {
       expect(
         hasIndexRoute({
-          root: ['/'],
+          ROOT: ['/'],
           ':city': ['/', 'string']
         })
       ).toBeTruthy();
@@ -52,7 +52,7 @@ describe('[generation] createType utils', () => {
     test('should return true when object has wildcard of *', () => {
       expect(
         hasIndexRoute({
-          root: ['/'],
+          ROOT: ['/'],
           '**': ['/', 'string']
         })
       ).toBeTruthy();

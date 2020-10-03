@@ -15,22 +15,22 @@ describe('[parse] parseRoutes', () => {
 
   it('should be parse project', () => {
     const expectedRouteMap: RouterKit.Parse.RouteTree = {
-      root: {
-        root: {},
+      ROOT: {
+        ROOT: {},
         'second-child': {},
         'third-child-module': {
-          root: {},
+          ROOT: {},
           eager: {}
         }
       },
       help: {},
       licenses: {
-        root: {}
+        ROOT: {}
       },
       'redirect-to-root': {},
       admin: {
-        root: {
-          root: {},
+        ROOT: {
+          ROOT: {},
           second: {},
           third: {}
         }

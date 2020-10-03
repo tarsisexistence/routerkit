@@ -7,7 +7,7 @@ describe('[generation] utils', () => {
     });
 
     test('should flat single root', () => {
-      expect(flatRoutes({ root: {} })).toEqual({});
+      expect(flatRoutes({ ROOT: {} })).toEqual({});
     });
 
     test('should not flat when no root', () => {
@@ -23,17 +23,17 @@ describe('[generation] utils', () => {
     test('should not flat when root is empty', () => {
       expect(
         flatRoutes({
-          root: {},
+          ROOT: {},
           a: {},
           b: {}
         })
-      ).toEqual({ root: {}, a: {}, b: {} });
+      ).toEqual({ ROOT: {}, a: {}, b: {} });
     });
 
     test('should flat root on next level', () => {
       expect(
         flatRoutes({
-          a: { root: {} }
+          a: { ROOT: {} }
         })
       ).toEqual({
         a: {}
@@ -43,7 +43,7 @@ describe('[generation] utils', () => {
     test('should flat nested route of root', () => {
       expect(
         flatRoutes({
-          root: { a: {} }
+          ROOT: { a: {} }
         })
       ).toEqual({
         a: {}
@@ -53,20 +53,20 @@ describe('[generation] utils', () => {
     test('should not flat root on next level when there is another route', () => {
       expect(
         flatRoutes({
-          a: { root: {}, b: {} }
+          a: { ROOT: {}, b: {} }
         })
       ).toEqual({
-        a: { root: {}, b: {} }
+        a: { ROOT: {}, b: {} }
       });
     });
 
     test('should flat root on next level with another route', () => {
       expect(
         flatRoutes({
-          root: { root: {}, b: {} }
+          ROOT: { ROOT: {}, b: {} }
         })
       ).toEqual({
-        root: {},
+        ROOT: {},
         b: {}
       });
     });
@@ -74,7 +74,7 @@ describe('[generation] utils', () => {
     test('should flat second level of nesting', () => {
       expect(
         flatRoutes({
-          a: { root: { root: {} } }
+          a: { ROOT: { ROOT: {} } }
         })
       ).toEqual({
         a: {}
@@ -84,7 +84,7 @@ describe('[generation] utils', () => {
     test('should flat second level of nesting nesting with other routes', () => {
       expect(
         flatRoutes({
-          a: { root: { root: { b: {}, c: {} } } }
+          a: { ROOT: { ROOT: { b: {}, c: {} } } }
         })
       ).toEqual({
         a: { b: {}, c: {} }
@@ -94,19 +94,19 @@ describe('[generation] utils', () => {
     test('should flat second level of nesting nesting with other routes and root', () => {
       expect(
         flatRoutes({
-          a: { root: { root: { root: {}, b: {}, c: {} } } }
+          a: { ROOT: { ROOT: { ROOT: {}, b: {}, c: {} } } }
         })
       ).toEqual({
-        a: { root: {}, b: {}, c: {} }
+        a: { ROOT: {}, b: {}, c: {} }
       });
     });
 
     test('should flat two lvl deep nested routes inside root with root', () => {
       expect(
         flatRoutes({
-          root: {
-            root: {
-              root: {
+          ROOT: {
+            ROOT: {
+              ROOT: {
                 nest: {}
               },
               a: {},

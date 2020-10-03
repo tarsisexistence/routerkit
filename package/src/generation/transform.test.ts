@@ -9,10 +9,10 @@ describe('[generation] transform', () => {
   test('should transform single root route', () => {
     expect(
       transform({
-        root: {}
+        ROOT: {}
       })
     ).toEqual({
-      root: ['/']
+      ROOT: ['/']
     });
   });
 
@@ -39,7 +39,7 @@ describe('[generation] transform', () => {
     expect(
       transform({
         home: {},
-        root: {
+        ROOT: {
           about: {},
           location: {}
         }
@@ -55,15 +55,15 @@ describe('[generation] transform', () => {
     expect(
       transform({
         home: {},
-        root: {
-          root: {},
+        ROOT: {
+          ROOT: {},
           about: {},
           location: {}
         }
       })
     ).toEqual({
       home: ['/', 'home'],
-      root: ['/'],
+      ROOT: ['/'],
       about: ['/', 'about'],
       location: ['/', 'location']
     });
@@ -93,7 +93,7 @@ describe('[generation] transform', () => {
     ).toEqual({
       home: ['/', 'home'],
       engine: {
-        root: ['/', 'engine'],
+        ROOT: ['/', 'engine'],
         ':year': ['/', 'engine', STRING_KEYWORD]
       }
     });
@@ -103,18 +103,18 @@ describe('[generation] transform', () => {
     expect(
       transform({
         home: {},
-        root: {
-          root: {},
+        ROOT: {
+          ROOT: {},
           about: {},
           car: {},
           details: {},
           info: {},
           'engine/:year': {}
         },
-        users: { root: {}, ':id': {}, ':id/profile': {} }
+        users: { ROOT: {}, ':id': {}, ':id/profile': {} }
       })
     ).toEqual({
-      root: ['/'],
+      ROOT: ['/'],
       home: ['/', 'home'],
       about: ['/', 'about'],
       car: ['/', 'car'],
@@ -126,9 +126,9 @@ describe('[generation] transform', () => {
       },
 
       users: {
-        root: ['/', 'users'],
+        ROOT: ['/', 'users'],
         ':id': {
-          root: ['/', 'users', STRING_KEYWORD],
+          ROOT: ['/', 'users', STRING_KEYWORD],
           profile: ['/', 'users', STRING_KEYWORD, 'profile']
         }
       }
@@ -139,26 +139,26 @@ describe('[generation] transform', () => {
     expect(
       transform({
         home: {},
-        users: { root: {}, ':id/settings': {}, ':id/profile': {} },
-        admin: { root: {}, collaborators: {}, ':id': {} },
-        pages: { root: {}, 'articles/today': {}, 'articles/:date': {} }
+        users: { ROOT: {}, ':id/settings': {}, ':id/profile': {} },
+        admin: { ROOT: {}, collaborators: {}, ':id': {} },
+        pages: { ROOT: {}, 'articles/today': {}, 'articles/:date': {} }
       })
     ).toEqual({
       home: ['/', 'home'],
       users: {
-        root: ['/', 'users'],
+        ROOT: ['/', 'users'],
         ':id': {
           profile: ['/', 'users', STRING_KEYWORD, 'profile'],
           settings: ['/', 'users', STRING_KEYWORD, 'settings']
         }
       },
       admin: {
-        root: ['/', 'admin'],
+        ROOT: ['/', 'admin'],
         collaborators: ['/', 'admin', 'collaborators'],
         ':id': ['/', 'admin', STRING_KEYWORD]
       },
       pages: {
-        root: ['/', 'pages'],
+        ROOT: ['/', 'pages'],
         articles: {
           today: ['/', 'pages', 'articles', 'today'],
           ':date': ['/', 'pages', 'articles', STRING_KEYWORD]
@@ -180,12 +180,12 @@ describe('[generation] transform', () => {
       ).toEqual({
         home: ['/', 'home'],
         engine: {
-          root: ['/', 'engine'],
+          ROOT: ['/', 'engine'],
           ':year': {
-            root: ['/', 'engine', STRING_KEYWORD],
+            ROOT: ['/', 'engine', STRING_KEYWORD],
             car: {
               ':type': {
-                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
+                ROOT: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
                   ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
@@ -208,12 +208,12 @@ describe('[generation] transform', () => {
       ).toEqual({
         home: ['/', 'home'],
         engine: {
-          root: ['/', 'engine'],
+          ROOT: ['/', 'engine'],
           ':year': {
-            root: ['/', 'engine', STRING_KEYWORD],
+            ROOT: ['/', 'engine', STRING_KEYWORD],
             car: {
               ':type': {
-                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
+                ROOT: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
                   ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
@@ -229,7 +229,7 @@ describe('[generation] transform', () => {
         transform({
           home: {},
           engine: {
-            root: {},
+            ROOT: {},
             ':year': {
               car: {
                 ':type': {}
@@ -241,11 +241,11 @@ describe('[generation] transform', () => {
       ).toEqual({
         home: ['/', 'home'],
         engine: {
-          root: ['/', 'engine'],
+          ROOT: ['/', 'engine'],
           ':year': {
             car: {
               ':type': {
-                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
+                ROOT: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
                   ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
@@ -262,7 +262,7 @@ describe('[generation] transform', () => {
           home: {},
           'engine/:year/car/:type/model/:id': {},
           engine: {
-            root: {},
+            ROOT: {},
             ':year': {
               car: {
                 ':type': {}
@@ -273,11 +273,11 @@ describe('[generation] transform', () => {
       ).toEqual({
         home: ['/', 'home'],
         engine: {
-          root: ['/', 'engine'],
+          ROOT: ['/', 'engine'],
           ':year': {
             car: {
               ':type': {
-                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
+                ROOT: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
                   ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
@@ -303,11 +303,11 @@ describe('[generation] transform', () => {
       ).toEqual({
         home: ['/', 'home'],
         engine: {
-          root: ['/', 'engine'],
+          ROOT: ['/', 'engine'],
           ':year': {
             car: {
               ':type': {
-                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
+                ROOT: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
                   ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
@@ -331,11 +331,11 @@ describe('[generation] transform', () => {
       ).toEqual({
         home: ['/', 'home'],
         engine: {
-          root: ['/', 'engine'],
+          ROOT: ['/', 'engine'],
           ':year': {
             car: {
               ':type': {
-                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
+                ROOT: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
                   ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
@@ -361,11 +361,11 @@ describe('[generation] transform', () => {
       ).toEqual({
         home: ['/', 'home'],
         engine: {
-          root: ['/', 'engine'],
+          ROOT: ['/', 'engine'],
           ':year': {
             car: {
               ':type': {
-                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
+                ROOT: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
                   ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
@@ -391,11 +391,11 @@ describe('[generation] transform', () => {
       ).toEqual({
         home: ['/', 'home'],
         engine: {
-          root: ['/', 'engine'],
+          ROOT: ['/', 'engine'],
           ':year': {
             car: {
               ':type': {
-                root: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
+                ROOT: ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD],
                 model: {
                   ':id': ['/', 'engine', STRING_KEYWORD, 'car', STRING_KEYWORD, 'model', STRING_KEYWORD]
                 }
