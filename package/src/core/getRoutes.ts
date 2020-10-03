@@ -24,7 +24,7 @@ export const getRoutes = <T>(): T => {
         case path === Symbol.iterator:
           return Array.prototype[Symbol.iterator].bind(targetArray);
 
-        case path in targetArray: {
+        case path in Array.prototype: {
           const updatedTargetPath = Array.prototype[path as any].bind(targetArray);
           Object.defineProperty(updatedTargetPath, 'length', { get: () => targetArray.length + 1 });
           const nextTuple = [...targetArray, path];
