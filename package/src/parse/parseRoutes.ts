@@ -3,12 +3,13 @@ import { Project } from 'ts-morph';
 
 import { createProjectRouteTree, getAppModule, getRouteModuleForRootExpressions } from './utils';
 import { getRouterModuleClass } from './utils.angular';
+import { error } from '../utils/common.utils';
 
 export const parseRoutes = (workspace: WorkspaceProject, project: Project): RouterKit.Parse.RouteTree => {
   const pathToMainFile = workspace.architect?.build?.options?.main as string;
 
   if (!pathToMainFile) {
-    throw new Error("Can't find path to main.ts in angular.json");
+    throw error("Can't find path to main.ts in angular.json");
   }
 
   const appModule = getAppModule(project, pathToMainFile);
@@ -21,6 +22,6 @@ export const parseRoutes = (workspace: WorkspaceProject, project: Project): Rout
   if (expression) {
     return createProjectRouteTree(project, appModule, expression, routerType);
   } else {
-    throw new Error("RouterModule.forRoot expression did't find");
+    throw error("RouterModule.forRoot expression did't find");
   }
 };

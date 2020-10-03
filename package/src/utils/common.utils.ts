@@ -14,3 +14,9 @@ export const taskFinish = (text: string, result: string = ''): string => {
 
   return `${logOffset}${colorfulText}${colorfulSign}${colorfulResult}`;
 };
+
+export const error = (message: string): Error =>
+  new Error(`
+
+${message}
+`);

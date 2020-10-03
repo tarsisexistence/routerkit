@@ -18,6 +18,7 @@ import { evaluate } from '@wessberg/ts-evaluator';
 
 import { getSourceFileOrThrow } from './get-source-file-from-paths';
 import { EMPTY_PATH } from '../generation/constants';
+import { error } from '../utils/common.utils';
 
 export const getRouteModuleForRootExpressions: (
   routerModuleClass: ClassDeclaration
@@ -27,7 +28,7 @@ export const getRouteModuleForRootExpressions: (
   // todo add check for Router.RouterModule.for....
   const forRootExpressions = getRouterModuleCallExpressions(refs, 'forRoot');
   if (forRootExpressions.length > 1) {
-    throw new Error('You have more than one RouterModule.forRoot expression');
+    throw error('You have more than one RouterModule.forRoot expression');
   }
 
   const forRootExpression = forRootExpressions[0];
@@ -38,7 +39,7 @@ const findRouterModuleArgumentValue = (routerExpr: CallExpression): ArrayLiteral
   const args = routerExpr.getArguments();
   if (args.length === 0) {
     const filePath = routerExpr.getSourceFile().getFilePath();
-    throw new Error(`RouterModule in ${filePath} hasn't arguments`);
+    throw error(`RouterModule in ${filePath} hasn't arguments`);
   }
 
   const firstArg = args[0];
@@ -318,7 +319,7 @@ const getClassIdentifierFromPropertyAccessExpression = (node: PropertyAccessExpr
   if (Node.isIdentifier(name)) {
     return findClassDeclarationByIdentifier(name);
   } else {
-    throw new Error(`Can't parse PropertyAccessExpression ${node.getText()}`);
+    throw error(`Can't parse PropertyAccessExpression ${node.getText()}`);
   }
 };
 
@@ -517,7 +518,7 @@ export const getAppModule = (project: Project, path: string): ClassDeclaration =
   sourceFile.forEachChild(findBootstrapModule);
 
   if (!bootstrapId) {
-    throw new Error(`Can't find bootstrapModule expression in ${path}`);
+    throw error(`Can't find bootstrapModule expression in ${path}`);
   }
 
   const parent = bootstrapId?.getParentOrThrow();
@@ -527,13 +528,13 @@ export const getAppModule = (project: Project, path: string): ClassDeclaration =
     // todo when module is not class token
     const declaration = findClassDeclarationByIdentifier(module as Identifier);
     if (!declaration) {
-      throw new Error(`Can't find AppModule!`);
+      throw error(`Can't find AppModule!`);
     }
 
     return declaration;
   }
 
-  throw new Error(`Can't find AppModule!`);
+  throw error(`Can't find AppModule!`);
 };
 
 /*

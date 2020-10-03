@@ -3,11 +3,13 @@ import { WorkspaceProject, WorkspaceSchema } from '@angular-devkit/core/src/expe
 import { ClassDeclaration, Node, Project } from 'ts-morph';
 import { resolve } from 'path';
 
+import { error } from '../utils/common.utils';
+
 export const findAngularJSON = (tree: Tree): WorkspaceSchema => {
   const angularJson = tree.read('angular.json');
 
   if (!angularJson) {
-    throw new Error("angular.json doesn't exist");
+    throw error("angular.json doesn't exist");
   }
 
   const content = angularJson.toString();
@@ -21,7 +23,7 @@ export const getProjectTsconfigPath = (workspace: WorkspaceProject, projectName:
     : tsconfig;
 
   if (typeof tsconfigPath !== 'string') {
-    throw new Error(
+    throw error(
       `Can't find tsconfig inside angular.json for ${projectName} project. An appropriate config name should include 'tsconfig' and '.json'`
     );
   }
@@ -39,7 +41,7 @@ export const getRouterModuleClass = (project: Project): ClassDeclaration => {
     .filter(imp => !!imp)?.[0];
 
   if (!moduleImport) {
-    throw new Error("Can't find RouterModule");
+    throw error("Can't find RouterModule");
   }
 
   const routerModuleSpec = moduleImport.getNamedImports().filter(imp => imp.getName() === 'RouterModule')?.[0];
@@ -56,7 +58,7 @@ export const getRouterModuleClass = (project: Project): ClassDeclaration => {
   const routerModule = routeDef.getClass('RouterModule');
 
   if (!routerModule) {
-    throw new Error(`Can't find RouterModule in ${routeDef.getFilePath()}`);
+    throw error(`Can't find RouterModule in ${routeDef.getFilePath()}`);
   }
 
   return routerModule;

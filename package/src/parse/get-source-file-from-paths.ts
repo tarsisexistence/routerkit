@@ -1,4 +1,5 @@
 import { Project, SourceFile, ts } from 'ts-morph';
+import { error } from '../utils/common.utils';
 
 /*
  * Works like Project.getSourceFileOrThrow function,
@@ -44,7 +45,7 @@ const tryGetSourceFileByAliasOrThrow = (
     .find(file => !!file);
 
   if (!sourceFile) {
-    throw new Error(`Can't find file with relative path ${relativeFilePath}`);
+    throw error(`Can't find file with relative path ${relativeFilePath}`);
   }
 
   return sourceFile;

@@ -6,7 +6,7 @@ import { parseRoutes } from './parseRoutes';
 import { generateRoutesType } from '../generation/generateRoutesType';
 import { generateFile } from '../generation/utils';
 import { findAngularJSON, getProjectAST, getProjectTsconfigPath } from './utils.angular';
-import { space, taskFinish, taskStart } from '../utils/common.utils';
+import { error, space, taskFinish, taskStart } from '../utils/common.utils';
 import { findFilePath } from '../utils/fs.utils';
 
 export function parse(options: RouterKit.Parse.Schema): Rule {
@@ -15,9 +15,9 @@ export function parse(options: RouterKit.Parse.Schema): Rule {
     const ROOT_DIR = findFilePath(process.cwd());
 
     if (!projectName) {
-      throw new Error('Project name expected.');
+      throw error('Project name expected.');
     } else if (ROOT_DIR === null) {
-      throw new Error("Can't find angular.json");
+      throw error("Can't find angular.json");
     }
 
     const projectSpinner = ora({ text: taskStart('Analyzing project'), stream: process.stdout }).start();
@@ -25,7 +25,7 @@ export function parse(options: RouterKit.Parse.Schema): Rule {
     const workspace = angularJson.projects[projectName];
 
     if (workspace === undefined) {
-      throw new Error(`Can't find ${projectName} project in angular.json`);
+      throw error(`Can't find ${projectName} project in angular.json`);
     }
 
     const TSCONFIG_PATH = getProjectTsconfigPath(workspace, projectName);
