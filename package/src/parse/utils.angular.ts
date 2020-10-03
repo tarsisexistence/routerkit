@@ -21,7 +21,6 @@ export const getProjectTsconfigPath = (workspace: WorkspaceProject, projectName:
     : tsconfig;
 
   if (typeof tsconfigPath !== 'string') {
-    console.log(tsconfigPath);
     throw new Error(
       `Can't find tsconfig inside angular.json for ${projectName} project. An appropriate config name should include 'tsconfig' and '.json'`
     );

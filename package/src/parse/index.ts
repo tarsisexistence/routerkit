@@ -23,6 +23,11 @@ export function parse(options: RouterKit.Parse.Schema): Rule {
     const projectSpinner = ora({ text: taskStart('Analyzing project'), stream: process.stdout }).start();
     const angularJson = findAngularJSON(tree);
     const workspace = angularJson.projects[projectName];
+
+    if (workspace === undefined) {
+      throw new Error(`Can't find ${projectName} project in angular.json`);
+    }
+
     const TSCONFIG_PATH = getProjectTsconfigPath(workspace, projectName);
     const projectAST = getProjectAST(TSCONFIG_PATH);
     projectSpinner.succeed(taskFinish('Project analyzed'));
