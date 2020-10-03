@@ -1,3 +1,16 @@
+# 0.8.0 2020-10-03
+
+Crucial release
+
+- Improved parser script (~75% faster for large projects)
+- Fixed issue with circular dependencies for `nx workspaces` (will generate a file in `rootDir`)
+- Fixed issue with accessing empty path route
+- Fixed issue with accessing property similar to array index
+- Fixed issue with internal developer experience (debugging schematics) 
+- Renamed empty path route (was `root`, now `ROOT`)
+- Updated usage example in documentation
+- Updated dependencies
+
 # 0.7.2 2020-09-22
 
 - Fixed nx typescript "paths"
