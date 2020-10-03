@@ -36,7 +36,7 @@ A new approach to Angular routes:
 - generates a TypeScript `type` containing all your routes information.
 - includes the generated type in your `tsconfig`
 
-[function](https://github.com/retarsis/routerkit/blob/1e9e55c8e66b44a1ac1d841a0f5aacc3d28b2989/package/src/core/getRoutes.ts#L1):
+[function](https://github.com/retarsis/routerkit/blob/master/package/src/core/getRoutes.ts):
 
 - returns route paths based on your routes type with appropriate JavaScript object structure
 
@@ -91,7 +91,7 @@ import { TypedRoutes } from '{ROOT}/{PROJECT_NAME}.routes.d.ts';
   template: `<a routerLink="{{ routes.profile.users[usersId] }}">User Details</a>`
 })
 export class UserComponent {
-  routes = getRoutes<TypedRoutes>();
+  routes: TypedRoutes = getRoutes<TypedRoutes>();
   usersId = 42;
 }
 ```
