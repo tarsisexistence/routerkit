@@ -124,6 +124,20 @@ describe('[generation] utils', () => {
         nest: {}
       });
     });
+
+    test('should not flat route with path root', () => {
+      expect(
+        flatRoutes({
+          root: {
+            root: {}
+          }
+        })
+      ).toEqual({
+        root: {
+          root: {}
+        }
+      });
+    });
   });
 
   describe('kebabCaseToCamelCase', () => {

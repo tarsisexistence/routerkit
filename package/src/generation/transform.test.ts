@@ -51,6 +51,22 @@ describe('[generation] transform', () => {
     });
   });
 
+  test('should transform route with root route path', () => {
+    expect(
+      transform({
+        home: {},
+        root: {
+          root: {}
+        }
+      })
+    ).toEqual({
+      home: ['/', 'home'],
+      root: {
+        root: ['/', 'root', 'root']
+      }
+    });
+  });
+
   test('should transform not flatten routes with root', () => {
     expect(
       transform({
