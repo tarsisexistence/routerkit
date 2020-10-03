@@ -17,6 +17,8 @@ import { resolve, sep } from 'path';
 import { evaluate } from '@wessberg/ts-evaluator';
 
 import { getSourceFileOrThrow } from './get-source-file-from-paths';
+import { EMPTY_PATH } from '../generation/constants';
+
 export const getRouteModuleForRootExpressions: (
   routerModuleClass: ClassDeclaration
 ) => ArrayLiteralExpression | null = (routerModuleClass: ClassDeclaration): ArrayLiteralExpression | null => {
@@ -132,7 +134,7 @@ const parseRoute = (
   const root: RouterKit.Parse.RouteTree = {};
   const typeChecker = project.getTypeChecker();
   const path = readPath(route, typeChecker);
-  const routeName = path === '' ? 'root' : path;
+  const routeName = path === '' ? EMPTY_PATH : path;
   root[routeName] = {};
 
   const sourceFile = route.getSourceFile();

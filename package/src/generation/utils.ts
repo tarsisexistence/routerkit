@@ -1,6 +1,8 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { Project } from 'ts-morph';
 
+import { EMPTY_PATH } from './constants';
+
 export const includeRoutesTypeIntoTsconfig = (tsconfigPath: string, fileName: string): void => {
   const tsconfigFile = readFileSync(tsconfigPath);
   const tsconfigJson: { include?: string[] } = JSON.parse(tsconfigFile.toString());
@@ -48,7 +50,7 @@ export const generateFile = ({
 
 export function flatRoutes(
   routes: RouterKit.Generation.TransformRoutes
-): Omit<RouterKit.Generation.TransformRoutes, 'root'> {
+): Omit<RouterKit.Generation.TransformRoutes, typeof EMPTY_PATH> {
   let result: Record<string, any> = {};
 
   const routesKeys = Object.keys(routes);
@@ -57,7 +59,7 @@ export function flatRoutes(
   for (const route of routesKeys) {
     const flattenRoutes = flatRoutes(routes[route]);
 
-    if (route === 'root') {
+    if (route === EMPTY_PATH) {
       const isEmptyRootRoute = Object.keys(flattenRoutes).length === 0;
 
       if (isEmptyRootRoute && routesLength === 1) {

@@ -1,6 +1,7 @@
 import { flatRoutes } from './utils';
 import { isLeaf, normalizePath } from './generation.utils';
 import { transformPathToState } from '../utils/routeshub.utils';
+import { EMPTY_PATH } from './constants';
 
 function transformer(
   routes: RouterKit.Generation.TransformRoutes,
@@ -10,7 +11,8 @@ function transformer(
   Object.keys(routes).forEach(path => {
     const isEndRoute = Object.keys(routes[path]).length === 0;
     const isMultiPath = path.includes('/');
-    const nextTuple = path === 'root' || isMultiPath ? currentTuple.slice() : currentTuple.concat(normalizePath(path));
+    const nextTuple =
+      path === EMPTY_PATH || isMultiPath ? currentTuple.slice() : currentTuple.concat(normalizePath(path));
 
     if (isMultiPath) {
       const multiPathState = transformPathToState(path, []);
@@ -81,7 +83,7 @@ function transformer(
 export function transform(routes: RouterKit.Generation.TransformRoutes): RouterKit.Generation.VirtualRoutes {
   const flattenRoutes = flatRoutes(routes);
 
-  if (Object.keys(flattenRoutes).length === 0 && 'root' in routes) {
+  if (Object.keys(flattenRoutes).length === 0 && EMPTY_PATH in routes) {
     flattenRoutes.root = {};
   }
 
