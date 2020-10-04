@@ -1,3 +1,8 @@
+# 0.8.1 2020-10-04
+
+- Fixed angular interpolation toString call
+- Fixed case when parser does not produce all application routes
+
 # 0.8.0 2020-10-03
 
 Crucial release
