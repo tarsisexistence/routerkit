@@ -6,11 +6,11 @@
   <nav class="menu">
     <a routerLink="{{ routes.about }}">About</a>
     <a [routerLink]="routes.car.ROOT" [routerLinkActive]="['active']"> Car </a>
-    <a [routerLink]="routes.car[2018]" [routerLinkActive]="['myActiveClass', 'myActiveClass2']">
+    <a [routerLink]="routes.car.engine[2018]" [routerLinkActive]="['myActiveClass', 'myActiveClass2']">
       Car (navLink + navParams)
     </a>
 
-    <a [routerLink]="routes.car[2368]" [routerLinkActive]="['myActiveClass', 'myActiveClass2']">
+    <a [routerLink]="routes.car.engine[2368]" [routerLinkActive]="['myActiveClass', 'myActiveClass2']">
       Car (navLink + navParams (reversed)
     </a>
 
