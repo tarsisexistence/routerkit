@@ -17,27 +17,10 @@ describe('merge trees test', () => {
     };
 
     expect(mergeRouteTrees(left, right)).toEqual(left);
-  });
-
-  test('should return expected tree 2', () => {
-    const left: RouterKit.Parse.RouteTree = {
-      ROOT: {
-        test: {
-          test1: {}
-        }
-      }
-    };
-
-    const right: RouterKit.Parse.RouteTree = {
-      ROOT: {
-        test: {}
-      }
-    };
-
     expect(mergeRouteTrees(right, left)).toEqual(left);
   });
 
-  test('should return expected tree 3', () => {
+  test('should return expected tree 2', () => {
     const left: RouterKit.Parse.RouteTree = {
       ROOT: {
         test: {
@@ -68,6 +51,7 @@ describe('merge trees test', () => {
     };
 
     expect(mergeRouteTrees(left, right)).toEqual(expectedTree);
+    expect(mergeRouteTrees(right, left)).toEqual(expectedTree);
   });
 
   test('should return expected tree 4', () => {
@@ -109,5 +93,6 @@ describe('merge trees test', () => {
     };
 
     expect(mergeRouteTrees(left, right)).toEqual(expectedTree);
+    expect(mergeRouteTrees(right, left)).toEqual(expectedTree);
   });
 });
