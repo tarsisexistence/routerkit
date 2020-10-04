@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { DetailsModule } from '../details/details.module';
-import { CarComponent } from './components/carComponent';
+import { CarComponent } from './car.component';
 
 const carRoutes = [
   {
