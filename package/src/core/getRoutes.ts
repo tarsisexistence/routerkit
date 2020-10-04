@@ -12,6 +12,7 @@ export const getRoutes = <T>(): T => {
           return targetArray.length as any;
 
         case path === 'toString':
+        case path === Symbol.toPrimitive:
           return (() => getRouteFromPaths(targetArray)) as any;
 
         case path === 'asString':
