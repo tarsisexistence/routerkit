@@ -1,12 +1,7 @@
-import { Routes } from '@angular/router';
-import { ViewComponent } from '../core/components/view/view.component';
+import { RouterModule, Routes } from '@angular/router';
 
-/**
- * Declares routes on App level
- * Cool stuff with routes variables
- * can be used here to add control
- * over magic strings
- */
+import { ViewComponent } from './core/components/view/view.component';
+
 export const routes: Routes = [
   {
     path: '',
@@ -28,3 +23,10 @@ export const routes: Routes = [
     ]
   }
 ];
+
+export const appRouting = RouterModule.forRoot(routes, {
+  enableTracing: false,
+  initialNavigation: 'enabled',
+  onSameUrlNavigation: 'reload',
+  scrollPositionRestoration: 'top'
+});

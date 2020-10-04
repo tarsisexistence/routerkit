@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AboutComponent } from './components/about.component';
-import { AboutHub } from './hub/about.hub';
+
+import { AboutComponent } from './about.component';
+import { aboutRouting } from './about.routes';
 
 @NgModule({
-  declarations: [AboutComponent],
-  imports: [CommonModule, AboutHub]
+  imports: [CommonModule, aboutRouting],
+  declarations: [AboutComponent]
 })
 export class AboutModule {}

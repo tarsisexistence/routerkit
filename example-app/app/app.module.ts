@@ -3,13 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { appRouting } from './app.routes';
 
-/**
- * Our main App Module that contains only
- * project specific or complex modules
- */
 @NgModule({
-  imports: [BrowserModule, CoreModule],
+  imports: [BrowserModule, CoreModule, appRouting],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
