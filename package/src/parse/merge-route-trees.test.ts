@@ -1,6 +1,6 @@
 import { mergeRouteTrees } from './merge-route-trees';
 
-describe('merge trees test', () => {
+describe('mergeRouteTrees test', () => {
   test('should return expected tree 1', () => {
     const left: RouterKit.Parse.RouteTree = {
       ROOT: {
