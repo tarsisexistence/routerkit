@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   selector: 'app-user',
   template: `
     <nav>
-      <a [navLink]="['../']">Back</a>
+      <a [routerLink]="['../']">Back</a>
       <a [routerLink]="['profile']">Profile</a>
     </nav>
     <h2>User</h2>

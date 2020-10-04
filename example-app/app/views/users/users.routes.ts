@@ -1,6 +1,6 @@
-import { UsersComponent } from '../components/users.component';
-import { UserComponent } from '../components/user.component';
-import { ProfileComponent } from '../components/profile.component';
+import { UsersComponent } from './users.component';
+import { UserComponent } from './user.component';
+import { ProfileComponent } from './profile.component';
 
 export const usersRoutes = [
   {
