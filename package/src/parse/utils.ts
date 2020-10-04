@@ -171,7 +171,7 @@ export const createProjectRouteTree = (
   root = { ...root, ...eagersTree };
 
   const parsedRoot = parseRoutes(forRootExpr, routerType, parsedModules, project);
-  return { ...root, ...parsedRoot };
+  return { ...parsedRoot, ...root };
 };
 
 const createModuleRouteTree = (
