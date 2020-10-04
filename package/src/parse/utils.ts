@@ -165,13 +165,13 @@ export const createProjectRouteTree = (
   forRootExpr: ArrayLiteralExpression,
   routerType: Type
 ): RouterKit.Parse.RouteTree => {
-  let root: RouterKit.Parse.RouteTree = {};
+  let routeTree: RouterKit.Parse.RouteTree = {};
   const parsedModules = new Set<Type>();
   const eagersTree = createModuleRouteTree(project, appModule, parsedModules, routerType);
-  root = { ...root, ...eagersTree };
+  routeTree = { ...routeTree, ...eagersTree };
 
   const parsedRoot = parseRoutes(forRootExpr, routerType, parsedModules, project);
-  return { ...root, ...parsedRoot };
+  return { ...parsedRoot, ...routeTree };
 };
 
 const createModuleRouteTree = (
