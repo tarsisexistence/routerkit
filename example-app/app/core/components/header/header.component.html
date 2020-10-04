@@ -1,42 +1,24 @@
 <header class="header">
-  <a class="logo" [navLink]="app.root.state">
+  <a class="logo" [routerLink]="routes.ROOT.asArray">
     <img class="image" src="/assets/logo/white.png" alt="logo" />
   </a>
 
   <nav class="menu">
-    <a navLink="{{ about.root.state }}">About</a>
-    <a [navLink]="hub.car.root" [navLinkActive]="['active']">
-      Car
-    </a>
-    <a
-      [navLink]="hub.car.year.state"
-      [navParams]="{ year: 2018 }"
-      [navLinkActive]="['myActiveClass', 'myActiveClass2']"
-    >
+    <a routerLink="{{ routes.about }}">About</a>
+    <a [routerLink]="routes.car.ROOT" [routerLinkActive]="['active']"> Car </a>
+    <a [routerLink]="routes.car[2018]" [routerLinkActive]="['myActiveClass', 'myActiveClass2']">
       Car (navLink + navParams)
     </a>
 
-    <a
-      [navParams]="{ year: 2368 }"
-      [navLink]="hub.car.year.state"
-      [navLinkActive]="['myActiveClass', 'myActiveClass2']"
-    >
+    <a [routerLink]="routes.car[2368]" [routerLinkActive]="['myActiveClass', 'myActiveClass2']">
       Car (navLink + navParams (reversed)
     </a>
 
-    <a (click)="freshCar()">
-      Car (navigate)
-    </a>
+    <a (click)="freshCar()"> Car (navigate) </a>
 
-    <a [navLink]="hub.details.details.state">
-      Details
-    </a>
+    <a routerLink="{{ routes.car.details.asString }}"> Details </a>
 
-    <a [navLink]="hub.home.home.state">
-      Home
-    </a>
-    <span class="link" [navLink]="hub.users.users.state">
-      Users
-    </span>
+    <a [routerLink]="routes.home.asArray"> Home </a>
+    <span class="link" routerLink="{{ routes.users.ROOT }}"> Users </span>
   </nav>
 </header>
