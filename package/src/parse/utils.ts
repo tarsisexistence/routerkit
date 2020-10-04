@@ -19,6 +19,7 @@ import { evaluate } from '@wessberg/ts-evaluator';
 import { getSourceFileOrThrow } from './get-source-file-from-paths';
 import { EMPTY_PATH } from '../generation/constants';
 import { error } from '../utils/common.utils';
+import { mergeRouteTrees } from './merge-route-trees';
 
 export const getRouteModuleForRootExpressions: (
   routerModuleClass: ClassDeclaration
@@ -119,7 +120,7 @@ export const parseRoutes = (
     }
 
     if (parsedRoute) {
-      root = { ...root, ...parsedRoute };
+      root = mergeRouteTrees(root, parsedRoute);
     }
   }
 
@@ -168,10 +169,10 @@ export const createProjectRouteTree = (
   let routeTree: RouterKit.Parse.RouteTree = {};
   const parsedModules = new Set<Type>();
   const eagersTree = createModuleRouteTree(project, appModule, parsedModules, routerType);
-  routeTree = { ...routeTree, ...eagersTree };
+  routeTree = mergeRouteTrees(routeTree, eagersTree);
 
   const parsedRoot = parseRoutes(forRootExpr, routerType, parsedModules, project);
-  return { ...parsedRoot, ...routeTree };
+  return mergeRouteTrees(parsedRoot, routeTree);
 };
 
 const createModuleRouteTree = (
@@ -187,7 +188,7 @@ const createModuleRouteTree = (
     const routes = findRouterModuleArgumentValue(forChildExpr);
     if (routes) {
       const parsed = parseRoutes(routes, routerType, parsedModules, project);
-      root = { ...root, ...parsed };
+      root = mergeRouteTrees(root, parsed);
     }
   }
 
@@ -374,7 +375,7 @@ const readChildren = (
   const expression = getPropertyValue(node, 'children');
   if (expression && Node.isArrayLiteralExpression(expression)) {
     const routes = parseRoutes(expression, routerType, parsedModules, project);
-    root = { ...root, ...routes };
+    root = mergeRouteTrees(root, routes);
   } // todo case, where children is a variable
 
   return root;
