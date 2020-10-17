@@ -9,11 +9,13 @@ describe('[parse] parseRoutes', () => {
   const PROJECT_NAME = 'test-app';
   const RELATIVE_PATH_TO_ANGULAR_JSON = '../../../angular.json';
   const ABSOLUTE_PATH_TO_ANGULAR_JSON = resolve(__dirname, RELATIVE_PATH_TO_ANGULAR_JSON);
-  const content = JSON.parse(readFileSync(ABSOLUTE_PATH_TO_ANGULAR_JSON).toString()) as WorkspaceSchema;
   const relativePathToTS = '../../../fixtures/test-app/tsconfig.app.json';
   const pathToTS = resolve(__dirname, relativePathToTS);
+  const CURRENT_DIR = process.cwd();
 
   it('should be parse project', () => {
+    const content = JSON.parse(readFileSync(ABSOLUTE_PATH_TO_ANGULAR_JSON).toString()) as WorkspaceSchema;
+
     const expectedRouteMap: RouterKit.Parse.RouteTree = {
       ROOT: {
         ROOT: {},
@@ -46,5 +48,32 @@ describe('[parse] parseRoutes', () => {
 
     const routes = parseRoutes(workspace, project);
     expect(routes).toEqual(expectedRouteMap);
+  });
+
+  it('should be parse nx project', () => {
+    const pathToNxRep = './fixtures/routerkit-nx-test-app';
+    process.chdir(pathToNxRep);
+
+    const tsconfigPath = './tsconfig.base.json';
+    const content = JSON.parse(readFileSync('./angular.json').toString()) as WorkspaceSchema;
+
+    const expectedRouteMap: RouterKit.Parse.RouteTree = {
+      auth: {
+        ROOT: {},
+        'sign-in': {}
+      }
+    };
+
+    const project = new Project({
+      tsConfigFilePath: tsconfigPath,
+      addFilesFromTsConfig: true
+    });
+
+    const workspace = content.projects['nx-app-for-routerkit'];
+
+    const routes = parseRoutes(workspace, project);
+    expect(routes).toEqual(expectedRouteMap);
+
+    process.chdir(CURRENT_DIR);
   });
 });
