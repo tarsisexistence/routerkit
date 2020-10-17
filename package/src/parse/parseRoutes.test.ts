@@ -5,8 +5,9 @@ import { Project } from 'ts-morph';
 
 import { parseRoutes } from './parseRoutes';
 
+const getWorkspace = (path: string) => JSON.parse(readFileSync(path).toString()) as WorkspaceSchema;
+
 describe('[parse] parseRoutes', () => {
-  const PROJECT_NAME = 'test-app';
   const RELATIVE_PATH_TO_ANGULAR_JSON = '../../../angular.json';
   const ABSOLUTE_PATH_TO_ANGULAR_JSON = resolve(__dirname, RELATIVE_PATH_TO_ANGULAR_JSON);
   const relativePathToTS = '../../../fixtures/test-app/tsconfig.app.json';
@@ -14,7 +15,7 @@ describe('[parse] parseRoutes', () => {
   const CURRENT_DIR = process.cwd();
 
   it('should be parse project', () => {
-    const content = JSON.parse(readFileSync(ABSOLUTE_PATH_TO_ANGULAR_JSON).toString()) as WorkspaceSchema;
+    const content = getWorkspace(ABSOLUTE_PATH_TO_ANGULAR_JSON);
 
     const expectedRouteMap: RouterKit.Parse.RouteTree = {
       ROOT: {
@@ -44,7 +45,7 @@ describe('[parse] parseRoutes', () => {
       addFilesFromTsConfig: true
     });
 
-    const workspace = content.projects[PROJECT_NAME];
+    const workspace = content.projects['test-app'];
 
     const routes = parseRoutes(workspace, project);
     expect(routes).toEqual(expectedRouteMap);
@@ -55,7 +56,7 @@ describe('[parse] parseRoutes', () => {
     process.chdir(pathToNxRep);
 
     const tsconfigPath = './tsconfig.base.json';
-    const content = JSON.parse(readFileSync('./angular.json').toString()) as WorkspaceSchema;
+    const content = getWorkspace('./angular.json');
 
     const expectedRouteMap: RouterKit.Parse.RouteTree = {
       auth: {
