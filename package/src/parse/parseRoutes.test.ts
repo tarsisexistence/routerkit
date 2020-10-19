@@ -77,4 +77,39 @@ describe('[parse] parseRoutes', () => {
 
     process.chdir(CURRENT_DIR);
   });
+
+  it('should be parse stackoverflow project', () => {
+    const pathToStackoverflowRep = './fixtures/stackoverflow';
+    process.chdir(pathToStackoverflowRep);
+
+    const tsconfigPath = './tsconfig.base.json';
+    const content = getWorkspace('./angular.json');
+
+    const expectedRouteMap: RouterKit.Parse.RouteTree = {
+      auth: {
+        ROOT: {
+          login: {},
+          'sign-up': {},
+          forgot: {},
+          ROOT: {}
+        }
+      },
+      ROOT: {},
+      results: { ROOT: {} },
+      answers: { ROOT: {} }
+    };
+
+    const project = new Project({
+      tsConfigFilePath: tsconfigPath,
+      addFilesFromTsConfig: true
+    });
+
+    const workspace = content.projects['stackoverflow'];
+
+    const routes = parseRoutes(workspace, project);
+    console.log(routes);
+    expect(routes).toEqual(expectedRouteMap);
+
+    process.chdir(CURRENT_DIR);
+  });
 });
