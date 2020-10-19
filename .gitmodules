@@ -1,3 +1,6 @@
 [submodule "fixtures/routerkit-nx-test-app"]
 	path = fixtures/routerkit-nx-test-app
 	url = git@github.com:limitofzero/routerkit-nx-test-app.git
+[submodule "fixtures/stackoverflow"]
+	path = fixtures/stackoverflow
+	url = git@github.com:limitofzero/stackoverflow.git
