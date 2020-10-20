@@ -2,7 +2,7 @@ import * as ora from 'ora';
 import { Rule, Tree } from '@angular-devkit/schematics';
 import { resolve } from 'path';
 
-import { parseRoutes } from './parseRoutes';
+import { parseRoutes } from './parse-routes';
 import { generateRoutesType } from '../generation/generateRoutesType';
 import { generateFile } from '../generation/utils';
 import { findAngularJSON, getProjectAST, getProjectTsconfigPath } from './utils.angular';

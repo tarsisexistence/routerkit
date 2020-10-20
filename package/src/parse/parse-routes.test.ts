@@ -3,7 +3,7 @@ import { readFileSync } from 'fs';
 import { WorkspaceSchema } from '@angular-devkit/core/src/experimental/workspace';
 import { Project } from 'ts-morph';
 
-import { parseRoutes } from './parseRoutes';
+import { parseRoutes } from './parse-routes';
 
 const getWorkspace = (path: string) => JSON.parse(readFileSync(path).toString()) as WorkspaceSchema;
 
