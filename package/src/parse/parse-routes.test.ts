@@ -15,6 +15,7 @@ describe('[parse] parseRoutes', () => {
   const CURRENT_DIR = process.cwd();
 
   it('should be parse project', () => {
+    const PROJECT_NAME = 'test-app';
     const content = getWorkspace(ABSOLUTE_PATH_TO_ANGULAR_JSON);
 
     const expectedRouteMap: RouterKit.Parse.RouteTree = {
@@ -45,13 +46,14 @@ describe('[parse] parseRoutes', () => {
       addFilesFromTsConfig: true
     });
 
-    const workspace = content.projects['test-app'];
+    const workspace = content.projects[PROJECT_NAME];
 
     const routes = parseRoutes(workspace, project);
     expect(routes).toEqual(expectedRouteMap);
   });
 
   it('should be parse nx project', () => {
+    const PROJECT_NAME = 'nx-app-for-routerkit';
     const pathToNxRep = './fixtures/routerkit-nx-test-app';
     process.chdir(pathToNxRep);
 
@@ -70,7 +72,7 @@ describe('[parse] parseRoutes', () => {
       addFilesFromTsConfig: true
     });
 
-    const workspace = content.projects['nx-app-for-routerkit'];
+    const workspace = content.projects[PROJECT_NAME];
 
     const routes = parseRoutes(workspace, project);
     expect(routes).toEqual(expectedRouteMap);
@@ -79,6 +81,7 @@ describe('[parse] parseRoutes', () => {
   });
 
   it('should be parse stackoverflow project', () => {
+    const PROJECT_NAME = 'stackoverflow';
     const pathToStackoverflowRep = './fixtures/stackoverflow';
     process.chdir(pathToStackoverflowRep);
 
@@ -104,7 +107,7 @@ describe('[parse] parseRoutes', () => {
       addFilesFromTsConfig: true
     });
 
-    const workspace = content.projects['stackoverflow'];
+    const workspace = content.projects[PROJECT_NAME];
 
     const routes = parseRoutes(workspace, project);
     console.log(routes);
