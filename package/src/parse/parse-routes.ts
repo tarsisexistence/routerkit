@@ -9,7 +9,7 @@ export const parseRoutes = (workspace: WorkspaceProject, project: Project): Rout
   const pathToMainFile = workspace.architect?.build?.options?.main as string;
 
   if (!pathToMainFile) {
-    throw error("Can't find path to main.ts in angular.json");
+    throw error(`Can't find path to main.ts in angular.json(${pathToMainFile})`);
   }
 
   const appModule = getAppModule(project, pathToMainFile);
