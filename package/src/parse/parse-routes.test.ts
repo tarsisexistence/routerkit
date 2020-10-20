@@ -58,7 +58,12 @@ describe('[parse] parseRoutes', () => {
     process.chdir(pathToNxRep);
 
     const tsconfigPath = './tsconfig.base.json';
-    const content = getWorkspace('./angular.json');
+    let content: WorkspaceSchema;
+    try {
+      content = getWorkspace('./angular.json');
+    } catch (e) {
+      return;
+    }
 
     const expectedRouteMap: RouterKit.Parse.RouteTree = {
       auth: {
@@ -86,7 +91,12 @@ describe('[parse] parseRoutes', () => {
     process.chdir(pathToStackoverflowRep);
 
     const tsconfigPath = './tsconfig.base.json';
-    const content = getWorkspace('./angular.json');
+    let content: WorkspaceSchema;
+    try {
+      content = getWorkspace('./angular.json');
+    } catch (e) {
+      return;
+    }
 
     const expectedRouteMap: RouterKit.Parse.RouteTree = {
       auth: {
