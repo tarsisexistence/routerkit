@@ -1,4 +1,4 @@
-const pluginName = 'webpackPlugin';
+const pluginName = 'WebpackPlugin';
 
 export class WebpackPlugin {
   constructor() {}
