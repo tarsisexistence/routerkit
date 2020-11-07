@@ -11,7 +11,7 @@
   "bugs": "https://github.com/retarsis/routerkit/issues",
   "license": "MIT",
   "dependencies": {
-    "@wessberg/ts-evaluator": "0.0.26",
+    "@wessberg/ts-evaluator": "0.0.27",
     "ts-morph": "8.1.2",
     "tslib": "2.0.3",
     "ora": "5.1.0"
