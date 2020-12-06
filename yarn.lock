@@ -10314,12 +10314,12 @@ rollup@^2.8.0:
   optionalDependencies:
     fsevents "~2.1.2"
 
-routeshub@4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/routeshub/-/routeshub-4.2.2.tgz#0d80a6ccc13021fc69e451fe5ac48380b0f919b4"
-  integrity sha512-srCyNHO2s2gm60f9S43mJGI2YHqsN2dRcEgp4yXhgnjKI1ePMFUK8F0Nom40uCWnvL89jUz05EizTGFB7lageA==
+routeshub@4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/routeshub/-/routeshub-4.3.0.tgz#2be5efdf4261d67d5d97ed77f4155f36f4e0cd23"
+  integrity sha512-ndgBpnFe6zlVCzXcTfDNqq+BfYWSzTUqoAvYgIhwWbTjs/ZAvnLDfTUaMurhBlMqrsx+YDiQWaZAKcQPRDa4iA==
   dependencies:
-    tslib "2.0.1"
+    tslib "~2.0.3"
 
 rsvp@^4.8.4:
   version "4.8.5"
@@ -11992,7 +11992,7 @@ tslib@2.0.1, tslib@^2.0.0, tslib@^2.0.1:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.1.tgz#410eb0d113e5b6356490eec749603725b021b43e"
   integrity sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==
 
-tslib@2.0.3, tslib@^2.0.3:
+tslib@2.0.3, tslib@^2.0.3, tslib@~2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
   integrity sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ==
