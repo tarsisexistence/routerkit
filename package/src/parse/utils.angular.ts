@@ -1,9 +1,13 @@
 import { Tree } from '@angular-devkit/schematics';
-import { WorkspaceProject, WorkspaceSchema } from '@angular-devkit/core/src/experimental/workspace';
 import { ClassDeclaration, Node, Project } from 'ts-morph';
 import { resolve } from 'path';
 
 import { error } from '../utils/common.utils';
+
+// TODO: find where to import the original type from '@angular-devkit/core/src/experimental/workspace';
+// import { WorkspaceProject, WorkspaceSchema } from '@angular-devkit/core/src/experimental/workspace';
+type WorkspaceProject = any;
+type WorkspaceSchema = any;
 
 export const findAngularJSON = (tree: Tree): WorkspaceSchema => {
   const angularJson = tree.read('angular.json');

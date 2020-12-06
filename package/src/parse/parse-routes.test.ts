@@ -1,10 +1,11 @@
 import { resolve } from 'path';
 import { readFileSync } from 'fs';
-import { WorkspaceSchema } from '@angular-devkit/core/src/experimental/workspace';
 import { Project } from 'ts-morph';
 
 import { parseRoutes } from './parse-routes';
 
+// TODO: find where to import the original type from '@angular-devkit/core/src/experimental/workspace';
+type WorkspaceSchema = any;
 const getWorkspace = (path: string) => JSON.parse(readFileSync(path).toString()) as WorkspaceSchema;
 
 describe('[parse] parseRoutes', () => {
