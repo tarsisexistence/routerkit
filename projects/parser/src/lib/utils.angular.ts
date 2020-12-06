@@ -1,8 +1,7 @@
 import { Tree } from '@angular-devkit/schematics';
 import { ClassDeclaration, Node, Project } from 'ts-morph';
 import { resolve } from 'path';
-
-import { error } from '../../../projects/parser/src/lib/common.utils';
+import { error } from './common.utils';
 
 // TODO: find where to import the original type from '@angular-devkit/core/src/experimental/workspace';
 // import { WorkspaceProject, WorkspaceSchema } from '@angular-devkit/core/src/experimental/workspace';

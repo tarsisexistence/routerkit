@@ -29,6 +29,10 @@
       "parser": [
         "dist/parser/parser",
         "dist/parser"
+      ],
+      "shared": [
+        "dist/shared/shared",
+        "dist/shared"
       ]
     }
   },

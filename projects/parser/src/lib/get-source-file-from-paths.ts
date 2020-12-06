@@ -1,5 +1,6 @@
 import { Project, SourceFile, ts } from 'ts-morph';
-import { error } from '../../../projects/parser/src/lib/common.utils';
+import { Alias } from './interfaces';
+import { error } from './common.utils';
 
 /*
  * Works like Project.getSourceFileOrThrow function,
@@ -28,7 +29,7 @@ export const getSourceFileOrThrow = (project: Project, relativeFilePath: string)
 
 const tryGetSourceFileByAliasOrThrow = (
   project: Project,
-  aliases: RouterKit.Parse.Alias[],
+  aliases: Alias[],
   paths: ts.MapLike<string[]>,
   relativeFilePath: string,
   baseUrl: string
@@ -51,8 +52,8 @@ const tryGetSourceFileByAliasOrThrow = (
   return sourceFile;
 };
 
-const getMaxMatchedAlias = (aliases: RouterKit.Parse.Alias[]): RouterKit.Parse.Alias => {
-  return aliases.reduce((maxMatched: RouterKit.Parse.Alias, alias: RouterKit.Parse.Alias) => {
+const getMaxMatchedAlias = (aliases: Alias[]): Alias => {
+  return aliases.reduce((maxMatched: Alias, alias: Alias) => {
     const maxLength = maxMatched.withoutAsterisk.length;
     const currentAliasLength = alias.withoutAsterisk.length;
 

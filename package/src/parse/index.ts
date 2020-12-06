@@ -6,7 +6,7 @@ import { parseRoutes } from './parse-routes';
 import { generateRoutesType } from '../generation/generateRoutesType';
 import { generateFile } from '../generation/utils';
 import { findAngularJSON, getProjectAST, getProjectTsconfigPath } from './utils.angular';
-import { error, space, taskFinish, taskStart } from '../utils/common.utils';
+import { error, space, taskFinish, taskStart } from '../../../projects/parser/src/lib/common.utils';
 import { findFilePath } from '../utils/fs.utils';
 
 export function parse(options: RouterKit.Parse.Schema): Rule {

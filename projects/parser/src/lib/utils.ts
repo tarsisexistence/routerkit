@@ -17,9 +17,10 @@ import { resolve, sep } from 'path';
 import { evaluate } from '@wessberg/ts-evaluator';
 
 import { getSourceFileOrThrow } from './get-source-file-from-paths';
-import { EMPTY_PATH } from '../generation/constants';
-import { error } from '../../../projects/parser/src/lib/common.utils';
+import { EMPTY_PATH } from './constants';
+import { error } from './common.utils';
 import { mergeRouteTrees } from './merge-route-trees';
+import { LoadChildren, RouterExpression, RouteTree } from './interfaces';
 
 export const getRouteModuleForRootExpressions: (
   routerModuleClass: ClassDeclaration
@@ -82,8 +83,8 @@ const tryFindVariableValue = <T extends Node>(
 
 export const getRouterModuleCallExpressions: (
   routeModules: Node[],
-  expression: RouterKit.Parse.RouterExpression
-) => CallExpression[] = (routeModules: Node[], expression: RouterKit.Parse.RouterExpression): CallExpression[] => {
+  expression: RouterExpression
+) => CallExpression[] = (routeModules: Node[], expression: RouterExpression): CallExpression[] => {
   return routeModules
     .map(ref => ref.getParent() as PropertyAccessExpression)
     .filter(node => Node.isPropertyAccessExpression(node))
@@ -103,12 +104,12 @@ export const parseRoutes = (
   routerType: Type,
   parsedModules: Set<Type>,
   project: Project
-): RouterKit.Parse.RouteTree => {
-  let root: RouterKit.Parse.RouteTree = {};
+): RouteTree => {
+  let root: RouteTree = {};
   const elements = routes.getElements();
 
   for (const el of elements) {
-    let parsedRoute: RouterKit.Parse.RouteTree | null = null;
+    let parsedRoute: RouteTree | null = null;
 
     if (Node.isObjectLiteralExpression(el)) {
       parsedRoute = parseRoute(el, routerType, parsedModules, project);
@@ -132,8 +133,8 @@ const parseRoute = (
   routerType: Type,
   parsedModules: Set<Type>,
   project: Project
-): RouterKit.Parse.RouteTree | null => {
-  const root: RouterKit.Parse.RouteTree = {};
+): RouteTree | null => {
+  const root: RouteTree = {};
   const typeChecker = project.getTypeChecker();
   const path = readPath(route, typeChecker);
   const routeName = path === '' ? EMPTY_PATH : path;
@@ -153,7 +154,7 @@ const parseRoute = (
   return root;
 };
 
-const getLazyModuleDeclaration = (project: Project, loadChildren: RouterKit.Parse.LoadChildren): ClassDeclaration => {
+const getLazyModuleDeclaration = (project: Project, loadChildren: LoadChildren): ClassDeclaration => {
   const { path, moduleName } = loadChildren;
   const pathWithExtension = path.endsWith('.ts') ? path : `${path}.ts`;
   const sourceFile = getSourceFileOrThrow(project, pathWithExtension);
@@ -165,8 +166,8 @@ export const createProjectRouteTree = (
   appModule: ClassDeclaration,
   forRootExpr: ArrayLiteralExpression,
   routerType: Type
-): RouterKit.Parse.RouteTree => {
-  let routeTree: RouterKit.Parse.RouteTree = {};
+): RouteTree => {
+  let routeTree: RouteTree = {};
   const parsedModules = new Set<Type>();
   const eagersTree = createModuleRouteTree(project, appModule, parsedModules, routerType);
   routeTree = mergeRouteTrees(routeTree, eagersTree);
@@ -180,8 +181,8 @@ const createModuleRouteTree = (
   module: ClassDeclaration,
   parsedModules: Set<Type>,
   routerType: Type
-): RouterKit.Parse.RouteTree => {
-  let root: RouterKit.Parse.RouteTree = {};
+): RouteTree => {
+  let root: RouteTree = {};
 
   const eagerForChildExpr = findRouteChildren(routerType, module, parsedModules);
   for (const forChildExpr of eagerForChildExpr) {
@@ -370,8 +371,8 @@ const readChildren = (
   routerType: Type,
   parsedModules: Set<Type>,
   project: Project
-): RouterKit.Parse.RouteTree => {
-  let root: RouterKit.Parse.RouteTree = {};
+): RouteTree => {
+  let root: RouteTree = {};
   const expression = getPropertyValue(node, 'children');
   if (expression && Node.isArrayLiteralExpression(expression)) {
     const routes = parseRoutes(expression, routerType, parsedModules, project);
@@ -385,7 +386,7 @@ export const readLoadChildrenWithFullModulePath = (
   node: ObjectLiteralExpression,
   currentSourceFile: SourceFile,
   typeChecker: TypeChecker
-): RouterKit.Parse.LoadChildren | null => {
+): LoadChildren | null => {
   const loadChildren = readLoadChildren(node, typeChecker);
   if (!loadChildren) {
     return null;
@@ -403,10 +404,7 @@ export const readLoadChildrenWithFullModulePath = (
   return { ...loadChildren, path: fullPathToLazyModule };
 };
 
-const readLoadChildren = (
-  node: ObjectLiteralExpression,
-  typeChecker: TypeChecker
-): RouterKit.Parse.LoadChildren | null => {
+const readLoadChildren = (node: ObjectLiteralExpression, typeChecker: TypeChecker): LoadChildren | null => {
   const expression = getPropertyValue(node, 'loadChildren');
   if (!expression) {
     return null;
@@ -426,7 +424,7 @@ const readLoadChildren = (
   return path ? getOldLoadChildrenSyntaxPath(path) : null;
 };
 
-const getOldLoadChildrenSyntaxPath = (str: string): RouterKit.Parse.LoadChildren | null => {
+const getOldLoadChildrenSyntaxPath = (str: string): LoadChildren | null => {
   const [path, module] = str.split('#');
   if (typeof path === 'string' && module) {
     return { path, moduleName: module };
@@ -435,8 +433,8 @@ const getOldLoadChildrenSyntaxPath = (str: string): RouterKit.Parse.LoadChildren
   return null;
 };
 
-const parseLoadChildrenFunction = (fnNode: CallExpression): RouterKit.Parse.LoadChildren | null => {
-  const parsedLoadChildren: Partial<RouterKit.Parse.LoadChildren> = {};
+const parseLoadChildrenFunction = (fnNode: CallExpression): LoadChildren | null => {
+  const parsedLoadChildren: Partial<LoadChildren> = {};
   const accessExpression = fnNode.getExpression();
   if (Node.isPropertyAccessExpression(accessExpression)) {
     const impExpr = accessExpression.getExpression();
@@ -461,7 +459,7 @@ const parseLoadChildrenFunction = (fnNode: CallExpression): RouterKit.Parse.Load
   return null;
 };
 
-const parseLazyModuleArrowFn = (node: ArrowFunction): RouterKit.Parse.LoadChildren | null => {
+const parseLazyModuleArrowFn = (node: ArrowFunction): LoadChildren | null => {
   const body = node.getBody();
   if (Node.isPropertyAccessExpression(body)) {
     const module = body.getNameNode();
