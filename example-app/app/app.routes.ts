@@ -25,8 +25,9 @@ export const routes: Routes = [
 ];
 
 export const appRouting = RouterModule.forRoot(routes, {
-  enableTracing: false,
-  initialNavigation: 'enabled',
-  onSameUrlNavigation: 'reload',
-  scrollPositionRestoration: 'top'
+    enableTracing: false,
+    initialNavigation: 'enabled',
+    onSameUrlNavigation: 'reload',
+    scrollPositionRestoration: 'top',
+    relativeLinkResolution: 'legacy'
 });
