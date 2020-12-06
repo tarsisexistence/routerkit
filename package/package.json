@@ -1,7 +1,7 @@
 {
   "name": "@routerkit/core",
   "description": "the next-gen typed angular routes",
-  "version": "0.8.1",
+  "version": "0.9.0",
   "author": "Max Tarsis (https://github.com/retarsis)",
   "repository": {
     "type": "git",
@@ -12,12 +12,12 @@
   "license": "MIT",
   "dependencies": {
     "@wessberg/ts-evaluator": "0.0.27",
-    "ts-morph": "8.1.2",
+    "ts-morph": "8.2.0",
     "tslib": "2.0.3",
     "ora": "5.1.0"
   },
   "peerDependencies": {
-    "@angular/router": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0",
+    "@angular/router": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",
     "chalk": "4.1.0"
   },
   "scripts": {

@@ -1,3 +1,8 @@
+# 0.9.0 2020-12-06
+
+- Added support Angular 11
+- Updated dependencies
+
 # 0.8.1 2020-10-04
 
 - Fixed angular interpolation toString call
