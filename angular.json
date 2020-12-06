@@ -236,7 +236,7 @@
     }
   },
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "yarn"
   },
   "defaultProject": "routerkit"
 }
