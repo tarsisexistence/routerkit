@@ -1,5 +1,5 @@
 import { Project, SourceFile, ts } from 'ts-morph';
-import { error } from '../../../projects/parser/src/lib/common.utils';
+import { error } from 'shared';
 
 /*
  * Works like Project.getSourceFileOrThrow function,

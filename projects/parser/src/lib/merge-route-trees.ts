@@ -1,4 +1,4 @@
-import { RouteTree } from './interfaces';
+import { RouteTree } from 'shared';
 
 export const mergeRouteTrees = (left: RouteTree, right: RouteTree, mutableRoot: RouteTree = {}): RouteTree => {
   const unionProps = getUnionArrayOfProps(left, right);

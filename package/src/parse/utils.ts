@@ -18,8 +18,8 @@ import { evaluate } from '@wessberg/ts-evaluator';
 
 import { getSourceFileOrThrow } from './get-source-file-from-paths';
 import { EMPTY_PATH } from '../generation/constants';
-import { error } from '../../../projects/parser/src/lib/common.utils';
 import { mergeRouteTrees } from './merge-route-trees';
+import { error } from 'shared';
 
 export const getRouteModuleForRootExpressions: (
   routerModuleClass: ClassDeclaration

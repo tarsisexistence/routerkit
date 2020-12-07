@@ -1,6 +1,5 @@
 import { Project, SourceFile, ts } from 'ts-morph';
-import { Alias } from './interfaces';
-import { error } from './common.utils';
+import { Alias, error } from 'shared';
 
 /*
  * Works like Project.getSourceFileOrThrow function,

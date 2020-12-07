@@ -17,10 +17,8 @@ import { resolve, sep } from 'path';
 import { evaluate } from '@wessberg/ts-evaluator';
 
 import { getSourceFileOrThrow } from './get-source-file-from-paths';
-import { EMPTY_PATH } from './constants';
-import { error } from './common.utils';
+import { EMPTY_PATH, error, LoadChildren, RouterExpression, RouteTree } from 'shared';
 import { mergeRouteTrees } from './merge-route-trees';
-import { LoadChildren, RouterExpression, RouteTree } from './interfaces';
 
 export const getRouteModuleForRootExpressions: (
   routerModuleClass: ClassDeclaration

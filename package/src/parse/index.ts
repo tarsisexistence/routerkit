@@ -2,11 +2,11 @@ import * as ora from 'ora';
 import { Rule, Tree } from '@angular-devkit/schematics';
 import { resolve } from 'path';
 
-import { findAngularJSON, getProjectAST, getProjectTsconfigPath, parseRoutes } from 'parser';
+import { parseRoutes } from 'parser';
 import { generateRoutesType } from '../generation/generateRoutesType';
 import { generateFile } from '../generation/utils';
-import { error, space, taskFinish, taskStart } from '../../../projects/parser/src/lib/common.utils';
 import { findFilePath } from '../utils/fs.utils';
+import { error, findAngularJSON, getProjectAST, getProjectTsconfigPath, space, taskFinish, taskStart } from 'shared';
 
 export function parse(options: RouterKit.Parse.Schema): Rule {
   return (tree: Tree) => {

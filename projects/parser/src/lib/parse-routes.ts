@@ -1,9 +1,7 @@
 import { Project } from 'ts-morph';
 
 import { createProjectRouteTree, getAppModule, getRouteModuleForRootExpressions } from './utils';
-import { getRouterModuleClass } from './utils.angular';
-import { error } from './common.utils';
-import { RouteTree } from './interfaces';
+import { error, getRouterModuleClass, RouteTree } from 'shared';
 
 // TODO: find where to import the original type from '@angular-devkit/core/src/experimental/workspace';
 type WorkspaceProject = any;

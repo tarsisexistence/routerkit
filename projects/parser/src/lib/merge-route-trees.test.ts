@@ -1,5 +1,5 @@
 import { mergeRouteTrees } from './merge-route-trees';
-import { RouteTree } from './interfaces';
+import { RouteTree } from 'shared';
 
 describe('mergeRouteTrees test', () => {
   test('should return expected tree 1', () => {
