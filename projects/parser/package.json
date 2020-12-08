@@ -6,6 +6,8 @@
     "@angular/core": "^11.0.3"
   },
   "dependencies": {
+    "@wessberg/ts-evaluator": "0.0.27",
+    "ts-morph": "8.2.0",
     "tslib": "^2.0.0"
   }
 }
