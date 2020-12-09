@@ -253,7 +253,7 @@
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
-            "configPath": "./projects/parser/jest.config.js"
+            "configPath": "jest.config.js"
           }
         },
         "lint": {
