@@ -2,7 +2,7 @@ import { resolve } from 'path';
 import { readFileSync } from 'fs';
 import { Project } from 'ts-morph';
 
-import { parseRoutes } from './parse-routes';
+import { parseRoutes } from 'parser';
 
 // TODO: find where to import the original type from '@angular-devkit/core/src/experimental/workspace';
 type WorkspaceSchema = any;

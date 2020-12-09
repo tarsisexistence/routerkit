@@ -3,5 +3,6 @@
   "dest": "../../dist/parser",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": ["@wessberg/ts-evaluator", "ts-morph", "tslib"]
 }
