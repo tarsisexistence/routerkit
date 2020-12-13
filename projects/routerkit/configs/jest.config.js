@@ -7,7 +7,11 @@ module.exports = {
   moduleNameMapper: {
     '^lib$': `${__dirname}/../package/index`,
     '^lib(.*)': `${__dirname}/../package/src/$1`
-  }
+  },
+  modulePathIgnorePatterns: [
+    '<rootDir>/projects/shared',
+    '<rootDir>/projects/parser',
+  ]
 };
 
 /**
