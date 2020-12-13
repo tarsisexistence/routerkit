@@ -7,7 +7,10 @@ module.exports = {
   moduleNameMapper: {
     '^projects': `${__dirname}/src/public-api.ts`,
     '^projects(.*)': `${__dirname}/src/$1`
-  }
+  },
+  modulePathIgnorePatterns: [
+    '<rootDir>/projects/shared'
+  ]
 };
 
 /**
