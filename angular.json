@@ -1,23 +1,23 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "newProjectRoot": "projects/routerkit",
   "projects": {
     "routerkit": {
-      "root": "package",
-      "sourceRoot": "package/src",
+      "root": "projects/routerkit",
+      "sourceRoot": "projects/routerkit/src",
       "projectType": "library",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "package/tsconfig.lib.json",
-            "project": "package/ng-package.json"
+            "tsConfig": "projects/routerkit/tsconfig.lib.json",
+            "project": "projects/routerkit/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "package/tsconfig.lib.prod.json"
+              "tsConfig": "projects/routerkit/tsconfig.lib.prod.json"
             }
           }
         },
@@ -30,7 +30,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["package/tsconfig.lib.json", "package/tsconfig.test.json"],
+            "tsConfig": ["projects/routerkit/tsconfig.lib.json", "projects/routerkit/tsconfig.test.json"],
             "exclude": ["**/node_modules/**"]
           }
         }

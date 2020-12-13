@@ -2,7 +2,8 @@ import { resolve } from 'path';
 import { readFileSync } from 'fs';
 import { Project } from 'ts-morph';
 
-import { parseRoutes } from 'parser';
+import { RouteTree } from 'shared';
+import { parseRoutes } from './parse-routes';
 
 // TODO: find where to import the original type from '@angular-devkit/core/src/experimental/workspace';
 type WorkspaceSchema = any;
@@ -19,7 +20,7 @@ describe('[parse] parseRoutes', () => {
     const PROJECT_NAME = 'test-app';
     const content = getWorkspace(ABSOLUTE_PATH_TO_ANGULAR_JSON);
 
-    const expectedRouteMap: RouterKit.Parse.RouteTree = {
+    const expectedRouteMap: RouteTree = {
       ROOT: {
         ROOT: {},
         'second-child': {},
@@ -71,7 +72,7 @@ describe('[parse] parseRoutes', () => {
       return;
     }
 
-    const expectedRouteMap: RouterKit.Parse.RouteTree = {
+    const expectedRouteMap: RouteTree = {
       auth: {
         ROOT: {},
         'sign-in': {}
@@ -109,7 +110,7 @@ describe('[parse] parseRoutes', () => {
       return;
     }
 
-    const expectedRouteMap: RouterKit.Parse.RouteTree = {
+    const expectedRouteMap: RouteTree = {
       auth: {
         ROOT: {
           login: {},

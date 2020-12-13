@@ -5,8 +5,8 @@ module.exports = {
     }
   },
   moduleNameMapper: {
-    '^lib$': `${__dirname}/src/public-api.ts`,
-    '^lib(.*)': `${__dirname}/src/$1`
+    '^projects': `${__dirname}/src/public-api.ts`,
+    '^projects(.*)': `${__dirname}/src/$1`
   }
 };
 

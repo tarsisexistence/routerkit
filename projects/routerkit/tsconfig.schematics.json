@@ -11,7 +11,7 @@
     "noImplicitThis": true,
     "noUnusedParameters": true,
     "noUnusedLocals": true,
-    "outDir": "../dist/routerkit",
+    "outDir": "../../dist/routerkit",
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "sourceMap": true,
