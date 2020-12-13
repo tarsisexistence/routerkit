@@ -9,7 +9,7 @@
     "// - NG - //": "------------------------------",
     "start": "ng serve example-app --port 3000",
     "build": "ng build routerkit --prod",
-    "build:schematics": "cd projects/schematic && yarn build",
+    "build:schematics": "ng build routerkit",
     "build:schematics:watch": "cd package && yarn build:watch",
     "build:shared": "yarn ng build shared",
     "build:parser": "yarn ng build parser",
