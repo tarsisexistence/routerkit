@@ -10,11 +10,11 @@ type WorkspaceSchema = any;
 const getWorkspace = (path: string) => JSON.parse(readFileSync(path).toString()) as WorkspaceSchema;
 
 describe('[parse] parseRoutes', () => {
-  const RELATIVE_PATH_TO_ANGULAR_JSON = '../../../angular.json';
-  const ABSOLUTE_PATH_TO_ANGULAR_JSON = resolve(__dirname, RELATIVE_PATH_TO_ANGULAR_JSON);
-  const relativePathToTS = '../../../fixtures/test-app/tsconfig.app.json';
-  const pathToTS = resolve(__dirname, relativePathToTS);
   const CURRENT_DIR = process.cwd();
+  const RELATIVE_PATH_TO_ANGULAR_JSON = `${CURRENT_DIR}/angular.json`;
+  const ABSOLUTE_PATH_TO_ANGULAR_JSON = `${CURRENT_DIR}/angular.json`;
+  const relativePathToTS = `${CURRENT_DIR}/fixtures/test-app/tsconfig.app.json`;
+  const pathToTS = resolve(__dirname, relativePathToTS);
 
   it('should be parse project', () => {
     const PROJECT_NAME = 'test-app';
