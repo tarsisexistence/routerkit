@@ -481,8 +481,8 @@ const evaluateExpression = (node: Expression, morphTypeChecker: TypeChecker): st
   const compilerNode = node.compilerNode;
   const typeChecker = morphTypeChecker.compilerObject;
   const result = evaluate({
-    node: compilerNode,
-    typeChecker
+    node: compilerNode as any,
+    typeChecker: typeChecker as any
   });
 
   return result.success ? (result.value as string) : null;
