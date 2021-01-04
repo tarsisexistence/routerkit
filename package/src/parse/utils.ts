@@ -481,7 +481,7 @@ const evaluateExpression = (node: Expression, morphTypeChecker: TypeChecker): st
   const compilerNode = node.compilerNode;
   const typeChecker = morphTypeChecker.compilerObject;
 
-  // wait evaluate update
+  // todo wait evaluate update
   const result = evaluate({
     node: compilerNode as any,
     typeChecker: typeChecker as any
