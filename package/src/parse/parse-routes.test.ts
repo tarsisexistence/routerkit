@@ -44,7 +44,7 @@ describe('[parse] parseRoutes', () => {
 
     const project = new Project({
       tsConfigFilePath: pathToTS,
-      addFilesFromTsConfig: true
+      skipAddingFilesFromTsConfig: false
     });
 
     const workspace = content.projects[PROJECT_NAME];
@@ -80,7 +80,7 @@ describe('[parse] parseRoutes', () => {
 
     const project = new Project({
       tsConfigFilePath: tsconfigPath,
-      addFilesFromTsConfig: true
+      skipAddingFilesFromTsConfig: false
     });
 
     const workspace = content.projects[PROJECT_NAME];
@@ -125,7 +125,7 @@ describe('[parse] parseRoutes', () => {
 
     const project = new Project({
       tsConfigFilePath: tsconfigPath,
-      addFilesFromTsConfig: true
+      skipAddingFilesFromTsConfig: false
     });
 
     const workspace = content.projects[PROJECT_NAME];

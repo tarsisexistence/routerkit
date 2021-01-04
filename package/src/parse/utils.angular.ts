@@ -36,7 +36,7 @@ export const getProjectTsconfigPath = (workspace: WorkspaceProject, projectName:
 };
 
 export const getProjectAST = (tsConfigFilePath: string): Project =>
-  new Project({ tsConfigFilePath, addFilesFromTsConfig: true });
+  new Project({ tsConfigFilePath, skipAddingFilesFromTsConfig: false });
 
 export const getRouterModuleClass = (project: Project): ClassDeclaration => {
   const moduleImport = project
