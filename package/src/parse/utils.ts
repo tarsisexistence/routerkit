@@ -480,6 +480,8 @@ const parseLazyModuleArrowFn = (node: ArrowFunction): RouterKit.Parse.LoadChildr
 const evaluateExpression = (node: Expression, morphTypeChecker: TypeChecker): string | null => {
   const compilerNode = node.compilerNode;
   const typeChecker = morphTypeChecker.compilerObject;
+
+  // wait evaluate update
   const result = evaluate({
     node: compilerNode as any,
     typeChecker: typeChecker as any
