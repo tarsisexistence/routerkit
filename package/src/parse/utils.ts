@@ -21,6 +21,7 @@ import { getSourceFileOrThrow } from './get-source-file-from-paths';
 import { EMPTY_PATH } from '../generation/constants';
 import { error } from '../utils/common.utils';
 import { mergeRouteTrees } from './merge-route-trees';
+import { logParsingWarning } from './log-parsing-worning';
 
 export const getRouteModuleForRootExpressions: (
   routerModuleClass: ClassDeclaration
@@ -265,12 +266,7 @@ const divideRouterExpressionsAndModulesDeclarations = (
 const getModulesFromSpreadOperator = (node: SpreadElement): Node[] => {
   const expression = node.getExpression();
   if (!Node.isIdentifier(expression)) {
-    // todo think about log fn
-    console.warn(
-      `The node can't be parsed ${node.getText()} (file: ${node
-        .getSourceFile()
-        .getFilePath()}, line: ${node.getStartLineNumber()})`
-    );
+    logParsingWarning(node);
     return [];
   }
 
