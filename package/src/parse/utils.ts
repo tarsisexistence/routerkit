@@ -265,7 +265,12 @@ const divideRouterExpressionsAndModulesDeclarations = (
 const getModulesFromSpreadOperator = (node: SpreadElement): Node[] => {
   const expression = node.getExpression();
   if (!Node.isIdentifier(expression)) {
-    console.warn(`Node ${node.getText()} has no parsable type`);
+    // todo think about log fn
+    console.warn(
+      `The node can't be parsed ${node.getText()} (file: ${node
+        .getSourceFile()
+        .getFilePath()}, line: ${node.getStartLineNumber()})`
+    );
     return [];
   }
 
