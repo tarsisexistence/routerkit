@@ -10,6 +10,7 @@ import {
   Project,
   PropertyAccessExpression,
   SourceFile,
+  SpreadElement,
   Type,
   TypeChecker
 } from 'ts-morph';
@@ -245,13 +246,8 @@ const divideRouterExpressionsAndModulesDeclarations = (
 
   for (const node of modules) {
     if (Node.isSpreadElement(node)) {
-      if (!Node.isIdentifier(node.getExpression())) {
-        console.warn(`Node ${node.getText()} has no parsable type`);
-        continue;
-      }
-
-      const modulesArray = tryFindVariableValue(node.getExpression() as Identifier, Node.isArrayLiteralExpression);
-      modulesArray?.getElements()?.forEach(el => modules.push(el));
+      getModulesFromSpreadOperator(node).forEach(el => modules.push(el));
+      continue;
     }
 
     const parsedNode = getModuleDeclarationOrCallExpressionById(node, isRouterType);
@@ -264,6 +260,17 @@ const divideRouterExpressionsAndModulesDeclarations = (
     routerExpressions,
     moduleDeclarations
   };
+};
+
+const getModulesFromSpreadOperator = (node: SpreadElement): Node[] => {
+  const expression = node.getExpression();
+  if (!Node.isIdentifier(expression)) {
+    console.warn(`Node ${node.getText()} has no parsable type`);
+    return [];
+  }
+
+  const modules = tryFindVariableValue(node.getExpression() as Identifier, Node.isArrayLiteralExpression);
+  return modules ? modules.getElements() : [];
 };
 
 const getModuleDeclarationOrCallExpressionById = (
