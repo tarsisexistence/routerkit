@@ -244,6 +244,16 @@ const divideRouterExpressionsAndModulesDeclarations = (
   const isRouterType = isClassHasTheSameType.bind(null, routerType);
 
   for (const node of modules) {
+    if (Node.isSpreadElement(node)) {
+      if (!Node.isIdentifier(node.getExpression())) {
+        console.warn(`Node ${node.getText()} has no parsable type`);
+        continue;
+      }
+
+      const modulesArray = tryFindVariableValue(node.getExpression() as Identifier, Node.isArrayLiteralExpression);
+      modulesArray?.getElements()?.forEach(el => modules.push(el));
+    }
+
     const parsedNode = getModuleDeclarationOrCallExpressionById(node, isRouterType);
     if (parsedNode) {
       Node.isCallExpression(parsedNode) ? routerExpressions.push(parsedNode) : moduleDeclarations.push(parsedNode);
