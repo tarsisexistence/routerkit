@@ -6,7 +6,7 @@ export const logParsingWarning = (node: Node): void => {
   const sourceCode = node.getText();
   const position = node.getStartLinePos();
 
-  const displayedMessage = `There is problems with parsing node:\n
+  const displayedMessage = `There are issues with parsing node:\n
   file: ${filePath}\n
   node: ${sourceCode}\n
   line: ${line}, position: ${position}\n`;
