@@ -10,6 +10,7 @@ import {
   Project,
   PropertyAccessExpression,
   SourceFile,
+  SpreadElement,
   Type,
   TypeChecker
 } from 'ts-morph';
@@ -20,6 +21,7 @@ import { getSourceFileOrThrow } from './get-source-file-from-paths';
 import { EMPTY_PATH } from '../generation/constants';
 import { error } from '../utils/common.utils';
 import { mergeRouteTrees } from './merge-route-trees';
+import { logParsingWarning } from './log-parsing-worning';
 
 export const getRouteModuleForRootExpressions: (
   routerModuleClass: ClassDeclaration
@@ -244,6 +246,11 @@ const divideRouterExpressionsAndModulesDeclarations = (
   const isRouterType = isClassHasTheSameType.bind(null, routerType);
 
   for (const node of modules) {
+    if (Node.isSpreadElement(node)) {
+      getModulesFromSpreadOperator(node).forEach(el => modules.push(el));
+      continue;
+    }
+
     const parsedNode = getModuleDeclarationOrCallExpressionById(node, isRouterType);
     if (parsedNode) {
       Node.isCallExpression(parsedNode) ? routerExpressions.push(parsedNode) : moduleDeclarations.push(parsedNode);
@@ -254,6 +261,17 @@ const divideRouterExpressionsAndModulesDeclarations = (
     routerExpressions,
     moduleDeclarations
   };
+};
+
+const getModulesFromSpreadOperator = (node: SpreadElement): Node[] => {
+  const expression = node.getExpression();
+  if (!Node.isIdentifier(expression)) {
+    logParsingWarning(node);
+    return [];
+  }
+
+  const modules = tryFindVariableValue(node.getExpression() as Identifier, Node.isArrayLiteralExpression);
+  return modules ? modules.getElements() : [];
 };
 
 const getModuleDeclarationOrCallExpressionById = (
