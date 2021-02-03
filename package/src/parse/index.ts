@@ -8,6 +8,8 @@ import { generateFile } from '../generation/utils';
 import { findAngularJSON, getProjectAST, getProjectTsconfigPath } from './utils.angular';
 import { error, space, taskFinish, taskStart } from '../utils/common.utils';
 import { findFilePath } from '../utils/fs.utils';
+import { Node, ObjectLiteralExpression, PropertyAssignment, SourceFile } from 'ts-morph';
+import { findNodes } from './find-nodes';
 
 export function parse(options: RouterKit.Parse.Schema): Rule {
   return (tree: Tree) => {
@@ -42,6 +44,31 @@ export function parse(options: RouterKit.Parse.Schema): Rule {
       const filePath = resolve(ROOT_DIR, fileName);
       const routesType = generateRoutesType(parsedRoutes, fileName);
       generatingTypeSpinner.succeed(taskFinish('Type generated'));
+
+      const now = Date.now();
+      const routes = projectAST.getSourceFiles()
+        .reduce((acc: Node[], sf: SourceFile) => {
+          const arr = findNodes(sf, Node.isObjectLiteralExpression, true);
+          return acc.concat(arr);
+          }, [])
+        .reduce((acc: ObjectLiteralExpression[], node: ObjectLiteralExpression) => {
+          const props = node.getProperties()
+            .filter(prop => Node.isPropertyAssignment(prop))
+            .map((prop: PropertyAssignment) => prop.getName())
+            .reduce((set, prop) => {
+            set.add(prop);
+            return set;
+          }, new Set<string>());
+
+          if (props.has('path') && (props.has('loadChildren') || props.has('component'))) {
+            acc.push(node);
+          }
+
+          return acc;
+      }, []);
+
+      console.log(routes.length);
+      console.log(Date.now() - now);
 
       const generatingFileSpinner = ora(taskStart('Generating type')).start();
       generateFile({ project: projectAST, filePath, output: routesType });
