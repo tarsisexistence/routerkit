@@ -2,14 +2,14 @@
 # yarn lockfile v1
 
 
-"@angular-builders/jest@11.0.0":
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/@angular-builders/jest/-/jest-11.0.0.tgz#9cbc71ad624fb41581390548b015a72a5b36173a"
-  integrity sha512-tK4KRhMRRqSSWdtS/comKuuGnLuZsWmKJuSQjpk+fAmye93wXi35/ozbmgvxNRpx4pOl/h3kB0oiAi78tkDF6g==
+"@angular-builders/jest@11.1.1":
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/@angular-builders/jest/-/jest-11.1.1.tgz#f20f02157a97dda87c2218a294dbf33564071388"
+  integrity sha512-y6TMB8yEQIjQ9g6fItO0y2HbW356hb8VSnNsdsZ0nXyZaK1++ueR0H/Wv2Ki4RJGzWHmPt8BQ0kekxny75qN3Q==
   dependencies:
     "@angular-devkit/architect" ">=0.1100.0 < 0.1200.0"
     "@angular-devkit/core" "^11.0.0"
-    jest-preset-angular "^8.3.2"
+    jest-preset-angular "^8.4.0"
     lodash "^4.17.15"
 
 "@angular-devkit/architect@0.1102.4":
@@ -7442,10 +7442,10 @@ jest-pnp-resolver@^1.2.2:
   resolved "https://registry.yarnpkg.com/jest-pnp-resolver/-/jest-pnp-resolver-1.2.2.tgz#b704ac0ae028a89108a4d040b3f919dfddc8e33c"
   integrity sha512-olV41bKSMm8BdnuMsewT4jqlZ8+3TCARAXjZGT9jcoSnrfUnRCqnMoF9XEeoWjbzObpqF9dRhHQj0Xb9QdF6/w==
 
-jest-preset-angular@^8.3.2:
-  version "8.3.2"
-  resolved "https://registry.yarnpkg.com/jest-preset-angular/-/jest-preset-angular-8.3.2.tgz#170e0a4635dcd4b2ad02a1a805268b15da5b5543"
-  integrity sha512-mdETK9E5tkCJPnPzB7NLXDB7CULbUEwcrA7eKU7WdR0u7ZIJqP0pvQxK5Cc70KBsOEaiwJK6LSGJm7aeqjSYYA==
+jest-preset-angular@^8.4.0:
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/jest-preset-angular/-/jest-preset-angular-8.4.0.tgz#476b8a29a4e3a28145b3a53bbe318252da8644f0"
+  integrity sha512-lngQRVVMy2qdzhSzUVTkKFsWC+Z2uMFlJf8J5ZeapNZFsRYW2tjlVqdm+sJOTnVmMVnN7CtDqvRDwlyFTIYD+A==
   dependencies:
     pretty-format "26.x"
     ts-jest "26.x"
