@@ -63,7 +63,7 @@
     "lint-staged": "10.5.4",
     "ng-packagr": "11.2.4",
     "ora": "5.4.0",
-    "prettier": "2.2.1",
+    "prettier": "2.3.0",
     "protractor": "7.0.0",
     "snyk": "1.439.0",
     "ts-morph": "9.1.0",
