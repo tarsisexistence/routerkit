@@ -8,6 +8,18 @@ export type TypedRoutes = {
         'about'
     ]>;
     car: {
+        ROOT: TypedRoute<[
+            '/',
+            'car'
+        ]>;
+        engine: {
+            [year: string]: TypedRoute<[
+                '/',
+                'car',
+                'engine',
+                string
+            ]>;
+        };
         details: TypedRoute<[
             '/',
             'car',
@@ -19,18 +31,6 @@ export type TypedRoutes = {
                 'car',
                 'info',
                 'info'
-            ]>;
-        };
-        ROOT: TypedRoute<[
-            '/',
-            'car'
-        ]>;
-        engine: {
-            [year: string]: TypedRoute<[
-                '/',
-                'car',
-                'engine',
-                string
             ]>;
         };
     };
