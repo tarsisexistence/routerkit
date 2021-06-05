@@ -8,7 +8,7 @@
   "scripts": {
     "// - NG - //": "------------------------------",
     "start": "ng serve example-app --port 3000",
-    "build": "ng build routerkit --prod",
+    "build": "ng build routerkit --configuration production",
     "build:schematics": "cd package && yarn build",
     "build:schematics:watch": "cd package && yarn build:watch",
     "build:all": "yarn build && yarn build:schematics",
