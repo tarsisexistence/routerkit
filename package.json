@@ -39,7 +39,7 @@
     "@wessberg/ts-evaluator": "0.0.27",
     "hammerjs": "2.0.8",
     "routeshub": "4.3.0",
-    "rxjs": "6.6.3",
+    "rxjs": "6.6.7",
     "zone.js": "0.11.4"
   },
   "devDependencies": {
