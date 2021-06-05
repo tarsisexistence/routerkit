@@ -9,7 +9,7 @@ NodeObject {
     "end": -1,
     "flags": 8,
     "isTypeOnly": false,
-    "kind": 259,
+    "kind": 262,
     "modifierFlagsCache": 0,
     "name": undefined,
     "namedBindings": NodeObject {
@@ -17,7 +17,7 @@ NodeObject {
         NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 262,
+          "kind": 265,
           "modifierFlagsCache": 0,
           "name": IdentifierObject {
             "end": -1,
@@ -38,7 +38,7 @@ NodeObject {
       ],
       "end": -1,
       "flags": 8,
-      "kind": 261,
+      "kind": 264,
       "modifierFlagsCache": 0,
       "parent": undefined,
       "pos": -1,
@@ -48,7 +48,7 @@ NodeObject {
     "pos": -1,
     "transformFlags": 0,
   },
-  "kind": 258,
+  "kind": 261,
   "localSymbol": undefined,
   "locals": undefined,
   "modifierFlagsCache": 0,
