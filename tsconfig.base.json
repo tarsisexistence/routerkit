@@ -16,7 +16,7 @@
     "types": ["jest"],
     "lib": ["es2018", "dom"],
     "paths": {
-      "routerkit": ["./package"]
+      "@routerkit/core": ["./package"]
     }
   },
   "angularCompilerOptions": {

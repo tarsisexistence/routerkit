@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { getRoutes } from 'routerkit';
+import { getRoutes } from '@routerkit/core';
 
 import { TypedRoutes } from '../../../../example-app.routes';
 
