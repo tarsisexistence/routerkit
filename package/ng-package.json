@@ -4,5 +4,5 @@
   "lib": {
     "entryFile": "src/public_api.ts"
   },
-  "whitelistedNonPeerDependencies": ["@wessberg/ts-evaluator", "ts-morph", "tslib", "ora"]
+  "whitelistedNonPeerDependencies": ["ts-evaluator", "ts-morph", "tslib", "ora"]
 }

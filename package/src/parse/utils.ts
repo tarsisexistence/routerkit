@@ -15,7 +15,7 @@ import {
   TypeChecker
 } from 'ts-morph';
 import { resolve, sep } from 'path';
-import { evaluate } from '@wessberg/ts-evaluator';
+import { evaluate } from 'ts-evaluator';
 
 import { getSourceFileOrThrow } from './get-source-file-from-paths';
 import { EMPTY_PATH } from '../generation/constants';
