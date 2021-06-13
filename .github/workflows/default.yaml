@@ -1,0 +1,23 @@
+name: 'default'
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  readiness:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        name: 'Setup node'
+        with:
+          node-version: '15.x'
+
+      - name: 'Install dependencies'
+        run: yarn install
+
+      - name: 'Test'
+        run: yarn test --ci
