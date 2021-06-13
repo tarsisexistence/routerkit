@@ -1,6 +1,6 @@
 ---
 name: "\U0001F339 Feature"
-about: Suggest an idea
+about: Submit a feature request or share an interesting idea
 title: ''
 labels: enhancement
 assignees: ''

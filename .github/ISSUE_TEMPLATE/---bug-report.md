@@ -1,6 +1,6 @@
 ---
 name: "\U0001F41B Bug Report"
-about: Create a report to help improve _RouterKit_
+about: Report us an issue you found or something that you think is not working properly
 title: ''
 labels: bug
 assignees: ''
