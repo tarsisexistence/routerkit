@@ -1,6 +1,6 @@
 ---
 name: '❔ Question'
-about: Ask about everything related to RouterKit
+about: Ask a question about RouterKit
 title: ''
 labels: question
 assignees: ''
