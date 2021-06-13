@@ -1,6 +1,6 @@
 ---
 name: "\U0001F339 Feature"
-about: Suggest an idea for RouterKit
+about: Suggest an idea for _RouterKit_
 title: ''
 labels: enhancement
 assignees: ''

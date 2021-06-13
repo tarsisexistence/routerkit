@@ -1,6 +1,6 @@
 ---
 name: "\U0001F41B Bug Report"
-about: Create a report to help improve RouterKit
+about: Create a report to help improve _RouterKit_
 title: ''
 labels: bug
 assignees: ''
@@ -24,6 +24,7 @@ If applicable, add screenshots to help explain your problem.
 
 ### Versions:
 
-- Browser
-- Angular
-- RouterKit
+- OS: 
+- Browser: 
+- Angular: 
+- RouterKit: 
