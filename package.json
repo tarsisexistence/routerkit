@@ -63,7 +63,7 @@
     "snyk": "1.622.0",
     "ts-morph": "11.0.0",
     "ts-node": "10.0.0",
-    "tsickle": "0.40.0",
+    "tsickle": "0.43.0",
     "tslib": "2.2.0",
     "tslint": "6.1.3",
     "tslint-angular": "3.0.3",
