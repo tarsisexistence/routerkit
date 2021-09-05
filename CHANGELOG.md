@@ -1,3 +1,7 @@
+# 0.9.2 2021-09-05
+
+- Updated dependencies
+
 # 0.9.0 2020-12-06
 
 - Added support Angular 11
