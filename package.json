@@ -3,7 +3,11 @@
   "description": "",
   "version": "0.0.0",
   "license": "MIT",
-  "author": "Max Tarsis (https://github.com/retarsis)",
+  "author": {
+    "name": "Maksym Tarsis",
+    "email": "tarsis.maksym@gmail.com",
+    "url": "https://github.com/untaggable"
+  },
   "private": true,
   "scripts": {
     "// - NG - //": "------------------------------",
