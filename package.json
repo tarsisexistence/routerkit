@@ -41,7 +41,7 @@
     "@angular/router": "12.2.7",
     "hammerjs": "2.0.8",
     "routeshub": "4.4.0",
-    "rxjs": "7.3.0",
+    "rxjs": "7.4.0",
     "ts-evaluator": "0.1.0",
     "zone.js": "0.11.4"
   },
