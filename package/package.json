@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "ts-evaluator": "0.1.0",
-    "ts-morph": "12.1.0",
+    "ts-morph": "12.2.0",
     "tslib": "2.3.1",
     "ora": "5.4.1"
   },
