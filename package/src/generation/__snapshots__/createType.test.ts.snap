@@ -5,7 +5,7 @@ NodeObject {
   "decorators": undefined,
   "end": -1,
   "flags": 8,
-  "kind": 171,
+  "kind": 175,
   "localSymbol": undefined,
   "locals": undefined,
   "modifierFlagsCache": 0,
@@ -19,7 +19,7 @@ NodeObject {
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 160,
+      "kind": 163,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -28,7 +28,7 @@ NodeObject {
         "end": -1,
         "escapedText": "city",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -44,7 +44,7 @@ NodeObject {
       "type": TokenObject {
         "end": -1,
         "flags": 8,
-        "kind": 147,
+        "kind": 149,
         "modifierFlagsCache": 0,
         "parent": undefined,
         "pos": -1,
@@ -59,7 +59,7 @@ NodeObject {
   "type": NodeObject {
     "end": -1,
     "flags": 8,
-    "kind": 173,
+    "kind": 177,
     "modifierFlagsCache": 0,
     "parent": undefined,
     "pos": -1,
@@ -70,7 +70,7 @@ NodeObject {
           NodeObject {
             "end": -1,
             "flags": 8,
-            "kind": 191,
+            "kind": 195,
             "literal": TokenObject {
               "end": -1,
               "flags": 8,
@@ -91,7 +91,7 @@ NodeObject {
           NodeObject {
             "end": -1,
             "flags": 8,
-            "kind": 191,
+            "kind": 195,
             "literal": TokenObject {
               "end": -1,
               "flags": 8,
@@ -112,7 +112,7 @@ NodeObject {
         ],
         "end": -1,
         "flags": 8,
-        "kind": 179,
+        "kind": 183,
         "modifierFlagsCache": 0,
         "parent": undefined,
         "pos": -1,
@@ -123,7 +123,7 @@ NodeObject {
       "end": -1,
       "escapedText": "TypedRoute",
       "flags": 8,
-      "kind": 78,
+      "kind": 79,
       "modifierFlagsCache": 0,
       "originalKeywordKind": undefined,
       "parent": undefined,
@@ -140,7 +140,7 @@ NodeObject {
   "decorators": undefined,
   "end": -1,
   "flags": 8,
-  "kind": 171,
+  "kind": 175,
   "localSymbol": undefined,
   "locals": undefined,
   "modifierFlagsCache": 0,
@@ -154,7 +154,7 @@ NodeObject {
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 160,
+      "kind": 163,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -163,7 +163,7 @@ NodeObject {
         "end": -1,
         "escapedText": "city",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -179,7 +179,7 @@ NodeObject {
       "type": TokenObject {
         "end": -1,
         "flags": 8,
-        "kind": 147,
+        "kind": 149,
         "modifierFlagsCache": 0,
         "parent": undefined,
         "pos": -1,
@@ -194,14 +194,14 @@ NodeObject {
   "type": NodeObject {
     "end": -1,
     "flags": 8,
-    "kind": 177,
+    "kind": 181,
     "members": Array [
       NodeObject {
         "decorators": undefined,
         "end": -1,
         "flags": 8,
         "initializer": undefined,
-        "kind": 162,
+        "kind": 165,
         "localSymbol": undefined,
         "locals": undefined,
         "modifierFlagsCache": 0,
@@ -210,7 +210,7 @@ NodeObject {
           "end": -1,
           "escapedText": "street",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -226,7 +226,7 @@ NodeObject {
         "type": NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 173,
+          "kind": 177,
           "modifierFlagsCache": 0,
           "parent": undefined,
           "pos": -1,
@@ -237,7 +237,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -258,7 +258,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -279,7 +279,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -300,7 +300,7 @@ NodeObject {
               ],
               "end": -1,
               "flags": 8,
-              "kind": 179,
+              "kind": 183,
               "modifierFlagsCache": 0,
               "parent": undefined,
               "pos": -1,
@@ -311,7 +311,7 @@ NodeObject {
             "end": -1,
             "escapedText": "TypedRoute",
             "flags": 8,
-            "kind": 78,
+            "kind": 79,
             "modifierFlagsCache": 0,
             "originalKeywordKind": undefined,
             "parent": undefined,
@@ -334,7 +334,7 @@ exports[`[generation] createType createIntersectionTypeNode should match Interse
 NodeObject {
   "end": -1,
   "flags": 8,
-  "kind": 183,
+  "kind": 187,
   "modifierFlagsCache": 0,
   "parent": undefined,
   "pos": -1,
@@ -343,14 +343,14 @@ NodeObject {
     NodeObject {
       "end": -1,
       "flags": 8,
-      "kind": 177,
+      "kind": 181,
       "members": Array [
         NodeObject {
           "decorators": undefined,
           "end": -1,
           "flags": 8,
           "initializer": undefined,
-          "kind": 162,
+          "kind": 165,
           "localSymbol": undefined,
           "locals": undefined,
           "modifierFlagsCache": 0,
@@ -359,7 +359,7 @@ NodeObject {
             "end": -1,
             "escapedText": "info",
             "flags": 8,
-            "kind": 78,
+            "kind": 79,
             "modifierFlagsCache": 0,
             "originalKeywordKind": undefined,
             "parent": undefined,
@@ -375,7 +375,7 @@ NodeObject {
           "type": NodeObject {
             "end": -1,
             "flags": 8,
-            "kind": 173,
+            "kind": 177,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -386,7 +386,7 @@ NodeObject {
                   NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 191,
+                    "kind": 195,
                     "literal": TokenObject {
                       "end": -1,
                       "flags": 8,
@@ -407,7 +407,7 @@ NodeObject {
                   NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 191,
+                    "kind": 195,
                     "literal": TokenObject {
                       "end": -1,
                       "flags": 8,
@@ -428,7 +428,7 @@ NodeObject {
                 ],
                 "end": -1,
                 "flags": 8,
-                "kind": 179,
+                "kind": 183,
                 "modifierFlagsCache": 0,
                 "parent": undefined,
                 "pos": -1,
@@ -439,7 +439,7 @@ NodeObject {
               "end": -1,
               "escapedText": "TypedRoute",
               "flags": 8,
-              "kind": 78,
+              "kind": 79,
               "modifierFlagsCache": 0,
               "originalKeywordKind": undefined,
               "parent": undefined,
@@ -457,13 +457,13 @@ NodeObject {
     NodeObject {
       "end": -1,
       "flags": 8,
-      "kind": 177,
+      "kind": 181,
       "members": Array [
         NodeObject {
           "decorators": undefined,
           "end": -1,
           "flags": 8,
-          "kind": 171,
+          "kind": 175,
           "localSymbol": undefined,
           "locals": undefined,
           "modifierFlagsCache": 0,
@@ -477,7 +477,7 @@ NodeObject {
               "end": -1,
               "flags": 8,
               "initializer": undefined,
-              "kind": 160,
+              "kind": 163,
               "localSymbol": undefined,
               "locals": undefined,
               "modifierFlagsCache": 0,
@@ -486,7 +486,7 @@ NodeObject {
                 "end": -1,
                 "escapedText": "city",
                 "flags": 8,
-                "kind": 78,
+                "kind": 79,
                 "modifierFlagsCache": 0,
                 "originalKeywordKind": undefined,
                 "parent": undefined,
@@ -502,7 +502,7 @@ NodeObject {
               "type": TokenObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 147,
+                "kind": 149,
                 "modifierFlagsCache": 0,
                 "parent": undefined,
                 "pos": -1,
@@ -517,7 +517,7 @@ NodeObject {
           "type": NodeObject {
             "end": -1,
             "flags": 8,
-            "kind": 173,
+            "kind": 177,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -528,7 +528,7 @@ NodeObject {
                   NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 191,
+                    "kind": 195,
                     "literal": TokenObject {
                       "end": -1,
                       "flags": 8,
@@ -549,7 +549,7 @@ NodeObject {
                   NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 191,
+                    "kind": 195,
                     "literal": TokenObject {
                       "end": -1,
                       "flags": 8,
@@ -570,7 +570,7 @@ NodeObject {
                 ],
                 "end": -1,
                 "flags": 8,
-                "kind": 179,
+                "kind": 183,
                 "modifierFlagsCache": 0,
                 "parent": undefined,
                 "pos": -1,
@@ -581,7 +581,7 @@ NodeObject {
               "end": -1,
               "escapedText": "TypedRoute",
               "flags": 8,
-              "kind": 78,
+              "kind": 79,
               "modifierFlagsCache": 0,
               "originalKeywordKind": undefined,
               "parent": undefined,
@@ -605,7 +605,7 @@ exports[`[generation] createType createIntersectionTypeNode should match Interse
 NodeObject {
   "end": -1,
   "flags": 8,
-  "kind": 183,
+  "kind": 187,
   "modifierFlagsCache": 0,
   "parent": undefined,
   "pos": -1,
@@ -614,7 +614,7 @@ NodeObject {
     NodeObject {
       "end": -1,
       "flags": 8,
-      "kind": 177,
+      "kind": 181,
       "members": Array [],
       "modifierFlagsCache": 0,
       "parent": undefined,
@@ -624,13 +624,13 @@ NodeObject {
     NodeObject {
       "end": -1,
       "flags": 8,
-      "kind": 177,
+      "kind": 181,
       "members": Array [
         NodeObject {
           "decorators": undefined,
           "end": -1,
           "flags": 8,
-          "kind": 171,
+          "kind": 175,
           "localSymbol": undefined,
           "locals": undefined,
           "modifierFlagsCache": 0,
@@ -644,7 +644,7 @@ NodeObject {
               "end": -1,
               "flags": 8,
               "initializer": undefined,
-              "kind": 160,
+              "kind": 163,
               "localSymbol": undefined,
               "locals": undefined,
               "modifierFlagsCache": 0,
@@ -653,7 +653,7 @@ NodeObject {
                 "end": -1,
                 "escapedText": "city",
                 "flags": 8,
-                "kind": 78,
+                "kind": 79,
                 "modifierFlagsCache": 0,
                 "originalKeywordKind": undefined,
                 "parent": undefined,
@@ -669,7 +669,7 @@ NodeObject {
               "type": TokenObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 147,
+                "kind": 149,
                 "modifierFlagsCache": 0,
                 "parent": undefined,
                 "pos": -1,
@@ -684,7 +684,7 @@ NodeObject {
           "type": NodeObject {
             "end": -1,
             "flags": 8,
-            "kind": 173,
+            "kind": 177,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -695,7 +695,7 @@ NodeObject {
                   NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 191,
+                    "kind": 195,
                     "literal": TokenObject {
                       "end": -1,
                       "flags": 8,
@@ -716,7 +716,7 @@ NodeObject {
                   NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 191,
+                    "kind": 195,
                     "literal": TokenObject {
                       "end": -1,
                       "flags": 8,
@@ -737,7 +737,7 @@ NodeObject {
                 ],
                 "end": -1,
                 "flags": 8,
-                "kind": 179,
+                "kind": 183,
                 "modifierFlagsCache": 0,
                 "parent": undefined,
                 "pos": -1,
@@ -748,7 +748,7 @@ NodeObject {
               "end": -1,
               "escapedText": "TypedRoute",
               "flags": 8,
-              "kind": 78,
+              "kind": 79,
               "modifierFlagsCache": 0,
               "originalKeywordKind": undefined,
               "parent": undefined,
@@ -773,7 +773,7 @@ NodeObject {
   "elements": Array [],
   "end": -1,
   "flags": 8,
-  "kind": 179,
+  "kind": 183,
   "modifierFlagsCache": 0,
   "parent": undefined,
   "pos": -1,
@@ -787,7 +787,7 @@ NodeObject {
     NodeObject {
       "end": -1,
       "flags": 8,
-      "kind": 191,
+      "kind": 195,
       "literal": TokenObject {
         "end": -1,
         "flags": 8,
@@ -808,7 +808,7 @@ NodeObject {
     NodeObject {
       "end": -1,
       "flags": 8,
-      "kind": 191,
+      "kind": 195,
       "literal": TokenObject {
         "end": -1,
         "flags": 8,
@@ -829,7 +829,7 @@ NodeObject {
     NodeObject {
       "end": -1,
       "flags": 8,
-      "kind": 191,
+      "kind": 195,
       "literal": TokenObject {
         "end": -1,
         "flags": 8,
@@ -850,7 +850,7 @@ NodeObject {
     NodeObject {
       "end": -1,
       "flags": 8,
-      "kind": 191,
+      "kind": 195,
       "literal": TokenObject {
         "end": -1,
         "flags": 8,
@@ -871,7 +871,7 @@ NodeObject {
   ],
   "end": -1,
   "flags": 8,
-  "kind": 179,
+  "kind": 183,
   "modifierFlagsCache": 0,
   "parent": undefined,
   "pos": -1,
@@ -885,7 +885,7 @@ NodeObject {
     NodeObject {
       "end": -1,
       "flags": 8,
-      "kind": 191,
+      "kind": 195,
       "literal": TokenObject {
         "end": -1,
         "flags": 8,
@@ -906,7 +906,7 @@ NodeObject {
     NodeObject {
       "end": -1,
       "flags": 8,
-      "kind": 191,
+      "kind": 195,
       "literal": TokenObject {
         "end": -1,
         "flags": 8,
@@ -927,7 +927,7 @@ NodeObject {
     NodeObject {
       "end": -1,
       "flags": 8,
-      "kind": 191,
+      "kind": 195,
       "literal": TokenObject {
         "end": -1,
         "flags": 8,
@@ -948,7 +948,7 @@ NodeObject {
     NodeObject {
       "end": -1,
       "flags": 8,
-      "kind": 191,
+      "kind": 195,
       "literal": TokenObject {
         "end": -1,
         "flags": 8,
@@ -969,7 +969,7 @@ NodeObject {
   ],
   "end": -1,
   "flags": 8,
-  "kind": 179,
+  "kind": 183,
   "modifierFlagsCache": 0,
   "parent": undefined,
   "pos": -1,
@@ -980,6 +980,7 @@ NodeObject {
 exports[`[generation] createType createType should match snapshot 1`] = `
 Array [
   NodeObject {
+    "assertClause": undefined,
     "decorators": undefined,
     "end": -1,
     "flags": 8,
@@ -987,7 +988,7 @@ Array [
       "end": -1,
       "flags": 8,
       "isTypeOnly": false,
-      "kind": 262,
+      "kind": 266,
       "modifierFlagsCache": 0,
       "name": undefined,
       "namedBindings": NodeObject {
@@ -995,13 +996,14 @@ Array [
           NodeObject {
             "end": -1,
             "flags": 8,
-            "kind": 265,
+            "isTypeOnly": false,
+            "kind": 269,
             "modifierFlagsCache": 0,
             "name": IdentifierObject {
               "end": -1,
               "escapedText": "TypedRoute",
               "flags": 8,
-              "kind": 78,
+              "kind": 79,
               "modifierFlagsCache": 0,
               "originalKeywordKind": undefined,
               "parent": undefined,
@@ -1016,7 +1018,7 @@ Array [
         ],
         "end": -1,
         "flags": 8,
-        "kind": 264,
+        "kind": 268,
         "modifierFlagsCache": 0,
         "parent": undefined,
         "pos": -1,
@@ -1026,7 +1028,7 @@ Array [
       "pos": -1,
       "transformFlags": 0,
     },
-    "kind": 261,
+    "kind": 265,
     "localSymbol": undefined,
     "locals": undefined,
     "modifierFlagsCache": 0,
@@ -1053,7 +1055,7 @@ Array [
     "decorators": undefined,
     "end": -1,
     "flags": 8,
-    "kind": 254,
+    "kind": 258,
     "localSymbol": undefined,
     "locals": undefined,
     "modifierFlagsCache": 0,
@@ -1061,7 +1063,7 @@ Array [
       TokenObject {
         "end": -1,
         "flags": 8,
-        "kind": 92,
+        "kind": 93,
         "modifierFlagsCache": 0,
         "parent": undefined,
         "pos": -1,
@@ -1072,7 +1074,7 @@ Array [
       "end": -1,
       "escapedText": "TypedRoutes",
       "flags": 8,
-      "kind": 78,
+      "kind": 79,
       "modifierFlagsCache": 0,
       "originalKeywordKind": undefined,
       "parent": undefined,
@@ -1087,14 +1089,14 @@ Array [
     "type": NodeObject {
       "end": -1,
       "flags": 8,
-      "kind": 177,
+      "kind": 181,
       "members": Array [
         NodeObject {
           "decorators": undefined,
           "end": -1,
           "flags": 8,
           "initializer": undefined,
-          "kind": 162,
+          "kind": 165,
           "localSymbol": undefined,
           "locals": undefined,
           "modifierFlagsCache": 0,
@@ -1103,7 +1105,7 @@ Array [
             "end": -1,
             "escapedText": "home",
             "flags": 8,
-            "kind": 78,
+            "kind": 79,
             "modifierFlagsCache": 0,
             "originalKeywordKind": undefined,
             "parent": undefined,
@@ -1119,7 +1121,7 @@ Array [
           "type": NodeObject {
             "end": -1,
             "flags": 8,
-            "kind": 173,
+            "kind": 177,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -1130,7 +1132,7 @@ Array [
                   NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 191,
+                    "kind": 195,
                     "literal": TokenObject {
                       "end": -1,
                       "flags": 8,
@@ -1151,7 +1153,7 @@ Array [
                   NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 191,
+                    "kind": 195,
                     "literal": TokenObject {
                       "end": -1,
                       "flags": 8,
@@ -1172,7 +1174,7 @@ Array [
                 ],
                 "end": -1,
                 "flags": 8,
-                "kind": 179,
+                "kind": 183,
                 "modifierFlagsCache": 0,
                 "parent": undefined,
                 "pos": -1,
@@ -1183,7 +1185,7 @@ Array [
               "end": -1,
               "escapedText": "TypedRoute",
               "flags": 8,
-              "kind": 78,
+              "kind": 79,
               "modifierFlagsCache": 0,
               "originalKeywordKind": undefined,
               "parent": undefined,
@@ -1207,7 +1209,7 @@ exports[`[generation] createType createTypeNode should match empty routes 1`] = 
 NodeObject {
   "end": -1,
   "flags": 8,
-  "kind": 177,
+  "kind": 181,
   "members": Array [],
   "modifierFlagsCache": 0,
   "parent": undefined,
@@ -1220,14 +1222,14 @@ exports[`[generation] createType createTypeNode should match nested regular rout
 NodeObject {
   "end": -1,
   "flags": 8,
-  "kind": 177,
+  "kind": 181,
   "members": Array [
     NodeObject {
       "decorators": undefined,
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 162,
+      "kind": 165,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -1236,7 +1238,7 @@ NodeObject {
         "end": -1,
         "escapedText": "ROOT",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -1252,7 +1254,7 @@ NodeObject {
       "type": NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 173,
+        "kind": 177,
         "modifierFlagsCache": 0,
         "parent": undefined,
         "pos": -1,
@@ -1263,7 +1265,7 @@ NodeObject {
               NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 191,
+                "kind": 195,
                 "literal": TokenObject {
                   "end": -1,
                   "flags": 8,
@@ -1284,7 +1286,7 @@ NodeObject {
             ],
             "end": -1,
             "flags": 8,
-            "kind": 179,
+            "kind": 183,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -1295,7 +1297,7 @@ NodeObject {
           "end": -1,
           "escapedText": "TypedRoute",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -1309,7 +1311,7 @@ NodeObject {
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 162,
+      "kind": 165,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -1318,7 +1320,7 @@ NodeObject {
         "end": -1,
         "escapedText": "home",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -1334,14 +1336,14 @@ NodeObject {
       "type": NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 177,
+        "kind": 181,
         "members": Array [
           NodeObject {
             "decorators": undefined,
             "end": -1,
             "flags": 8,
             "initializer": undefined,
-            "kind": 162,
+            "kind": 165,
             "localSymbol": undefined,
             "locals": undefined,
             "modifierFlagsCache": 0,
@@ -1350,7 +1352,7 @@ NodeObject {
               "end": -1,
               "escapedText": "place",
               "flags": 8,
-              "kind": 78,
+              "kind": 79,
               "modifierFlagsCache": 0,
               "originalKeywordKind": undefined,
               "parent": undefined,
@@ -1366,7 +1368,7 @@ NodeObject {
             "type": NodeObject {
               "end": -1,
               "flags": 8,
-              "kind": 173,
+              "kind": 177,
               "modifierFlagsCache": 0,
               "parent": undefined,
               "pos": -1,
@@ -1377,7 +1379,7 @@ NodeObject {
                     NodeObject {
                       "end": -1,
                       "flags": 8,
-                      "kind": 191,
+                      "kind": 195,
                       "literal": TokenObject {
                         "end": -1,
                         "flags": 8,
@@ -1398,7 +1400,7 @@ NodeObject {
                     NodeObject {
                       "end": -1,
                       "flags": 8,
-                      "kind": 191,
+                      "kind": 195,
                       "literal": TokenObject {
                         "end": -1,
                         "flags": 8,
@@ -1419,7 +1421,7 @@ NodeObject {
                     NodeObject {
                       "end": -1,
                       "flags": 8,
-                      "kind": 191,
+                      "kind": 195,
                       "literal": TokenObject {
                         "end": -1,
                         "flags": 8,
@@ -1440,7 +1442,7 @@ NodeObject {
                   ],
                   "end": -1,
                   "flags": 8,
-                  "kind": 179,
+                  "kind": 183,
                   "modifierFlagsCache": 0,
                   "parent": undefined,
                   "pos": -1,
@@ -1451,7 +1453,7 @@ NodeObject {
                 "end": -1,
                 "escapedText": "TypedRoute",
                 "flags": 8,
-                "kind": 78,
+                "kind": 79,
                 "modifierFlagsCache": 0,
                 "originalKeywordKind": undefined,
                 "parent": undefined,
@@ -1472,7 +1474,7 @@ NodeObject {
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 162,
+      "kind": 165,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -1481,7 +1483,7 @@ NodeObject {
         "end": -1,
         "escapedText": "about",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -1497,14 +1499,14 @@ NodeObject {
       "type": NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 177,
+        "kind": 181,
         "members": Array [
           NodeObject {
             "decorators": undefined,
             "end": -1,
             "flags": 8,
             "initializer": undefined,
-            "kind": 162,
+            "kind": 165,
             "localSymbol": undefined,
             "locals": undefined,
             "modifierFlagsCache": 0,
@@ -1513,7 +1515,7 @@ NodeObject {
               "end": -1,
               "escapedText": "story",
               "flags": 8,
-              "kind": 78,
+              "kind": 79,
               "modifierFlagsCache": 0,
               "originalKeywordKind": undefined,
               "parent": undefined,
@@ -1529,14 +1531,14 @@ NodeObject {
             "type": NodeObject {
               "end": -1,
               "flags": 8,
-              "kind": 177,
+              "kind": 181,
               "members": Array [
                 NodeObject {
                   "decorators": undefined,
                   "end": -1,
                   "flags": 8,
                   "initializer": undefined,
-                  "kind": 162,
+                  "kind": 165,
                   "localSymbol": undefined,
                   "locals": undefined,
                   "modifierFlagsCache": 0,
@@ -1545,7 +1547,7 @@ NodeObject {
                     "end": -1,
                     "escapedText": "company",
                     "flags": 8,
-                    "kind": 78,
+                    "kind": 79,
                     "modifierFlagsCache": 0,
                     "originalKeywordKind": undefined,
                     "parent": undefined,
@@ -1561,7 +1563,7 @@ NodeObject {
                   "type": NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 173,
+                    "kind": 177,
                     "modifierFlagsCache": 0,
                     "parent": undefined,
                     "pos": -1,
@@ -1572,7 +1574,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -1593,7 +1595,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -1614,7 +1616,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -1635,7 +1637,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -1656,7 +1658,7 @@ NodeObject {
                         ],
                         "end": -1,
                         "flags": 8,
-                        "kind": 179,
+                        "kind": 183,
                         "modifierFlagsCache": 0,
                         "parent": undefined,
                         "pos": -1,
@@ -1667,7 +1669,7 @@ NodeObject {
                       "end": -1,
                       "escapedText": "TypedRoute",
                       "flags": 8,
-                      "kind": 78,
+                      "kind": 79,
                       "modifierFlagsCache": 0,
                       "originalKeywordKind": undefined,
                       "parent": undefined,
@@ -1681,7 +1683,7 @@ NodeObject {
                   "end": -1,
                   "flags": 8,
                   "initializer": undefined,
-                  "kind": 162,
+                  "kind": 165,
                   "localSymbol": undefined,
                   "locals": undefined,
                   "modifierFlagsCache": 0,
@@ -1690,7 +1692,7 @@ NodeObject {
                     "end": -1,
                     "escapedText": "team",
                     "flags": 8,
-                    "kind": 78,
+                    "kind": 79,
                     "modifierFlagsCache": 0,
                     "originalKeywordKind": undefined,
                     "parent": undefined,
@@ -1706,7 +1708,7 @@ NodeObject {
                   "type": NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 173,
+                    "kind": 177,
                     "modifierFlagsCache": 0,
                     "parent": undefined,
                     "pos": -1,
@@ -1717,7 +1719,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -1738,7 +1740,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -1759,7 +1761,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -1780,7 +1782,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -1801,7 +1803,7 @@ NodeObject {
                         ],
                         "end": -1,
                         "flags": 8,
-                        "kind": 179,
+                        "kind": 183,
                         "modifierFlagsCache": 0,
                         "parent": undefined,
                         "pos": -1,
@@ -1812,7 +1814,7 @@ NodeObject {
                       "end": -1,
                       "escapedText": "TypedRoute",
                       "flags": 8,
-                      "kind": 78,
+                      "kind": 79,
                       "modifierFlagsCache": 0,
                       "originalKeywordKind": undefined,
                       "parent": undefined,
@@ -1840,7 +1842,7 @@ NodeObject {
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 162,
+      "kind": 165,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -1849,7 +1851,7 @@ NodeObject {
         "end": -1,
         "escapedText": "location",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -1865,14 +1867,14 @@ NodeObject {
       "type": NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 177,
+        "kind": 181,
         "members": Array [
           NodeObject {
             "decorators": undefined,
             "end": -1,
             "flags": 8,
             "initializer": undefined,
-            "kind": 162,
+            "kind": 165,
             "localSymbol": undefined,
             "locals": undefined,
             "modifierFlagsCache": 0,
@@ -1881,7 +1883,7 @@ NodeObject {
               "end": -1,
               "escapedText": "map",
               "flags": 8,
-              "kind": 78,
+              "kind": 79,
               "modifierFlagsCache": 0,
               "originalKeywordKind": undefined,
               "parent": undefined,
@@ -1897,14 +1899,14 @@ NodeObject {
             "type": NodeObject {
               "end": -1,
               "flags": 8,
-              "kind": 177,
+              "kind": 181,
               "members": Array [
                 NodeObject {
                   "decorators": undefined,
                   "end": -1,
                   "flags": 8,
                   "initializer": undefined,
-                  "kind": 162,
+                  "kind": 165,
                   "localSymbol": undefined,
                   "locals": undefined,
                   "modifierFlagsCache": 0,
@@ -1913,7 +1915,7 @@ NodeObject {
                     "end": -1,
                     "escapedText": "city",
                     "flags": 8,
-                    "kind": 78,
+                    "kind": 79,
                     "modifierFlagsCache": 0,
                     "originalKeywordKind": undefined,
                     "parent": undefined,
@@ -1929,14 +1931,14 @@ NodeObject {
                   "type": NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 177,
+                    "kind": 181,
                     "members": Array [
                       NodeObject {
                         "decorators": undefined,
                         "end": -1,
                         "flags": 8,
                         "initializer": undefined,
-                        "kind": 162,
+                        "kind": 165,
                         "localSymbol": undefined,
                         "locals": undefined,
                         "modifierFlagsCache": 0,
@@ -1945,7 +1947,7 @@ NodeObject {
                           "end": -1,
                           "escapedText": "street",
                           "flags": 8,
-                          "kind": 78,
+                          "kind": 79,
                           "modifierFlagsCache": 0,
                           "originalKeywordKind": undefined,
                           "parent": undefined,
@@ -1961,7 +1963,7 @@ NodeObject {
                         "type": NodeObject {
                           "end": -1,
                           "flags": 8,
-                          "kind": 173,
+                          "kind": 177,
                           "modifierFlagsCache": 0,
                           "parent": undefined,
                           "pos": -1,
@@ -1972,7 +1974,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -1993,7 +1995,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -2014,7 +2016,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -2035,7 +2037,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -2056,7 +2058,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -2077,7 +2079,7 @@ NodeObject {
                               ],
                               "end": -1,
                               "flags": 8,
-                              "kind": 179,
+                              "kind": 183,
                               "modifierFlagsCache": 0,
                               "parent": undefined,
                               "pos": -1,
@@ -2088,7 +2090,7 @@ NodeObject {
                             "end": -1,
                             "escapedText": "TypedRoute",
                             "flags": 8,
-                            "kind": 78,
+                            "kind": 79,
                             "modifierFlagsCache": 0,
                             "originalKeywordKind": undefined,
                             "parent": undefined,
@@ -2130,14 +2132,14 @@ exports[`[generation] createType createTypeNode should match regular routes 1`] 
 NodeObject {
   "end": -1,
   "flags": 8,
-  "kind": 177,
+  "kind": 181,
   "members": Array [
     NodeObject {
       "decorators": undefined,
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 162,
+      "kind": 165,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -2146,7 +2148,7 @@ NodeObject {
         "end": -1,
         "escapedText": "ROOT",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -2162,7 +2164,7 @@ NodeObject {
       "type": NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 173,
+        "kind": 177,
         "modifierFlagsCache": 0,
         "parent": undefined,
         "pos": -1,
@@ -2173,7 +2175,7 @@ NodeObject {
               NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 191,
+                "kind": 195,
                 "literal": TokenObject {
                   "end": -1,
                   "flags": 8,
@@ -2194,7 +2196,7 @@ NodeObject {
             ],
             "end": -1,
             "flags": 8,
-            "kind": 179,
+            "kind": 183,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -2205,7 +2207,7 @@ NodeObject {
           "end": -1,
           "escapedText": "TypedRoute",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -2219,7 +2221,7 @@ NodeObject {
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 162,
+      "kind": 165,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -2228,7 +2230,7 @@ NodeObject {
         "end": -1,
         "escapedText": "home",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -2244,7 +2246,7 @@ NodeObject {
       "type": NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 173,
+        "kind": 177,
         "modifierFlagsCache": 0,
         "parent": undefined,
         "pos": -1,
@@ -2255,7 +2257,7 @@ NodeObject {
               NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 191,
+                "kind": 195,
                 "literal": TokenObject {
                   "end": -1,
                   "flags": 8,
@@ -2276,7 +2278,7 @@ NodeObject {
               NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 191,
+                "kind": 195,
                 "literal": TokenObject {
                   "end": -1,
                   "flags": 8,
@@ -2297,7 +2299,7 @@ NodeObject {
             ],
             "end": -1,
             "flags": 8,
-            "kind": 179,
+            "kind": 183,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -2308,7 +2310,7 @@ NodeObject {
           "end": -1,
           "escapedText": "TypedRoute",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -2322,7 +2324,7 @@ NodeObject {
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 162,
+      "kind": 165,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -2331,7 +2333,7 @@ NodeObject {
         "end": -1,
         "escapedText": "about",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -2347,7 +2349,7 @@ NodeObject {
       "type": NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 173,
+        "kind": 177,
         "modifierFlagsCache": 0,
         "parent": undefined,
         "pos": -1,
@@ -2358,7 +2360,7 @@ NodeObject {
               NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 191,
+                "kind": 195,
                 "literal": TokenObject {
                   "end": -1,
                   "flags": 8,
@@ -2379,7 +2381,7 @@ NodeObject {
               NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 191,
+                "kind": 195,
                 "literal": TokenObject {
                   "end": -1,
                   "flags": 8,
@@ -2400,7 +2402,7 @@ NodeObject {
             ],
             "end": -1,
             "flags": 8,
-            "kind": 179,
+            "kind": 183,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -2411,7 +2413,7 @@ NodeObject {
           "end": -1,
           "escapedText": "TypedRoute",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -2425,7 +2427,7 @@ NodeObject {
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 162,
+      "kind": 165,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -2434,7 +2436,7 @@ NodeObject {
         "end": -1,
         "escapedText": "car",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -2450,7 +2452,7 @@ NodeObject {
       "type": NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 173,
+        "kind": 177,
         "modifierFlagsCache": 0,
         "parent": undefined,
         "pos": -1,
@@ -2461,7 +2463,7 @@ NodeObject {
               NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 191,
+                "kind": 195,
                 "literal": TokenObject {
                   "end": -1,
                   "flags": 8,
@@ -2482,7 +2484,7 @@ NodeObject {
               NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 191,
+                "kind": 195,
                 "literal": TokenObject {
                   "end": -1,
                   "flags": 8,
@@ -2503,7 +2505,7 @@ NodeObject {
             ],
             "end": -1,
             "flags": 8,
-            "kind": 179,
+            "kind": 183,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -2514,7 +2516,7 @@ NodeObject {
           "end": -1,
           "escapedText": "TypedRoute",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -2528,7 +2530,7 @@ NodeObject {
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 162,
+      "kind": 165,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -2537,7 +2539,7 @@ NodeObject {
         "end": -1,
         "escapedText": "details",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -2553,7 +2555,7 @@ NodeObject {
       "type": NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 173,
+        "kind": 177,
         "modifierFlagsCache": 0,
         "parent": undefined,
         "pos": -1,
@@ -2564,7 +2566,7 @@ NodeObject {
               NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 191,
+                "kind": 195,
                 "literal": TokenObject {
                   "end": -1,
                   "flags": 8,
@@ -2585,7 +2587,7 @@ NodeObject {
               NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 191,
+                "kind": 195,
                 "literal": TokenObject {
                   "end": -1,
                   "flags": 8,
@@ -2606,7 +2608,7 @@ NodeObject {
             ],
             "end": -1,
             "flags": 8,
-            "kind": 179,
+            "kind": 183,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -2617,7 +2619,7 @@ NodeObject {
           "end": -1,
           "escapedText": "TypedRoute",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -2631,7 +2633,7 @@ NodeObject {
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 162,
+      "kind": 165,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -2640,7 +2642,7 @@ NodeObject {
         "end": -1,
         "escapedText": "info",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -2656,7 +2658,7 @@ NodeObject {
       "type": NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 173,
+        "kind": 177,
         "modifierFlagsCache": 0,
         "parent": undefined,
         "pos": -1,
@@ -2667,7 +2669,7 @@ NodeObject {
               NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 191,
+                "kind": 195,
                 "literal": TokenObject {
                   "end": -1,
                   "flags": 8,
@@ -2688,7 +2690,7 @@ NodeObject {
               NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 191,
+                "kind": 195,
                 "literal": TokenObject {
                   "end": -1,
                   "flags": 8,
@@ -2709,7 +2711,7 @@ NodeObject {
             ],
             "end": -1,
             "flags": 8,
-            "kind": 179,
+            "kind": 183,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -2720,7 +2722,7 @@ NodeObject {
           "end": -1,
           "escapedText": "TypedRoute",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -2741,14 +2743,14 @@ exports[`[generation] createType createTypeNode should match routes with childre
 NodeObject {
   "end": -1,
   "flags": 8,
-  "kind": 177,
+  "kind": 181,
   "members": Array [
     NodeObject {
       "decorators": undefined,
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 162,
+      "kind": 165,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -2757,7 +2759,7 @@ NodeObject {
         "end": -1,
         "escapedText": "ROOT",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -2773,7 +2775,7 @@ NodeObject {
       "type": NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 173,
+        "kind": 177,
         "modifierFlagsCache": 0,
         "parent": undefined,
         "pos": -1,
@@ -2784,7 +2786,7 @@ NodeObject {
               NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 191,
+                "kind": 195,
                 "literal": TokenObject {
                   "end": -1,
                   "flags": 8,
@@ -2805,7 +2807,7 @@ NodeObject {
             ],
             "end": -1,
             "flags": 8,
-            "kind": 179,
+            "kind": 183,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -2816,7 +2818,7 @@ NodeObject {
           "end": -1,
           "escapedText": "TypedRoute",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -2830,7 +2832,7 @@ NodeObject {
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 162,
+      "kind": 165,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -2839,7 +2841,7 @@ NodeObject {
         "end": -1,
         "escapedText": "home",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -2855,13 +2857,13 @@ NodeObject {
       "type": NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 177,
+        "kind": 181,
         "members": Array [
           NodeObject {
             "decorators": undefined,
             "end": -1,
             "flags": 8,
-            "kind": 171,
+            "kind": 175,
             "localSymbol": undefined,
             "locals": undefined,
             "modifierFlagsCache": 0,
@@ -2875,7 +2877,7 @@ NodeObject {
                 "end": -1,
                 "flags": 8,
                 "initializer": undefined,
-                "kind": 160,
+                "kind": 163,
                 "localSymbol": undefined,
                 "locals": undefined,
                 "modifierFlagsCache": 0,
@@ -2884,7 +2886,7 @@ NodeObject {
                   "end": -1,
                   "escapedText": "place",
                   "flags": 8,
-                  "kind": 78,
+                  "kind": 79,
                   "modifierFlagsCache": 0,
                   "originalKeywordKind": undefined,
                   "parent": undefined,
@@ -2900,7 +2902,7 @@ NodeObject {
                 "type": TokenObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 147,
+                  "kind": 149,
                   "modifierFlagsCache": 0,
                   "parent": undefined,
                   "pos": -1,
@@ -2915,7 +2917,7 @@ NodeObject {
             "type": NodeObject {
               "end": -1,
               "flags": 8,
-              "kind": 173,
+              "kind": 177,
               "modifierFlagsCache": 0,
               "parent": undefined,
               "pos": -1,
@@ -2926,7 +2928,7 @@ NodeObject {
                     NodeObject {
                       "end": -1,
                       "flags": 8,
-                      "kind": 191,
+                      "kind": 195,
                       "literal": TokenObject {
                         "end": -1,
                         "flags": 8,
@@ -2947,7 +2949,7 @@ NodeObject {
                     NodeObject {
                       "end": -1,
                       "flags": 8,
-                      "kind": 191,
+                      "kind": 195,
                       "literal": TokenObject {
                         "end": -1,
                         "flags": 8,
@@ -2968,7 +2970,7 @@ NodeObject {
                     NodeObject {
                       "end": -1,
                       "flags": 8,
-                      "kind": 191,
+                      "kind": 195,
                       "literal": TokenObject {
                         "end": -1,
                         "flags": 8,
@@ -2989,7 +2991,7 @@ NodeObject {
                   ],
                   "end": -1,
                   "flags": 8,
-                  "kind": 179,
+                  "kind": 183,
                   "modifierFlagsCache": 0,
                   "parent": undefined,
                   "pos": -1,
@@ -3000,7 +3002,7 @@ NodeObject {
                 "end": -1,
                 "escapedText": "TypedRoute",
                 "flags": 8,
-                "kind": 78,
+                "kind": 79,
                 "modifierFlagsCache": 0,
                 "originalKeywordKind": undefined,
                 "parent": undefined,
@@ -3022,7 +3024,7 @@ NodeObject {
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 162,
+      "kind": 165,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -3031,7 +3033,7 @@ NodeObject {
         "end": -1,
         "escapedText": "about",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -3047,14 +3049,14 @@ NodeObject {
       "type": NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 177,
+        "kind": 181,
         "members": Array [
           NodeObject {
             "decorators": undefined,
             "end": -1,
             "flags": 8,
             "initializer": undefined,
-            "kind": 162,
+            "kind": 165,
             "localSymbol": undefined,
             "locals": undefined,
             "modifierFlagsCache": 0,
@@ -3063,7 +3065,7 @@ NodeObject {
               "end": -1,
               "escapedText": "story",
               "flags": 8,
-              "kind": 78,
+              "kind": 79,
               "modifierFlagsCache": 0,
               "originalKeywordKind": undefined,
               "parent": undefined,
@@ -3079,14 +3081,14 @@ NodeObject {
             "type": NodeObject {
               "end": -1,
               "flags": 8,
-              "kind": 177,
+              "kind": 181,
               "members": Array [
                 NodeObject {
                   "decorators": undefined,
                   "end": -1,
                   "flags": 8,
                   "initializer": undefined,
-                  "kind": 162,
+                  "kind": 165,
                   "localSymbol": undefined,
                   "locals": undefined,
                   "modifierFlagsCache": 0,
@@ -3095,7 +3097,7 @@ NodeObject {
                     "end": -1,
                     "escapedText": "company",
                     "flags": 8,
-                    "kind": 78,
+                    "kind": 79,
                     "modifierFlagsCache": 0,
                     "originalKeywordKind": undefined,
                     "parent": undefined,
@@ -3111,7 +3113,7 @@ NodeObject {
                   "type": NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 173,
+                    "kind": 177,
                     "modifierFlagsCache": 0,
                     "parent": undefined,
                     "pos": -1,
@@ -3122,7 +3124,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -3143,7 +3145,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -3164,7 +3166,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -3185,7 +3187,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -3206,7 +3208,7 @@ NodeObject {
                         ],
                         "end": -1,
                         "flags": 8,
-                        "kind": 179,
+                        "kind": 183,
                         "modifierFlagsCache": 0,
                         "parent": undefined,
                         "pos": -1,
@@ -3217,7 +3219,7 @@ NodeObject {
                       "end": -1,
                       "escapedText": "TypedRoute",
                       "flags": 8,
-                      "kind": 78,
+                      "kind": 79,
                       "modifierFlagsCache": 0,
                       "originalKeywordKind": undefined,
                       "parent": undefined,
@@ -3231,7 +3233,7 @@ NodeObject {
                   "end": -1,
                   "flags": 8,
                   "initializer": undefined,
-                  "kind": 162,
+                  "kind": 165,
                   "localSymbol": undefined,
                   "locals": undefined,
                   "modifierFlagsCache": 0,
@@ -3240,7 +3242,7 @@ NodeObject {
                     "end": -1,
                     "escapedText": "team",
                     "flags": 8,
-                    "kind": 78,
+                    "kind": 79,
                     "modifierFlagsCache": 0,
                     "originalKeywordKind": undefined,
                     "parent": undefined,
@@ -3256,7 +3258,7 @@ NodeObject {
                   "type": NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 173,
+                    "kind": 177,
                     "modifierFlagsCache": 0,
                     "parent": undefined,
                     "pos": -1,
@@ -3267,7 +3269,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -3288,7 +3290,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -3309,7 +3311,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -3330,7 +3332,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -3351,7 +3353,7 @@ NodeObject {
                         ],
                         "end": -1,
                         "flags": 8,
-                        "kind": 179,
+                        "kind": 183,
                         "modifierFlagsCache": 0,
                         "parent": undefined,
                         "pos": -1,
@@ -3362,7 +3364,7 @@ NodeObject {
                       "end": -1,
                       "escapedText": "TypedRoute",
                       "flags": 8,
-                      "kind": 78,
+                      "kind": 79,
                       "modifierFlagsCache": 0,
                       "originalKeywordKind": undefined,
                       "parent": undefined,
@@ -3390,7 +3392,7 @@ NodeObject {
       "end": -1,
       "flags": 8,
       "initializer": undefined,
-      "kind": 162,
+      "kind": 165,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -3399,7 +3401,7 @@ NodeObject {
         "end": -1,
         "escapedText": "location",
         "flags": 8,
-        "kind": 78,
+        "kind": 79,
         "modifierFlagsCache": 0,
         "originalKeywordKind": undefined,
         "parent": undefined,
@@ -3415,14 +3417,14 @@ NodeObject {
       "type": NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 177,
+        "kind": 181,
         "members": Array [
           NodeObject {
             "decorators": undefined,
             "end": -1,
             "flags": 8,
             "initializer": undefined,
-            "kind": 162,
+            "kind": 165,
             "localSymbol": undefined,
             "locals": undefined,
             "modifierFlagsCache": 0,
@@ -3431,7 +3433,7 @@ NodeObject {
               "end": -1,
               "escapedText": "map",
               "flags": 8,
-              "kind": 78,
+              "kind": 79,
               "modifierFlagsCache": 0,
               "originalKeywordKind": undefined,
               "parent": undefined,
@@ -3447,13 +3449,13 @@ NodeObject {
             "type": NodeObject {
               "end": -1,
               "flags": 8,
-              "kind": 177,
+              "kind": 181,
               "members": Array [
                 NodeObject {
                   "decorators": undefined,
                   "end": -1,
                   "flags": 8,
-                  "kind": 171,
+                  "kind": 175,
                   "localSymbol": undefined,
                   "locals": undefined,
                   "modifierFlagsCache": 0,
@@ -3467,7 +3469,7 @@ NodeObject {
                       "end": -1,
                       "flags": 8,
                       "initializer": undefined,
-                      "kind": 160,
+                      "kind": 163,
                       "localSymbol": undefined,
                       "locals": undefined,
                       "modifierFlagsCache": 0,
@@ -3476,7 +3478,7 @@ NodeObject {
                         "end": -1,
                         "escapedText": "city",
                         "flags": 8,
-                        "kind": 78,
+                        "kind": 79,
                         "modifierFlagsCache": 0,
                         "originalKeywordKind": undefined,
                         "parent": undefined,
@@ -3492,7 +3494,7 @@ NodeObject {
                       "type": TokenObject {
                         "end": -1,
                         "flags": 8,
-                        "kind": 147,
+                        "kind": 149,
                         "modifierFlagsCache": 0,
                         "parent": undefined,
                         "pos": -1,
@@ -3507,14 +3509,14 @@ NodeObject {
                   "type": NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 177,
+                    "kind": 181,
                     "members": Array [
                       NodeObject {
                         "decorators": undefined,
                         "end": -1,
                         "flags": 8,
                         "initializer": undefined,
-                        "kind": 162,
+                        "kind": 165,
                         "localSymbol": undefined,
                         "locals": undefined,
                         "modifierFlagsCache": 0,
@@ -3523,7 +3525,7 @@ NodeObject {
                           "end": -1,
                           "escapedText": "info",
                           "flags": 8,
-                          "kind": 78,
+                          "kind": 79,
                           "modifierFlagsCache": 0,
                           "originalKeywordKind": undefined,
                           "parent": undefined,
@@ -3539,7 +3541,7 @@ NodeObject {
                         "type": NodeObject {
                           "end": -1,
                           "flags": 8,
-                          "kind": 173,
+                          "kind": 177,
                           "modifierFlagsCache": 0,
                           "parent": undefined,
                           "pos": -1,
@@ -3550,7 +3552,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -3571,7 +3573,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -3592,7 +3594,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -3613,7 +3615,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -3634,7 +3636,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -3655,7 +3657,7 @@ NodeObject {
                               ],
                               "end": -1,
                               "flags": 8,
-                              "kind": 179,
+                              "kind": 183,
                               "modifierFlagsCache": 0,
                               "parent": undefined,
                               "pos": -1,
@@ -3666,7 +3668,7 @@ NodeObject {
                             "end": -1,
                             "escapedText": "TypedRoute",
                             "flags": 8,
-                            "kind": 78,
+                            "kind": 79,
                             "modifierFlagsCache": 0,
                             "originalKeywordKind": undefined,
                             "parent": undefined,
@@ -3680,7 +3682,7 @@ NodeObject {
                         "end": -1,
                         "flags": 8,
                         "initializer": undefined,
-                        "kind": 162,
+                        "kind": 165,
                         "localSymbol": undefined,
                         "locals": undefined,
                         "modifierFlagsCache": 0,
@@ -3689,7 +3691,7 @@ NodeObject {
                           "end": -1,
                           "escapedText": ":street",
                           "flags": 8,
-                          "kind": 78,
+                          "kind": 79,
                           "modifierFlagsCache": 0,
                           "originalKeywordKind": undefined,
                           "parent": undefined,
@@ -3705,7 +3707,7 @@ NodeObject {
                         "type": NodeObject {
                           "end": -1,
                           "flags": 8,
-                          "kind": 173,
+                          "kind": 177,
                           "modifierFlagsCache": 0,
                           "parent": undefined,
                           "pos": -1,
@@ -3716,7 +3718,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -3737,7 +3739,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -3758,7 +3760,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -3779,7 +3781,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -3800,7 +3802,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -3821,7 +3823,7 @@ NodeObject {
                               ],
                               "end": -1,
                               "flags": 8,
-                              "kind": 179,
+                              "kind": 183,
                               "modifierFlagsCache": 0,
                               "parent": undefined,
                               "pos": -1,
@@ -3832,7 +3834,7 @@ NodeObject {
                             "end": -1,
                             "escapedText": "TypedRoute",
                             "flags": 8,
-                            "kind": 78,
+                            "kind": 79,
                             "modifierFlagsCache": 0,
                             "originalKeywordKind": undefined,
                             "parent": undefined,
@@ -3875,7 +3877,7 @@ exports[`[generation] createType createTypeNodeWithIndex should match Intersecti
 NodeObject {
   "end": -1,
   "flags": 8,
-  "kind": 183,
+  "kind": 187,
   "modifierFlagsCache": 0,
   "parent": undefined,
   "pos": -1,
@@ -3884,14 +3886,14 @@ NodeObject {
     NodeObject {
       "end": -1,
       "flags": 8,
-      "kind": 177,
+      "kind": 181,
       "members": Array [
         NodeObject {
           "decorators": undefined,
           "end": -1,
           "flags": 8,
           "initializer": undefined,
-          "kind": 162,
+          "kind": 165,
           "localSymbol": undefined,
           "locals": undefined,
           "modifierFlagsCache": 0,
@@ -3900,7 +3902,7 @@ NodeObject {
             "end": -1,
             "escapedText": "info",
             "flags": 8,
-            "kind": 78,
+            "kind": 79,
             "modifierFlagsCache": 0,
             "originalKeywordKind": undefined,
             "parent": undefined,
@@ -3916,7 +3918,7 @@ NodeObject {
           "type": NodeObject {
             "end": -1,
             "flags": 8,
-            "kind": 173,
+            "kind": 177,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -3927,7 +3929,7 @@ NodeObject {
                   NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 191,
+                    "kind": 195,
                     "literal": TokenObject {
                       "end": -1,
                       "flags": 8,
@@ -3948,7 +3950,7 @@ NodeObject {
                   NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 191,
+                    "kind": 195,
                     "literal": TokenObject {
                       "end": -1,
                       "flags": 8,
@@ -3969,7 +3971,7 @@ NodeObject {
                 ],
                 "end": -1,
                 "flags": 8,
-                "kind": 179,
+                "kind": 183,
                 "modifierFlagsCache": 0,
                 "parent": undefined,
                 "pos": -1,
@@ -3980,7 +3982,7 @@ NodeObject {
               "end": -1,
               "escapedText": "TypedRoute",
               "flags": 8,
-              "kind": 78,
+              "kind": 79,
               "modifierFlagsCache": 0,
               "originalKeywordKind": undefined,
               "parent": undefined,
@@ -3998,13 +4000,13 @@ NodeObject {
     NodeObject {
       "end": -1,
       "flags": 8,
-      "kind": 177,
+      "kind": 181,
       "members": Array [
         NodeObject {
           "decorators": undefined,
           "end": -1,
           "flags": 8,
-          "kind": 171,
+          "kind": 175,
           "localSymbol": undefined,
           "locals": undefined,
           "modifierFlagsCache": 0,
@@ -4018,7 +4020,7 @@ NodeObject {
               "end": -1,
               "flags": 8,
               "initializer": undefined,
-              "kind": 160,
+              "kind": 163,
               "localSymbol": undefined,
               "locals": undefined,
               "modifierFlagsCache": 0,
@@ -4027,7 +4029,7 @@ NodeObject {
                 "end": -1,
                 "escapedText": "city",
                 "flags": 8,
-                "kind": 78,
+                "kind": 79,
                 "modifierFlagsCache": 0,
                 "originalKeywordKind": undefined,
                 "parent": undefined,
@@ -4043,7 +4045,7 @@ NodeObject {
               "type": TokenObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 147,
+                "kind": 149,
                 "modifierFlagsCache": 0,
                 "parent": undefined,
                 "pos": -1,
@@ -4058,7 +4060,7 @@ NodeObject {
           "type": NodeObject {
             "end": -1,
             "flags": 8,
-            "kind": 173,
+            "kind": 177,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -4069,7 +4071,7 @@ NodeObject {
                   NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 191,
+                    "kind": 195,
                     "literal": TokenObject {
                       "end": -1,
                       "flags": 8,
@@ -4090,7 +4092,7 @@ NodeObject {
                   NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 191,
+                    "kind": 195,
                     "literal": TokenObject {
                       "end": -1,
                       "flags": 8,
@@ -4111,7 +4113,7 @@ NodeObject {
                 ],
                 "end": -1,
                 "flags": 8,
-                "kind": 179,
+                "kind": 183,
                 "modifierFlagsCache": 0,
                 "parent": undefined,
                 "pos": -1,
@@ -4122,7 +4124,7 @@ NodeObject {
               "end": -1,
               "escapedText": "TypedRoute",
               "flags": 8,
-              "kind": 78,
+              "kind": 79,
               "modifierFlagsCache": 0,
               "originalKeywordKind": undefined,
               "parent": undefined,
@@ -4146,13 +4148,13 @@ exports[`[generation] createType createTypeNodeWithIndex should match only index
 NodeObject {
   "end": -1,
   "flags": 8,
-  "kind": 177,
+  "kind": 181,
   "members": Array [
     NodeObject {
       "decorators": undefined,
       "end": -1,
       "flags": 8,
-      "kind": 171,
+      "kind": 175,
       "localSymbol": undefined,
       "locals": undefined,
       "modifierFlagsCache": 0,
@@ -4166,7 +4168,7 @@ NodeObject {
           "end": -1,
           "flags": 8,
           "initializer": undefined,
-          "kind": 160,
+          "kind": 163,
           "localSymbol": undefined,
           "locals": undefined,
           "modifierFlagsCache": 0,
@@ -4175,7 +4177,7 @@ NodeObject {
             "end": -1,
             "escapedText": "city",
             "flags": 8,
-            "kind": 78,
+            "kind": 79,
             "modifierFlagsCache": 0,
             "originalKeywordKind": undefined,
             "parent": undefined,
@@ -4191,7 +4193,7 @@ NodeObject {
           "type": TokenObject {
             "end": -1,
             "flags": 8,
-            "kind": 147,
+            "kind": 149,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -4206,7 +4208,7 @@ NodeObject {
       "type": NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 173,
+        "kind": 177,
         "modifierFlagsCache": 0,
         "parent": undefined,
         "pos": -1,
@@ -4217,7 +4219,7 @@ NodeObject {
               NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 191,
+                "kind": 195,
                 "literal": TokenObject {
                   "end": -1,
                   "flags": 8,
@@ -4238,7 +4240,7 @@ NodeObject {
               NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 191,
+                "kind": 195,
                 "literal": TokenObject {
                   "end": -1,
                   "flags": 8,
@@ -4259,7 +4261,7 @@ NodeObject {
             ],
             "end": -1,
             "flags": 8,
-            "kind": 179,
+            "kind": 183,
             "modifierFlagsCache": 0,
             "parent": undefined,
             "pos": -1,
@@ -4270,7 +4272,7 @@ NodeObject {
           "end": -1,
           "escapedText": "TypedRoute",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -4292,7 +4294,7 @@ exports[`[generation] createType createTypeReferenceNodeOfTuple should match sna
 NodeObject {
   "end": -1,
   "flags": 8,
-  "kind": 173,
+  "kind": 177,
   "modifierFlagsCache": 0,
   "parent": undefined,
   "pos": -1,
@@ -4302,7 +4304,7 @@ NodeObject {
       "elements": Array [],
       "end": -1,
       "flags": 8,
-      "kind": 179,
+      "kind": 183,
       "modifierFlagsCache": 0,
       "parent": undefined,
       "pos": -1,
@@ -4313,7 +4315,7 @@ NodeObject {
     "end": -1,
     "escapedText": "TypedRoute",
     "flags": 8,
-    "kind": 78,
+    "kind": 79,
     "modifierFlagsCache": 0,
     "originalKeywordKind": undefined,
     "parent": undefined,
@@ -4327,7 +4329,7 @@ exports[`[generation] createType createTypeReferenceNodeOfTuple should match sna
 NodeObject {
   "end": -1,
   "flags": 8,
-  "kind": 173,
+  "kind": 177,
   "modifierFlagsCache": 0,
   "parent": undefined,
   "pos": -1,
@@ -4338,7 +4340,7 @@ NodeObject {
         NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 191,
+          "kind": 195,
           "literal": TokenObject {
             "end": -1,
             "flags": 8,
@@ -4359,7 +4361,7 @@ NodeObject {
         NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 191,
+          "kind": 195,
           "literal": TokenObject {
             "end": -1,
             "flags": 8,
@@ -4380,7 +4382,7 @@ NodeObject {
         NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 191,
+          "kind": 195,
           "literal": TokenObject {
             "end": -1,
             "flags": 8,
@@ -4401,7 +4403,7 @@ NodeObject {
         NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 191,
+          "kind": 195,
           "literal": TokenObject {
             "end": -1,
             "flags": 8,
@@ -4422,7 +4424,7 @@ NodeObject {
       ],
       "end": -1,
       "flags": 8,
-      "kind": 179,
+      "kind": 183,
       "modifierFlagsCache": 0,
       "parent": undefined,
       "pos": -1,
@@ -4433,7 +4435,7 @@ NodeObject {
     "end": -1,
     "escapedText": "TypedRoute",
     "flags": 8,
-    "kind": 78,
+    "kind": 79,
     "modifierFlagsCache": 0,
     "originalKeywordKind": undefined,
     "parent": undefined,
@@ -4447,7 +4449,7 @@ exports[`[generation] createType createTypeReferenceNodeOfTuple should match sna
 NodeObject {
   "end": -1,
   "flags": 8,
-  "kind": 173,
+  "kind": 177,
   "modifierFlagsCache": 0,
   "parent": undefined,
   "pos": -1,
@@ -4458,7 +4460,7 @@ NodeObject {
         NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 191,
+          "kind": 195,
           "literal": TokenObject {
             "end": -1,
             "flags": 8,
@@ -4479,7 +4481,7 @@ NodeObject {
         NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 191,
+          "kind": 195,
           "literal": TokenObject {
             "end": -1,
             "flags": 8,
@@ -4500,7 +4502,7 @@ NodeObject {
         NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 191,
+          "kind": 195,
           "literal": TokenObject {
             "end": -1,
             "flags": 8,
@@ -4521,7 +4523,7 @@ NodeObject {
         NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 191,
+          "kind": 195,
           "literal": TokenObject {
             "end": -1,
             "flags": 8,
@@ -4542,7 +4544,7 @@ NodeObject {
       ],
       "end": -1,
       "flags": 8,
-      "kind": 179,
+      "kind": 183,
       "modifierFlagsCache": 0,
       "parent": undefined,
       "pos": -1,
@@ -4553,7 +4555,7 @@ NodeObject {
     "end": -1,
     "escapedText": "TypedRoute",
     "flags": 8,
-    "kind": 78,
+    "kind": 79,
     "modifierFlagsCache": 0,
     "originalKeywordKind": undefined,
     "parent": undefined,
@@ -4568,7 +4570,7 @@ NodeObject {
   "decorators": undefined,
   "end": -1,
   "flags": 8,
-  "kind": 254,
+  "kind": 258,
   "localSymbol": undefined,
   "locals": undefined,
   "modifierFlagsCache": 0,
@@ -4576,7 +4578,7 @@ NodeObject {
     TokenObject {
       "end": -1,
       "flags": 8,
-      "kind": 92,
+      "kind": 93,
       "modifierFlagsCache": 0,
       "parent": undefined,
       "pos": -1,
@@ -4587,7 +4589,7 @@ NodeObject {
     "end": -1,
     "escapedText": "TypedRoutes",
     "flags": 8,
-    "kind": 78,
+    "kind": 79,
     "modifierFlagsCache": 0,
     "originalKeywordKind": undefined,
     "parent": undefined,
@@ -4602,14 +4604,14 @@ NodeObject {
   "type": NodeObject {
     "end": -1,
     "flags": 8,
-    "kind": 177,
+    "kind": 181,
     "members": Array [
       NodeObject {
         "decorators": undefined,
         "end": -1,
         "flags": 8,
         "initializer": undefined,
-        "kind": 162,
+        "kind": 165,
         "localSymbol": undefined,
         "locals": undefined,
         "modifierFlagsCache": 0,
@@ -4618,7 +4620,7 @@ NodeObject {
           "end": -1,
           "escapedText": "ROOT",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -4634,7 +4636,7 @@ NodeObject {
         "type": NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 173,
+          "kind": 177,
           "modifierFlagsCache": 0,
           "parent": undefined,
           "pos": -1,
@@ -4645,7 +4647,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -4666,7 +4668,7 @@ NodeObject {
               ],
               "end": -1,
               "flags": 8,
-              "kind": 179,
+              "kind": 183,
               "modifierFlagsCache": 0,
               "parent": undefined,
               "pos": -1,
@@ -4677,7 +4679,7 @@ NodeObject {
             "end": -1,
             "escapedText": "TypedRoute",
             "flags": 8,
-            "kind": 78,
+            "kind": 79,
             "modifierFlagsCache": 0,
             "originalKeywordKind": undefined,
             "parent": undefined,
@@ -4691,7 +4693,7 @@ NodeObject {
         "end": -1,
         "flags": 8,
         "initializer": undefined,
-        "kind": 162,
+        "kind": 165,
         "localSymbol": undefined,
         "locals": undefined,
         "modifierFlagsCache": 0,
@@ -4700,7 +4702,7 @@ NodeObject {
           "end": -1,
           "escapedText": "home",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -4716,7 +4718,7 @@ NodeObject {
         "type": NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 173,
+          "kind": 177,
           "modifierFlagsCache": 0,
           "parent": undefined,
           "pos": -1,
@@ -4727,7 +4729,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -4748,7 +4750,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -4769,7 +4771,7 @@ NodeObject {
               ],
               "end": -1,
               "flags": 8,
-              "kind": 179,
+              "kind": 183,
               "modifierFlagsCache": 0,
               "parent": undefined,
               "pos": -1,
@@ -4780,7 +4782,7 @@ NodeObject {
             "end": -1,
             "escapedText": "TypedRoute",
             "flags": 8,
-            "kind": 78,
+            "kind": 79,
             "modifierFlagsCache": 0,
             "originalKeywordKind": undefined,
             "parent": undefined,
@@ -4794,7 +4796,7 @@ NodeObject {
         "end": -1,
         "flags": 8,
         "initializer": undefined,
-        "kind": 162,
+        "kind": 165,
         "localSymbol": undefined,
         "locals": undefined,
         "modifierFlagsCache": 0,
@@ -4803,7 +4805,7 @@ NodeObject {
           "end": -1,
           "escapedText": "about",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -4819,7 +4821,7 @@ NodeObject {
         "type": NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 173,
+          "kind": 177,
           "modifierFlagsCache": 0,
           "parent": undefined,
           "pos": -1,
@@ -4830,7 +4832,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -4851,7 +4853,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -4872,7 +4874,7 @@ NodeObject {
               ],
               "end": -1,
               "flags": 8,
-              "kind": 179,
+              "kind": 183,
               "modifierFlagsCache": 0,
               "parent": undefined,
               "pos": -1,
@@ -4883,7 +4885,7 @@ NodeObject {
             "end": -1,
             "escapedText": "TypedRoute",
             "flags": 8,
-            "kind": 78,
+            "kind": 79,
             "modifierFlagsCache": 0,
             "originalKeywordKind": undefined,
             "parent": undefined,
@@ -4897,7 +4899,7 @@ NodeObject {
         "end": -1,
         "flags": 8,
         "initializer": undefined,
-        "kind": 162,
+        "kind": 165,
         "localSymbol": undefined,
         "locals": undefined,
         "modifierFlagsCache": 0,
@@ -4906,7 +4908,7 @@ NodeObject {
           "end": -1,
           "escapedText": "car",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -4922,7 +4924,7 @@ NodeObject {
         "type": NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 173,
+          "kind": 177,
           "modifierFlagsCache": 0,
           "parent": undefined,
           "pos": -1,
@@ -4933,7 +4935,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -4954,7 +4956,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -4975,7 +4977,7 @@ NodeObject {
               ],
               "end": -1,
               "flags": 8,
-              "kind": 179,
+              "kind": 183,
               "modifierFlagsCache": 0,
               "parent": undefined,
               "pos": -1,
@@ -4986,7 +4988,7 @@ NodeObject {
             "end": -1,
             "escapedText": "TypedRoute",
             "flags": 8,
-            "kind": 78,
+            "kind": 79,
             "modifierFlagsCache": 0,
             "originalKeywordKind": undefined,
             "parent": undefined,
@@ -5000,7 +5002,7 @@ NodeObject {
         "end": -1,
         "flags": 8,
         "initializer": undefined,
-        "kind": 162,
+        "kind": 165,
         "localSymbol": undefined,
         "locals": undefined,
         "modifierFlagsCache": 0,
@@ -5009,7 +5011,7 @@ NodeObject {
           "end": -1,
           "escapedText": "details",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -5025,7 +5027,7 @@ NodeObject {
         "type": NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 173,
+          "kind": 177,
           "modifierFlagsCache": 0,
           "parent": undefined,
           "pos": -1,
@@ -5036,7 +5038,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -5057,7 +5059,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -5078,7 +5080,7 @@ NodeObject {
               ],
               "end": -1,
               "flags": 8,
-              "kind": 179,
+              "kind": 183,
               "modifierFlagsCache": 0,
               "parent": undefined,
               "pos": -1,
@@ -5089,7 +5091,7 @@ NodeObject {
             "end": -1,
             "escapedText": "TypedRoute",
             "flags": 8,
-            "kind": 78,
+            "kind": 79,
             "modifierFlagsCache": 0,
             "originalKeywordKind": undefined,
             "parent": undefined,
@@ -5103,7 +5105,7 @@ NodeObject {
         "end": -1,
         "flags": 8,
         "initializer": undefined,
-        "kind": 162,
+        "kind": 165,
         "localSymbol": undefined,
         "locals": undefined,
         "modifierFlagsCache": 0,
@@ -5112,7 +5114,7 @@ NodeObject {
           "end": -1,
           "escapedText": "info",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -5128,7 +5130,7 @@ NodeObject {
         "type": NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 173,
+          "kind": 177,
           "modifierFlagsCache": 0,
           "parent": undefined,
           "pos": -1,
@@ -5139,7 +5141,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -5160,7 +5162,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -5181,7 +5183,7 @@ NodeObject {
               ],
               "end": -1,
               "flags": 8,
-              "kind": 179,
+              "kind": 183,
               "modifierFlagsCache": 0,
               "parent": undefined,
               "pos": -1,
@@ -5192,7 +5194,7 @@ NodeObject {
             "end": -1,
             "escapedText": "TypedRoute",
             "flags": 8,
-            "kind": 78,
+            "kind": 79,
             "modifierFlagsCache": 0,
             "originalKeywordKind": undefined,
             "parent": undefined,
@@ -5206,7 +5208,7 @@ NodeObject {
         "end": -1,
         "flags": 8,
         "initializer": undefined,
-        "kind": 162,
+        "kind": 165,
         "localSymbol": undefined,
         "locals": undefined,
         "modifierFlagsCache": 0,
@@ -5215,7 +5217,7 @@ NodeObject {
           "end": -1,
           "escapedText": "engine",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -5231,13 +5233,13 @@ NodeObject {
         "type": NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 177,
+          "kind": 181,
           "members": Array [
             NodeObject {
               "decorators": undefined,
               "end": -1,
               "flags": 8,
-              "kind": 171,
+              "kind": 175,
               "localSymbol": undefined,
               "locals": undefined,
               "modifierFlagsCache": 0,
@@ -5251,7 +5253,7 @@ NodeObject {
                   "end": -1,
                   "flags": 8,
                   "initializer": undefined,
-                  "kind": 160,
+                  "kind": 163,
                   "localSymbol": undefined,
                   "locals": undefined,
                   "modifierFlagsCache": 0,
@@ -5260,7 +5262,7 @@ NodeObject {
                     "end": -1,
                     "escapedText": "year",
                     "flags": 8,
-                    "kind": 78,
+                    "kind": 79,
                     "modifierFlagsCache": 0,
                     "originalKeywordKind": undefined,
                     "parent": undefined,
@@ -5276,7 +5278,7 @@ NodeObject {
                   "type": TokenObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 147,
+                    "kind": 149,
                     "modifierFlagsCache": 0,
                     "parent": undefined,
                     "pos": -1,
@@ -5291,7 +5293,7 @@ NodeObject {
               "type": NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 173,
+                "kind": 177,
                 "modifierFlagsCache": 0,
                 "parent": undefined,
                 "pos": -1,
@@ -5302,7 +5304,7 @@ NodeObject {
                       NodeObject {
                         "end": -1,
                         "flags": 8,
-                        "kind": 191,
+                        "kind": 195,
                         "literal": TokenObject {
                           "end": -1,
                           "flags": 8,
@@ -5323,7 +5325,7 @@ NodeObject {
                       NodeObject {
                         "end": -1,
                         "flags": 8,
-                        "kind": 191,
+                        "kind": 195,
                         "literal": TokenObject {
                           "end": -1,
                           "flags": 8,
@@ -5344,7 +5346,7 @@ NodeObject {
                       NodeObject {
                         "end": -1,
                         "flags": 8,
-                        "kind": 191,
+                        "kind": 195,
                         "literal": TokenObject {
                           "end": -1,
                           "flags": 8,
@@ -5365,7 +5367,7 @@ NodeObject {
                     ],
                     "end": -1,
                     "flags": 8,
-                    "kind": 179,
+                    "kind": 183,
                     "modifierFlagsCache": 0,
                     "parent": undefined,
                     "pos": -1,
@@ -5376,7 +5378,7 @@ NodeObject {
                   "end": -1,
                   "escapedText": "TypedRoute",
                   "flags": 8,
-                  "kind": 78,
+                  "kind": 79,
                   "modifierFlagsCache": 0,
                   "originalKeywordKind": undefined,
                   "parent": undefined,
@@ -5398,7 +5400,7 @@ NodeObject {
         "end": -1,
         "flags": 8,
         "initializer": undefined,
-        "kind": 162,
+        "kind": 165,
         "localSymbol": undefined,
         "locals": undefined,
         "modifierFlagsCache": 0,
@@ -5407,7 +5409,7 @@ NodeObject {
           "end": -1,
           "escapedText": "users",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -5423,7 +5425,7 @@ NodeObject {
         "type": NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 183,
+          "kind": 187,
           "modifierFlagsCache": 0,
           "parent": undefined,
           "pos": -1,
@@ -5432,14 +5434,14 @@ NodeObject {
             NodeObject {
               "end": -1,
               "flags": 8,
-              "kind": 177,
+              "kind": 181,
               "members": Array [
                 NodeObject {
                   "decorators": undefined,
                   "end": -1,
                   "flags": 8,
                   "initializer": undefined,
-                  "kind": 162,
+                  "kind": 165,
                   "localSymbol": undefined,
                   "locals": undefined,
                   "modifierFlagsCache": 0,
@@ -5448,7 +5450,7 @@ NodeObject {
                     "end": -1,
                     "escapedText": "ROOT",
                     "flags": 8,
-                    "kind": 78,
+                    "kind": 79,
                     "modifierFlagsCache": 0,
                     "originalKeywordKind": undefined,
                     "parent": undefined,
@@ -5464,7 +5466,7 @@ NodeObject {
                   "type": NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 173,
+                    "kind": 177,
                     "modifierFlagsCache": 0,
                     "parent": undefined,
                     "pos": -1,
@@ -5475,7 +5477,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -5496,7 +5498,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -5517,7 +5519,7 @@ NodeObject {
                         ],
                         "end": -1,
                         "flags": 8,
-                        "kind": 179,
+                        "kind": 183,
                         "modifierFlagsCache": 0,
                         "parent": undefined,
                         "pos": -1,
@@ -5528,7 +5530,7 @@ NodeObject {
                       "end": -1,
                       "escapedText": "TypedRoute",
                       "flags": 8,
-                      "kind": 78,
+                      "kind": 79,
                       "modifierFlagsCache": 0,
                       "originalKeywordKind": undefined,
                       "parent": undefined,
@@ -5546,13 +5548,13 @@ NodeObject {
             NodeObject {
               "end": -1,
               "flags": 8,
-              "kind": 177,
+              "kind": 181,
               "members": Array [
                 NodeObject {
                   "decorators": undefined,
                   "end": -1,
                   "flags": 8,
-                  "kind": 171,
+                  "kind": 175,
                   "localSymbol": undefined,
                   "locals": undefined,
                   "modifierFlagsCache": 0,
@@ -5566,7 +5568,7 @@ NodeObject {
                       "end": -1,
                       "flags": 8,
                       "initializer": undefined,
-                      "kind": 160,
+                      "kind": 163,
                       "localSymbol": undefined,
                       "locals": undefined,
                       "modifierFlagsCache": 0,
@@ -5575,7 +5577,7 @@ NodeObject {
                         "end": -1,
                         "escapedText": "id",
                         "flags": 8,
-                        "kind": 78,
+                        "kind": 79,
                         "modifierFlagsCache": 0,
                         "originalKeywordKind": undefined,
                         "parent": undefined,
@@ -5591,7 +5593,7 @@ NodeObject {
                       "type": TokenObject {
                         "end": -1,
                         "flags": 8,
-                        "kind": 147,
+                        "kind": 149,
                         "modifierFlagsCache": 0,
                         "parent": undefined,
                         "pos": -1,
@@ -5606,14 +5608,14 @@ NodeObject {
                   "type": NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 177,
+                    "kind": 181,
                     "members": Array [
                       NodeObject {
                         "decorators": undefined,
                         "end": -1,
                         "flags": 8,
                         "initializer": undefined,
-                        "kind": 162,
+                        "kind": 165,
                         "localSymbol": undefined,
                         "locals": undefined,
                         "modifierFlagsCache": 0,
@@ -5622,7 +5624,7 @@ NodeObject {
                           "end": -1,
                           "escapedText": "ROOT",
                           "flags": 8,
-                          "kind": 78,
+                          "kind": 79,
                           "modifierFlagsCache": 0,
                           "originalKeywordKind": undefined,
                           "parent": undefined,
@@ -5638,7 +5640,7 @@ NodeObject {
                         "type": NodeObject {
                           "end": -1,
                           "flags": 8,
-                          "kind": 173,
+                          "kind": 177,
                           "modifierFlagsCache": 0,
                           "parent": undefined,
                           "pos": -1,
@@ -5649,7 +5651,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -5670,7 +5672,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -5691,7 +5693,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -5712,7 +5714,7 @@ NodeObject {
                               ],
                               "end": -1,
                               "flags": 8,
-                              "kind": 179,
+                              "kind": 183,
                               "modifierFlagsCache": 0,
                               "parent": undefined,
                               "pos": -1,
@@ -5723,7 +5725,7 @@ NodeObject {
                             "end": -1,
                             "escapedText": "TypedRoute",
                             "flags": 8,
-                            "kind": 78,
+                            "kind": 79,
                             "modifierFlagsCache": 0,
                             "originalKeywordKind": undefined,
                             "parent": undefined,
@@ -5737,7 +5739,7 @@ NodeObject {
                         "end": -1,
                         "flags": 8,
                         "initializer": undefined,
-                        "kind": 162,
+                        "kind": 165,
                         "localSymbol": undefined,
                         "locals": undefined,
                         "modifierFlagsCache": 0,
@@ -5746,7 +5748,7 @@ NodeObject {
                           "end": -1,
                           "escapedText": "profile",
                           "flags": 8,
-                          "kind": 78,
+                          "kind": 79,
                           "modifierFlagsCache": 0,
                           "originalKeywordKind": undefined,
                           "parent": undefined,
@@ -5762,7 +5764,7 @@ NodeObject {
                         "type": NodeObject {
                           "end": -1,
                           "flags": 8,
-                          "kind": 173,
+                          "kind": 177,
                           "modifierFlagsCache": 0,
                           "parent": undefined,
                           "pos": -1,
@@ -5773,7 +5775,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -5794,7 +5796,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -5815,7 +5817,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -5836,7 +5838,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -5857,7 +5859,7 @@ NodeObject {
                               ],
                               "end": -1,
                               "flags": 8,
-                              "kind": 179,
+                              "kind": 183,
                               "modifierFlagsCache": 0,
                               "parent": undefined,
                               "pos": -1,
@@ -5868,7 +5870,7 @@ NodeObject {
                             "end": -1,
                             "escapedText": "TypedRoute",
                             "flags": 8,
-                            "kind": 78,
+                            "kind": 79,
                             "modifierFlagsCache": 0,
                             "originalKeywordKind": undefined,
                             "parent": undefined,
@@ -5909,7 +5911,7 @@ NodeObject {
   "decorators": undefined,
   "end": -1,
   "flags": 8,
-  "kind": 254,
+  "kind": 258,
   "localSymbol": undefined,
   "locals": undefined,
   "modifierFlagsCache": 0,
@@ -5917,7 +5919,7 @@ NodeObject {
     TokenObject {
       "end": -1,
       "flags": 8,
-      "kind": 92,
+      "kind": 93,
       "modifierFlagsCache": 0,
       "parent": undefined,
       "pos": -1,
@@ -5928,7 +5930,7 @@ NodeObject {
     "end": -1,
     "escapedText": "TypedRoutes",
     "flags": 8,
-    "kind": 78,
+    "kind": 79,
     "modifierFlagsCache": 0,
     "originalKeywordKind": undefined,
     "parent": undefined,
@@ -5943,14 +5945,14 @@ NodeObject {
   "type": NodeObject {
     "end": -1,
     "flags": 8,
-    "kind": 177,
+    "kind": 181,
     "members": Array [
       NodeObject {
         "decorators": undefined,
         "end": -1,
         "flags": 8,
         "initializer": undefined,
-        "kind": 162,
+        "kind": 165,
         "localSymbol": undefined,
         "locals": undefined,
         "modifierFlagsCache": 0,
@@ -5959,7 +5961,7 @@ NodeObject {
           "end": -1,
           "escapedText": "home",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -5975,7 +5977,7 @@ NodeObject {
         "type": NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 173,
+          "kind": 177,
           "modifierFlagsCache": 0,
           "parent": undefined,
           "pos": -1,
@@ -5986,7 +5988,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -6007,7 +6009,7 @@ NodeObject {
                 NodeObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 191,
+                  "kind": 195,
                   "literal": TokenObject {
                     "end": -1,
                     "flags": 8,
@@ -6028,7 +6030,7 @@ NodeObject {
               ],
               "end": -1,
               "flags": 8,
-              "kind": 179,
+              "kind": 183,
               "modifierFlagsCache": 0,
               "parent": undefined,
               "pos": -1,
@@ -6039,7 +6041,7 @@ NodeObject {
             "end": -1,
             "escapedText": "TypedRoute",
             "flags": 8,
-            "kind": 78,
+            "kind": 79,
             "modifierFlagsCache": 0,
             "originalKeywordKind": undefined,
             "parent": undefined,
@@ -6053,7 +6055,7 @@ NodeObject {
         "end": -1,
         "flags": 8,
         "initializer": undefined,
-        "kind": 162,
+        "kind": 165,
         "localSymbol": undefined,
         "locals": undefined,
         "modifierFlagsCache": 0,
@@ -6062,7 +6064,7 @@ NodeObject {
           "end": -1,
           "escapedText": "users",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -6078,7 +6080,7 @@ NodeObject {
         "type": NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 183,
+          "kind": 187,
           "modifierFlagsCache": 0,
           "parent": undefined,
           "pos": -1,
@@ -6087,14 +6089,14 @@ NodeObject {
             NodeObject {
               "end": -1,
               "flags": 8,
-              "kind": 177,
+              "kind": 181,
               "members": Array [
                 NodeObject {
                   "decorators": undefined,
                   "end": -1,
                   "flags": 8,
                   "initializer": undefined,
-                  "kind": 162,
+                  "kind": 165,
                   "localSymbol": undefined,
                   "locals": undefined,
                   "modifierFlagsCache": 0,
@@ -6103,7 +6105,7 @@ NodeObject {
                     "end": -1,
                     "escapedText": "ROOT",
                     "flags": 8,
-                    "kind": 78,
+                    "kind": 79,
                     "modifierFlagsCache": 0,
                     "originalKeywordKind": undefined,
                     "parent": undefined,
@@ -6119,7 +6121,7 @@ NodeObject {
                   "type": NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 173,
+                    "kind": 177,
                     "modifierFlagsCache": 0,
                     "parent": undefined,
                     "pos": -1,
@@ -6130,7 +6132,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -6151,7 +6153,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -6172,7 +6174,7 @@ NodeObject {
                         ],
                         "end": -1,
                         "flags": 8,
-                        "kind": 179,
+                        "kind": 183,
                         "modifierFlagsCache": 0,
                         "parent": undefined,
                         "pos": -1,
@@ -6183,7 +6185,7 @@ NodeObject {
                       "end": -1,
                       "escapedText": "TypedRoute",
                       "flags": 8,
-                      "kind": 78,
+                      "kind": 79,
                       "modifierFlagsCache": 0,
                       "originalKeywordKind": undefined,
                       "parent": undefined,
@@ -6201,13 +6203,13 @@ NodeObject {
             NodeObject {
               "end": -1,
               "flags": 8,
-              "kind": 177,
+              "kind": 181,
               "members": Array [
                 NodeObject {
                   "decorators": undefined,
                   "end": -1,
                   "flags": 8,
-                  "kind": 171,
+                  "kind": 175,
                   "localSymbol": undefined,
                   "locals": undefined,
                   "modifierFlagsCache": 0,
@@ -6221,7 +6223,7 @@ NodeObject {
                       "end": -1,
                       "flags": 8,
                       "initializer": undefined,
-                      "kind": 160,
+                      "kind": 163,
                       "localSymbol": undefined,
                       "locals": undefined,
                       "modifierFlagsCache": 0,
@@ -6230,7 +6232,7 @@ NodeObject {
                         "end": -1,
                         "escapedText": "id",
                         "flags": 8,
-                        "kind": 78,
+                        "kind": 79,
                         "modifierFlagsCache": 0,
                         "originalKeywordKind": undefined,
                         "parent": undefined,
@@ -6246,7 +6248,7 @@ NodeObject {
                       "type": TokenObject {
                         "end": -1,
                         "flags": 8,
-                        "kind": 147,
+                        "kind": 149,
                         "modifierFlagsCache": 0,
                         "parent": undefined,
                         "pos": -1,
@@ -6261,14 +6263,14 @@ NodeObject {
                   "type": NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 177,
+                    "kind": 181,
                     "members": Array [
                       NodeObject {
                         "decorators": undefined,
                         "end": -1,
                         "flags": 8,
                         "initializer": undefined,
-                        "kind": 162,
+                        "kind": 165,
                         "localSymbol": undefined,
                         "locals": undefined,
                         "modifierFlagsCache": 0,
@@ -6277,7 +6279,7 @@ NodeObject {
                           "end": -1,
                           "escapedText": "profile",
                           "flags": 8,
-                          "kind": 78,
+                          "kind": 79,
                           "modifierFlagsCache": 0,
                           "originalKeywordKind": undefined,
                           "parent": undefined,
@@ -6293,7 +6295,7 @@ NodeObject {
                         "type": NodeObject {
                           "end": -1,
                           "flags": 8,
-                          "kind": 173,
+                          "kind": 177,
                           "modifierFlagsCache": 0,
                           "parent": undefined,
                           "pos": -1,
@@ -6304,7 +6306,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -6325,7 +6327,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -6346,7 +6348,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -6367,7 +6369,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -6388,7 +6390,7 @@ NodeObject {
                               ],
                               "end": -1,
                               "flags": 8,
-                              "kind": 179,
+                              "kind": 183,
                               "modifierFlagsCache": 0,
                               "parent": undefined,
                               "pos": -1,
@@ -6399,7 +6401,7 @@ NodeObject {
                             "end": -1,
                             "escapedText": "TypedRoute",
                             "flags": 8,
-                            "kind": 78,
+                            "kind": 79,
                             "modifierFlagsCache": 0,
                             "originalKeywordKind": undefined,
                             "parent": undefined,
@@ -6413,7 +6415,7 @@ NodeObject {
                         "end": -1,
                         "flags": 8,
                         "initializer": undefined,
-                        "kind": 162,
+                        "kind": 165,
                         "localSymbol": undefined,
                         "locals": undefined,
                         "modifierFlagsCache": 0,
@@ -6422,7 +6424,7 @@ NodeObject {
                           "end": -1,
                           "escapedText": "settings",
                           "flags": 8,
-                          "kind": 78,
+                          "kind": 79,
                           "modifierFlagsCache": 0,
                           "originalKeywordKind": undefined,
                           "parent": undefined,
@@ -6438,7 +6440,7 @@ NodeObject {
                         "type": NodeObject {
                           "end": -1,
                           "flags": 8,
-                          "kind": 173,
+                          "kind": 177,
                           "modifierFlagsCache": 0,
                           "parent": undefined,
                           "pos": -1,
@@ -6449,7 +6451,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -6470,7 +6472,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -6491,7 +6493,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -6512,7 +6514,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -6533,7 +6535,7 @@ NodeObject {
                               ],
                               "end": -1,
                               "flags": 8,
-                              "kind": 179,
+                              "kind": 183,
                               "modifierFlagsCache": 0,
                               "parent": undefined,
                               "pos": -1,
@@ -6544,7 +6546,7 @@ NodeObject {
                             "end": -1,
                             "escapedText": "TypedRoute",
                             "flags": 8,
-                            "kind": 78,
+                            "kind": 79,
                             "modifierFlagsCache": 0,
                             "originalKeywordKind": undefined,
                             "parent": undefined,
@@ -6575,7 +6577,7 @@ NodeObject {
         "end": -1,
         "flags": 8,
         "initializer": undefined,
-        "kind": 162,
+        "kind": 165,
         "localSymbol": undefined,
         "locals": undefined,
         "modifierFlagsCache": 0,
@@ -6584,7 +6586,7 @@ NodeObject {
           "end": -1,
           "escapedText": "admin",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -6600,7 +6602,7 @@ NodeObject {
         "type": NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 183,
+          "kind": 187,
           "modifierFlagsCache": 0,
           "parent": undefined,
           "pos": -1,
@@ -6609,14 +6611,14 @@ NodeObject {
             NodeObject {
               "end": -1,
               "flags": 8,
-              "kind": 177,
+              "kind": 181,
               "members": Array [
                 NodeObject {
                   "decorators": undefined,
                   "end": -1,
                   "flags": 8,
                   "initializer": undefined,
-                  "kind": 162,
+                  "kind": 165,
                   "localSymbol": undefined,
                   "locals": undefined,
                   "modifierFlagsCache": 0,
@@ -6625,7 +6627,7 @@ NodeObject {
                     "end": -1,
                     "escapedText": "ROOT",
                     "flags": 8,
-                    "kind": 78,
+                    "kind": 79,
                     "modifierFlagsCache": 0,
                     "originalKeywordKind": undefined,
                     "parent": undefined,
@@ -6641,7 +6643,7 @@ NodeObject {
                   "type": NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 173,
+                    "kind": 177,
                     "modifierFlagsCache": 0,
                     "parent": undefined,
                     "pos": -1,
@@ -6652,7 +6654,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -6673,7 +6675,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -6694,7 +6696,7 @@ NodeObject {
                         ],
                         "end": -1,
                         "flags": 8,
-                        "kind": 179,
+                        "kind": 183,
                         "modifierFlagsCache": 0,
                         "parent": undefined,
                         "pos": -1,
@@ -6705,7 +6707,7 @@ NodeObject {
                       "end": -1,
                       "escapedText": "TypedRoute",
                       "flags": 8,
-                      "kind": 78,
+                      "kind": 79,
                       "modifierFlagsCache": 0,
                       "originalKeywordKind": undefined,
                       "parent": undefined,
@@ -6719,7 +6721,7 @@ NodeObject {
                   "end": -1,
                   "flags": 8,
                   "initializer": undefined,
-                  "kind": 162,
+                  "kind": 165,
                   "localSymbol": undefined,
                   "locals": undefined,
                   "modifierFlagsCache": 0,
@@ -6728,7 +6730,7 @@ NodeObject {
                     "end": -1,
                     "escapedText": "collaborators",
                     "flags": 8,
-                    "kind": 78,
+                    "kind": 79,
                     "modifierFlagsCache": 0,
                     "originalKeywordKind": undefined,
                     "parent": undefined,
@@ -6744,7 +6746,7 @@ NodeObject {
                   "type": NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 173,
+                    "kind": 177,
                     "modifierFlagsCache": 0,
                     "parent": undefined,
                     "pos": -1,
@@ -6755,7 +6757,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -6776,7 +6778,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -6797,7 +6799,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -6818,7 +6820,7 @@ NodeObject {
                         ],
                         "end": -1,
                         "flags": 8,
-                        "kind": 179,
+                        "kind": 183,
                         "modifierFlagsCache": 0,
                         "parent": undefined,
                         "pos": -1,
@@ -6829,7 +6831,7 @@ NodeObject {
                       "end": -1,
                       "escapedText": "TypedRoute",
                       "flags": 8,
-                      "kind": 78,
+                      "kind": 79,
                       "modifierFlagsCache": 0,
                       "originalKeywordKind": undefined,
                       "parent": undefined,
@@ -6847,13 +6849,13 @@ NodeObject {
             NodeObject {
               "end": -1,
               "flags": 8,
-              "kind": 177,
+              "kind": 181,
               "members": Array [
                 NodeObject {
                   "decorators": undefined,
                   "end": -1,
                   "flags": 8,
-                  "kind": 171,
+                  "kind": 175,
                   "localSymbol": undefined,
                   "locals": undefined,
                   "modifierFlagsCache": 0,
@@ -6867,7 +6869,7 @@ NodeObject {
                       "end": -1,
                       "flags": 8,
                       "initializer": undefined,
-                      "kind": 160,
+                      "kind": 163,
                       "localSymbol": undefined,
                       "locals": undefined,
                       "modifierFlagsCache": 0,
@@ -6876,7 +6878,7 @@ NodeObject {
                         "end": -1,
                         "escapedText": "id",
                         "flags": 8,
-                        "kind": 78,
+                        "kind": 79,
                         "modifierFlagsCache": 0,
                         "originalKeywordKind": undefined,
                         "parent": undefined,
@@ -6892,7 +6894,7 @@ NodeObject {
                       "type": TokenObject {
                         "end": -1,
                         "flags": 8,
-                        "kind": 147,
+                        "kind": 149,
                         "modifierFlagsCache": 0,
                         "parent": undefined,
                         "pos": -1,
@@ -6907,7 +6909,7 @@ NodeObject {
                   "type": NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 173,
+                    "kind": 177,
                     "modifierFlagsCache": 0,
                     "parent": undefined,
                     "pos": -1,
@@ -6918,7 +6920,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -6939,7 +6941,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -6960,7 +6962,7 @@ NodeObject {
                           NodeObject {
                             "end": -1,
                             "flags": 8,
-                            "kind": 191,
+                            "kind": 195,
                             "literal": TokenObject {
                               "end": -1,
                               "flags": 8,
@@ -6981,7 +6983,7 @@ NodeObject {
                         ],
                         "end": -1,
                         "flags": 8,
-                        "kind": 179,
+                        "kind": 183,
                         "modifierFlagsCache": 0,
                         "parent": undefined,
                         "pos": -1,
@@ -6992,7 +6994,7 @@ NodeObject {
                       "end": -1,
                       "escapedText": "TypedRoute",
                       "flags": 8,
-                      "kind": 78,
+                      "kind": 79,
                       "modifierFlagsCache": 0,
                       "originalKeywordKind": undefined,
                       "parent": undefined,
@@ -7016,7 +7018,7 @@ NodeObject {
         "end": -1,
         "flags": 8,
         "initializer": undefined,
-        "kind": 162,
+        "kind": 165,
         "localSymbol": undefined,
         "locals": undefined,
         "modifierFlagsCache": 0,
@@ -7025,7 +7027,7 @@ NodeObject {
           "end": -1,
           "escapedText": "pages",
           "flags": 8,
-          "kind": 78,
+          "kind": 79,
           "modifierFlagsCache": 0,
           "originalKeywordKind": undefined,
           "parent": undefined,
@@ -7041,14 +7043,14 @@ NodeObject {
         "type": NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 177,
+          "kind": 181,
           "members": Array [
             NodeObject {
               "decorators": undefined,
               "end": -1,
               "flags": 8,
               "initializer": undefined,
-              "kind": 162,
+              "kind": 165,
               "localSymbol": undefined,
               "locals": undefined,
               "modifierFlagsCache": 0,
@@ -7057,7 +7059,7 @@ NodeObject {
                 "end": -1,
                 "escapedText": "ROOT",
                 "flags": 8,
-                "kind": 78,
+                "kind": 79,
                 "modifierFlagsCache": 0,
                 "originalKeywordKind": undefined,
                 "parent": undefined,
@@ -7073,7 +7075,7 @@ NodeObject {
               "type": NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 173,
+                "kind": 177,
                 "modifierFlagsCache": 0,
                 "parent": undefined,
                 "pos": -1,
@@ -7084,7 +7086,7 @@ NodeObject {
                       NodeObject {
                         "end": -1,
                         "flags": 8,
-                        "kind": 191,
+                        "kind": 195,
                         "literal": TokenObject {
                           "end": -1,
                           "flags": 8,
@@ -7105,7 +7107,7 @@ NodeObject {
                       NodeObject {
                         "end": -1,
                         "flags": 8,
-                        "kind": 191,
+                        "kind": 195,
                         "literal": TokenObject {
                           "end": -1,
                           "flags": 8,
@@ -7126,7 +7128,7 @@ NodeObject {
                     ],
                     "end": -1,
                     "flags": 8,
-                    "kind": 179,
+                    "kind": 183,
                     "modifierFlagsCache": 0,
                     "parent": undefined,
                     "pos": -1,
@@ -7137,7 +7139,7 @@ NodeObject {
                   "end": -1,
                   "escapedText": "TypedRoute",
                   "flags": 8,
-                  "kind": 78,
+                  "kind": 79,
                   "modifierFlagsCache": 0,
                   "originalKeywordKind": undefined,
                   "parent": undefined,
@@ -7151,7 +7153,7 @@ NodeObject {
               "end": -1,
               "flags": 8,
               "initializer": undefined,
-              "kind": 162,
+              "kind": 165,
               "localSymbol": undefined,
               "locals": undefined,
               "modifierFlagsCache": 0,
@@ -7160,7 +7162,7 @@ NodeObject {
                 "end": -1,
                 "escapedText": "articles",
                 "flags": 8,
-                "kind": 78,
+                "kind": 79,
                 "modifierFlagsCache": 0,
                 "originalKeywordKind": undefined,
                 "parent": undefined,
@@ -7176,7 +7178,7 @@ NodeObject {
               "type": NodeObject {
                 "end": -1,
                 "flags": 8,
-                "kind": 183,
+                "kind": 187,
                 "modifierFlagsCache": 0,
                 "parent": undefined,
                 "pos": -1,
@@ -7185,14 +7187,14 @@ NodeObject {
                   NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 177,
+                    "kind": 181,
                     "members": Array [
                       NodeObject {
                         "decorators": undefined,
                         "end": -1,
                         "flags": 8,
                         "initializer": undefined,
-                        "kind": 162,
+                        "kind": 165,
                         "localSymbol": undefined,
                         "locals": undefined,
                         "modifierFlagsCache": 0,
@@ -7201,7 +7203,7 @@ NodeObject {
                           "end": -1,
                           "escapedText": "today",
                           "flags": 8,
-                          "kind": 78,
+                          "kind": 79,
                           "modifierFlagsCache": 0,
                           "originalKeywordKind": undefined,
                           "parent": undefined,
@@ -7217,7 +7219,7 @@ NodeObject {
                         "type": NodeObject {
                           "end": -1,
                           "flags": 8,
-                          "kind": 173,
+                          "kind": 177,
                           "modifierFlagsCache": 0,
                           "parent": undefined,
                           "pos": -1,
@@ -7228,7 +7230,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -7249,7 +7251,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -7270,7 +7272,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -7291,7 +7293,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -7312,7 +7314,7 @@ NodeObject {
                               ],
                               "end": -1,
                               "flags": 8,
-                              "kind": 179,
+                              "kind": 183,
                               "modifierFlagsCache": 0,
                               "parent": undefined,
                               "pos": -1,
@@ -7323,7 +7325,7 @@ NodeObject {
                             "end": -1,
                             "escapedText": "TypedRoute",
                             "flags": 8,
-                            "kind": 78,
+                            "kind": 79,
                             "modifierFlagsCache": 0,
                             "originalKeywordKind": undefined,
                             "parent": undefined,
@@ -7341,13 +7343,13 @@ NodeObject {
                   NodeObject {
                     "end": -1,
                     "flags": 8,
-                    "kind": 177,
+                    "kind": 181,
                     "members": Array [
                       NodeObject {
                         "decorators": undefined,
                         "end": -1,
                         "flags": 8,
-                        "kind": 171,
+                        "kind": 175,
                         "localSymbol": undefined,
                         "locals": undefined,
                         "modifierFlagsCache": 0,
@@ -7361,7 +7363,7 @@ NodeObject {
                             "end": -1,
                             "flags": 8,
                             "initializer": undefined,
-                            "kind": 160,
+                            "kind": 163,
                             "localSymbol": undefined,
                             "locals": undefined,
                             "modifierFlagsCache": 0,
@@ -7370,7 +7372,7 @@ NodeObject {
                               "end": -1,
                               "escapedText": "date",
                               "flags": 8,
-                              "kind": 78,
+                              "kind": 79,
                               "modifierFlagsCache": 0,
                               "originalKeywordKind": undefined,
                               "parent": undefined,
@@ -7386,7 +7388,7 @@ NodeObject {
                             "type": TokenObject {
                               "end": -1,
                               "flags": 8,
-                              "kind": 147,
+                              "kind": 149,
                               "modifierFlagsCache": 0,
                               "parent": undefined,
                               "pos": -1,
@@ -7401,7 +7403,7 @@ NodeObject {
                         "type": NodeObject {
                           "end": -1,
                           "flags": 8,
-                          "kind": 173,
+                          "kind": 177,
                           "modifierFlagsCache": 0,
                           "parent": undefined,
                           "pos": -1,
@@ -7412,7 +7414,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -7433,7 +7435,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -7454,7 +7456,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -7475,7 +7477,7 @@ NodeObject {
                                 NodeObject {
                                   "end": -1,
                                   "flags": 8,
-                                  "kind": 191,
+                                  "kind": 195,
                                   "literal": TokenObject {
                                     "end": -1,
                                     "flags": 8,
@@ -7496,7 +7498,7 @@ NodeObject {
                               ],
                               "end": -1,
                               "flags": 8,
-                              "kind": 179,
+                              "kind": 183,
                               "modifierFlagsCache": 0,
                               "parent": undefined,
                               "pos": -1,
@@ -7507,7 +7509,7 @@ NodeObject {
                             "end": -1,
                             "escapedText": "TypedRoute",
                             "flags": 8,
-                            "kind": 78,
+                            "kind": 79,
                             "modifierFlagsCache": 0,
                             "originalKeywordKind": undefined,
                             "parent": undefined,
@@ -7548,7 +7550,7 @@ NodeObject {
   "decorators": undefined,
   "end": -1,
   "flags": 8,
-  "kind": 254,
+  "kind": 258,
   "localSymbol": undefined,
   "locals": undefined,
   "modifierFlagsCache": 0,
@@ -7556,7 +7558,7 @@ NodeObject {
     TokenObject {
       "end": -1,
       "flags": 8,
-      "kind": 92,
+      "kind": 93,
       "modifierFlagsCache": 0,
       "parent": undefined,
       "pos": -1,
@@ -7567,7 +7569,7 @@ NodeObject {
     "end": -1,
     "escapedText": "TypedRoutes",
     "flags": 8,
-    "kind": 78,
+    "kind": 79,
     "modifierFlagsCache": 0,
     "originalKeywordKind": undefined,
     "parent": undefined,
@@ -7582,7 +7584,7 @@ NodeObject {
   "type": NodeObject {
     "end": -1,
     "flags": 8,
-    "kind": 183,
+    "kind": 187,
     "modifierFlagsCache": 0,
     "parent": undefined,
     "pos": -1,
@@ -7591,14 +7593,14 @@ NodeObject {
       NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 177,
+        "kind": 181,
         "members": Array [
           NodeObject {
             "decorators": undefined,
             "end": -1,
             "flags": 8,
             "initializer": undefined,
-            "kind": 162,
+            "kind": 165,
             "localSymbol": undefined,
             "locals": undefined,
             "modifierFlagsCache": 0,
@@ -7607,7 +7609,7 @@ NodeObject {
               "end": -1,
               "escapedText": "ROOT",
               "flags": 8,
-              "kind": 78,
+              "kind": 79,
               "modifierFlagsCache": 0,
               "originalKeywordKind": undefined,
               "parent": undefined,
@@ -7623,7 +7625,7 @@ NodeObject {
             "type": NodeObject {
               "end": -1,
               "flags": 8,
-              "kind": 173,
+              "kind": 177,
               "modifierFlagsCache": 0,
               "parent": undefined,
               "pos": -1,
@@ -7634,7 +7636,7 @@ NodeObject {
                     NodeObject {
                       "end": -1,
                       "flags": 8,
-                      "kind": 191,
+                      "kind": 195,
                       "literal": TokenObject {
                         "end": -1,
                         "flags": 8,
@@ -7655,7 +7657,7 @@ NodeObject {
                   ],
                   "end": -1,
                   "flags": 8,
-                  "kind": 179,
+                  "kind": 183,
                   "modifierFlagsCache": 0,
                   "parent": undefined,
                   "pos": -1,
@@ -7666,7 +7668,7 @@ NodeObject {
                 "end": -1,
                 "escapedText": "TypedRoute",
                 "flags": 8,
-                "kind": 78,
+                "kind": 79,
                 "modifierFlagsCache": 0,
                 "originalKeywordKind": undefined,
                 "parent": undefined,
@@ -7684,13 +7686,13 @@ NodeObject {
       NodeObject {
         "end": -1,
         "flags": 8,
-        "kind": 177,
+        "kind": 181,
         "members": Array [
           NodeObject {
             "decorators": undefined,
             "end": -1,
             "flags": 8,
-            "kind": 171,
+            "kind": 175,
             "localSymbol": undefined,
             "locals": undefined,
             "modifierFlagsCache": 0,
@@ -7704,7 +7706,7 @@ NodeObject {
                 "end": -1,
                 "flags": 8,
                 "initializer": undefined,
-                "kind": 160,
+                "kind": 163,
                 "localSymbol": undefined,
                 "locals": undefined,
                 "modifierFlagsCache": 0,
@@ -7713,7 +7715,7 @@ NodeObject {
                   "end": -1,
                   "escapedText": "city",
                   "flags": 8,
-                  "kind": 78,
+                  "kind": 79,
                   "modifierFlagsCache": 0,
                   "originalKeywordKind": undefined,
                   "parent": undefined,
@@ -7729,7 +7731,7 @@ NodeObject {
                 "type": TokenObject {
                   "end": -1,
                   "flags": 8,
-                  "kind": 147,
+                  "kind": 149,
                   "modifierFlagsCache": 0,
                   "parent": undefined,
                   "pos": -1,
@@ -7744,7 +7746,7 @@ NodeObject {
             "type": NodeObject {
               "end": -1,
               "flags": 8,
-              "kind": 173,
+              "kind": 177,
               "modifierFlagsCache": 0,
               "parent": undefined,
               "pos": -1,
@@ -7755,7 +7757,7 @@ NodeObject {
                     NodeObject {
                       "end": -1,
                       "flags": 8,
-                      "kind": 191,
+                      "kind": 195,
                       "literal": TokenObject {
                         "end": -1,
                         "flags": 8,
@@ -7776,7 +7778,7 @@ NodeObject {
                     NodeObject {
                       "end": -1,
                       "flags": 8,
-                      "kind": 191,
+                      "kind": 195,
                       "literal": TokenObject {
                         "end": -1,
                         "flags": 8,
@@ -7797,7 +7799,7 @@ NodeObject {
                   ],
                   "end": -1,
                   "flags": 8,
-                  "kind": 179,
+                  "kind": 183,
                   "modifierFlagsCache": 0,
                   "parent": undefined,
                   "pos": -1,
@@ -7808,7 +7810,7 @@ NodeObject {
                 "end": -1,
                 "escapedText": "TypedRoute",
                 "flags": 8,
-                "kind": 78,
+                "kind": 79,
                 "modifierFlagsCache": 0,
                 "originalKeywordKind": undefined,
                 "parent": undefined,

@@ -50,7 +50,8 @@ export const createImportRouteType = (): ts.ImportDeclaration =>
     undefined,
     ts.createImportClause(
       undefined,
-      ts.createNamedImports([ts.createImportSpecifier(undefined, ts.createIdentifier(TYPED_ROUTE_TYPE_NAME))]),
+      // TODO: check this
+      ts.createNamedImports([ts.createImportSpecifier(false, undefined, ts.createIdentifier(TYPED_ROUTE_TYPE_NAME))]),
       false
     ),
     createStringLiteral(PACKAGE_NAME)

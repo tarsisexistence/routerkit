@@ -2,6 +2,7 @@
 
 exports[`[generation] createType utils createImportRouteType should match snapshot 1`] = `
 NodeObject {
+  "assertClause": undefined,
   "decorators": undefined,
   "end": -1,
   "flags": 8,
@@ -9,7 +10,7 @@ NodeObject {
     "end": -1,
     "flags": 8,
     "isTypeOnly": false,
-    "kind": 262,
+    "kind": 266,
     "modifierFlagsCache": 0,
     "name": undefined,
     "namedBindings": NodeObject {
@@ -17,13 +18,14 @@ NodeObject {
         NodeObject {
           "end": -1,
           "flags": 8,
-          "kind": 265,
+          "isTypeOnly": false,
+          "kind": 269,
           "modifierFlagsCache": 0,
           "name": IdentifierObject {
             "end": -1,
             "escapedText": "TypedRoute",
             "flags": 8,
-            "kind": 78,
+            "kind": 79,
             "modifierFlagsCache": 0,
             "originalKeywordKind": undefined,
             "parent": undefined,
@@ -38,7 +40,7 @@ NodeObject {
       ],
       "end": -1,
       "flags": 8,
-      "kind": 264,
+      "kind": 268,
       "modifierFlagsCache": 0,
       "parent": undefined,
       "pos": -1,
@@ -48,7 +50,7 @@ NodeObject {
     "pos": -1,
     "transformFlags": 0,
   },
-  "kind": 261,
+  "kind": 265,
   "localSymbol": undefined,
   "locals": undefined,
   "modifierFlagsCache": 0,
@@ -93,7 +95,7 @@ IdentifierObject {
   "end": -1,
   "escapedText": "info",
   "flags": 8,
-  "kind": 78,
+  "kind": 79,
   "modifierFlagsCache": 0,
   "originalKeywordKind": undefined,
   "parent": undefined,
