@@ -71,7 +71,7 @@ const tryFindVariableValue = <T extends Node>(
 
   for (const def of defs) {
     // expression.expression1.varName
-    if (Node.isInitializerExpressionGetableNode(def)) {
+    if (Node.isInitializerExpressionGetable(def)) {
       const initializer = def.getInitializer();
       if (initializer && valueTypeChecker(initializer)) {
         return initializer;
