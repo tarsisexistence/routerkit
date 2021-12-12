@@ -14,10 +14,13 @@ jobs:
       - uses: actions/setup-node@v2
         name: 'Setup node'
         with:
-          node-version: '15.x'
+          node-version: '16.x'
 
       - name: 'Install dependencies'
         run: yarn install
 
       - name: 'Test'
         run: yarn test --ci
+
+      - name: 'Parse example'
+        run: yarn build:all && yarn parse
