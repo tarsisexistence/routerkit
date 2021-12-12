@@ -2,3 +2,5 @@ v13
 
 - You can now disable the navigation of a routerLink by passing undefined and null.
 Previously the routerLink directive used to accept these two values as equivalent to an empty string.
+
+- Migrates `[routerLink]=""` in templates to `[routerLink]="[]"` because these links are likely intended to route to the current page with updated fragment/query params.

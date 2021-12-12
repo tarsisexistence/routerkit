@@ -26,13 +26,6 @@
           "options": {
             "configPath": "./configs/jest.config.js"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["package/tsconfig.lib.json", "package/tsconfig.test.json"],
-            "exclude": ["**/node_modules/**"]
-          }
         }
       }
     },
@@ -123,13 +116,6 @@
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {}
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["example-app/tsconfig.app.json"],
-            "exclude": ["**/node_modules/**"]
-          }
         }
       }
     },
@@ -216,17 +202,6 @@
             "assets": ["fixtures/test-app/src/favicon.ico", "fixtures/test-app/src/assets"],
             "styles": ["fixtures/test-app/src/styles.css"],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "fixtures/test-app/tsconfig.app.json",
-              "fixtures/test-app/tsconfig.test.json",
-              "fixtures/test-app/e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
