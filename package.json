@@ -55,7 +55,7 @@
     "@angular/compiler-cli": "13.1.0",
     "@angular/language-service": "13.1.0",
     "@types/jest": "27.4.0",
-    "@types/node": "16.11.12",
+    "@types/node": "16.11.21",
     "all-contributors-cli": "6.20.0",
     "chalk": "4.1.2",
     "codelyzer": "6.0.2",
