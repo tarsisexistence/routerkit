@@ -1,6 +1,6 @@
 {
   "projectName": "routerkit",
-  "projectOwner": "untaggable",
+  "projectOwner": "tarsinzer",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -12,10 +12,10 @@
   "commitConvention": "angular",
   "contributors": [
     {
-      "login": "untaggable",
+      "login": "tarsinzer",
       "name": "Max Tarsis",
       "avatar_url": "https://avatars1.githubusercontent.com/u/21989873?v=4",
-      "profile": "https://github.com/untaggable",
+      "profile": "https://github.com/tarsinzer",
       "contributions": [
         "ideas",
         "code",

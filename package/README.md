@@ -1,6 +1,6 @@
 # RouterKit
 
-<a href="https://routeshub.gitbook.io/docs"><img src="https://raw.githubusercontent.com/untaggable/routerkit/master/assets/logo.png" align="right" alt="logo" /></a>
+<a href="https://routeshub.gitbook.io/docs"><img src="https://raw.githubusercontent.com/tarsinzer/routerkit/master/assets/logo.png" align="right" alt="logo" /></a>
 
 A new approach to Angular routes:
 
@@ -14,7 +14,7 @@ A new approach to Angular routes:
 
 ## Showcase
 
-<img src="https://raw.githubusercontent.com/untaggable/routerkit/master/assets/concise.gif" alt="Gif demonstrating the process of running schematic script." align="center">
+<img src="https://raw.githubusercontent.com/tarsinzer/routerkit/master/assets/concise.gif" alt="Gif demonstrating the process of running schematic script." align="center">
 
 <br/>
 
@@ -28,7 +28,7 @@ A new approach to Angular routes:
 
 ## How does it work?
 
-[script](https://github.com/untaggable/routerkit/blob/master/package/src/parse/index.ts):
+[script](https://github.com/tarsinzer/routerkit/blob/master/package/src/parse/index.ts):
 
 - parses your Angular project
 - traverses generated AST, extracting route information and following eager / lazy routes
@@ -36,7 +36,7 @@ A new approach to Angular routes:
 - generates a TypeScript `type` containing all your routes information.
 - includes the generated type in your `tsconfig`
 
-[function](https://github.com/untaggable/routerkit/blob/master/package/src/core/getRoutes.ts):
+[function](https://github.com/tarsinzer/routerkit/blob/master/package/src/core/getRoutes.ts):
 
 - returns route paths based on your routes type with appropriate JavaScript object structure
 
@@ -123,13 +123,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/untaggable"><img src="https://avatars1.githubusercontent.com/u/21989873?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Max Tarsis</b></sub></a><br /><a href="#ideas-untaggable" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/untaggable/routerkit/commits?author=untaggable" title="Code">💻</a> <a href="#infra-untaggable" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/untaggable/routerkit/commits?author=untaggable" title="Documentation">📖</a> <a href="#projectManagement-untaggable" title="Project Management">📆</a></td>
-    <td align="center"><a href="https://github.com/limitofzero"><img src="https://avatars1.githubusercontent.com/u/16196664?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Denis Makarov</b></sub></a><br /><a href="#ideas-limitofzero" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/untaggable/routerkit/commits?author=limitofzero" title="Code">💻</a></td>
-    <td align="center"><a href="https://twitter.com/kirjs"><img src="https://avatars0.githubusercontent.com/u/2545357?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kirill Cherkashin</b></sub></a><br /><a href="#ideas-kirjs" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/untaggable/routerkit/commits?author=kirjs" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/tarsinzer"><img src="https://avatars1.githubusercontent.com/u/21989873?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Max Tarsis</b></sub></a><br /><a href="#ideas-tarsinzer" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/tarsinzer/routerkit/commits?author=tarsinzer" title="Code">💻</a> <a href="#infra-tarsinzer" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/tarsinzer/routerkit/commits?author=tarsinzer" title="Documentation">📖</a> <a href="#projectManagement-tarsinzer" title="Project Management">📆</a></td>
+    <td align="center"><a href="https://github.com/limitofzero"><img src="https://avatars1.githubusercontent.com/u/16196664?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Denis Makarov</b></sub></a><br /><a href="#ideas-limitofzero" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/tarsinzer/routerkit/commits?author=limitofzero" title="Code">💻</a></td>
+    <td align="center"><a href="https://twitter.com/kirjs"><img src="https://avatars0.githubusercontent.com/u/2545357?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kirill Cherkashin</b></sub></a><br /><a href="#ideas-kirjs" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/tarsinzer/routerkit/commits?author=kirjs" title="Documentation">📖</a></td>
     <td align="center"><a href="https://thekiba.io/"><img src="https://avatars0.githubusercontent.com/u/1910515?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrew Grekov</b></sub></a><br /><a href="#ideas-thekiba" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://indepth.dev/author/layzee/"><img src="https://avatars1.githubusercontent.com/u/6364586?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lars Gyrup Brink Nielsen</b></sub></a><br /><a href="https://github.com/untaggable/routerkit/commits?author=LayZeeDK" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/JoepKockelkorn"><img src="https://avatars3.githubusercontent.com/u/12891645?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joep Kockelkorn</b></sub></a><br /><a href="https://github.com/untaggable/routerkit/issues?q=author%3AJoepKockelkorn" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://github.com/Andrei0872"><img src="https://avatars2.githubusercontent.com/u/36248290?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gatej Andrei</b></sub></a><br /><a href="https://github.com/untaggable/routerkit/commits?author=Andrei0872" title="Code">💻</a></td>
+    <td align="center"><a href="https://indepth.dev/author/layzee/"><img src="https://avatars1.githubusercontent.com/u/6364586?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lars Gyrup Brink Nielsen</b></sub></a><br /><a href="https://github.com/tarsinzer/routerkit/commits?author=LayZeeDK" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/JoepKockelkorn"><img src="https://avatars3.githubusercontent.com/u/12891645?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joep Kockelkorn</b></sub></a><br /><a href="https://github.com/tarsinzer/routerkit/issues?q=author%3AJoepKockelkorn" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/Andrei0872"><img src="https://avatars2.githubusercontent.com/u/36248290?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gatej Andrei</b></sub></a><br /><a href="https://github.com/tarsinzer/routerkit/commits?author=Andrei0872" title="Code">💻</a></td>
   </tr>
 </table>
 

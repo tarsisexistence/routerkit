@@ -3,16 +3,16 @@
   "description": "the next-gen typed angular routes",
   "version": "0.9.2",
   "author": {
-    "name": "Maksym Tarsis",
+    "name": "Max Tarsis",
     "email": "tarsis.maksym@gmail.com",
-    "url": "https://github.com/untaggable"
+    "url": "https://github.com/tarsinzer"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/untaggable/routerkit.git"
+    "url": "https://github.com/tarsinzer/routerkit.git"
   },
-  "homepage": "https://github.com/untaggable/routerkit/blob/master/package/README.md",
-  "bugs": "https://github.com/untaggable/routerkit/issues",
+  "homepage": "https://github.com/tarsinzer/routerkit/blob/master/package/README.md",
+  "bugs": "https://github.com/tarsinzer/routerkit/issues",
   "license": "MIT",
   "dependencies": {
     "ts-evaluator": "0.1.0",
