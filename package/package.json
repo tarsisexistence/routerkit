@@ -15,7 +15,7 @@
   "bugs": "https://github.com/tarsinzer/routerkit/issues",
   "license": "MIT",
   "dependencies": {
-    "ts-evaluator": "0.1.0",
+    "ts-evaluator": "0.2.0",
     "ts-morph": "13.0.3",
     "tslib": "2.3.1",
     "ora": "5.4.1"
