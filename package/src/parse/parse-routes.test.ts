@@ -1,5 +1,5 @@
 import { resolve } from 'path';
-import { readFileSync } from 'fs';
+import { existsSync, readFileSync } from 'fs';
 import { Project } from 'ts-morph';
 
 import { parseRoutes } from './parse-routes';
@@ -8,6 +8,8 @@ import { parseRoutes } from './parse-routes';
 type WorkspaceSchema = any;
 const getWorkspace = (path: string) => JSON.parse(readFileSync(path).toString()) as WorkspaceSchema;
 
+const testWithSkip = (angularJsonPath: string) => (existsSync(angularJsonPath) ? test : test.skip);
+
 describe('[parse] parseRoutes', () => {
   const RELATIVE_PATH_TO_ANGULAR_JSON = '../../../angular.json';
   const ABSOLUTE_PATH_TO_ANGULAR_JSON = resolve(__dirname, RELATIVE_PATH_TO_ANGULAR_JSON);
@@ -15,7 +17,7 @@ describe('[parse] parseRoutes', () => {
   const pathToTS = resolve(__dirname, relativePathToTS);
   const CURRENT_DIR = process.cwd();
 
-  it('should be parse project', () => {
+  test('should be parse project', () => {
     const PROJECT_NAME = 'test-app';
     const content = getWorkspace(ABSOLUTE_PATH_TO_ANGULAR_JSON);
 
@@ -53,7 +55,7 @@ describe('[parse] parseRoutes', () => {
     expect(routes).toEqual(expectedRouteMap);
   });
 
-  it('should be parse nx project', () => {
+  testWithSkip('./fixtures/routerkit-nx-test-app/angular.json')('should be parse nx project', () => {
     const PROJECT_NAME = 'nx-app-for-routerkit';
     const pathToNxRep = './fixtures/routerkit-nx-test-app';
 
@@ -65,6 +67,7 @@ describe('[parse] parseRoutes', () => {
 
     const tsconfigPath = './tsconfig.base.json';
     let content: WorkspaceSchema;
+
     try {
       content = getWorkspace('./angular.json');
     } catch (e) {
@@ -88,10 +91,12 @@ describe('[parse] parseRoutes', () => {
     const routes = parseRoutes(workspace, project);
     expect(routes).toEqual(expectedRouteMap);
 
+    console.log(routes);
+
     process.chdir(CURRENT_DIR);
   });
 
-  it('should be parse stackoverflow project', () => {
+  testWithSkip('./fixtures/stackoverflow/angular.json')('should be parse stackoverflow project', () => {
     const PROJECT_NAME = 'stackoverflow';
     const pathToStackoverflowRep = './fixtures/stackoverflow';
 
