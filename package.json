@@ -62,7 +62,7 @@
     "jest": "27.4.7",
     "ng-packagr": "13.3.1",
     "ora": "5.4.1",
-    "prettier": "2.5.1",
+    "prettier": "2.7.1",
     "protractor": "7.0.0",
     "snyk": "1.981.0",
     "ts-morph": "13.0.3",
