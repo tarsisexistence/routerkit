@@ -8627,10 +8627,10 @@ ts-node@10.4.0:
     make-error "^1.1.1"
     yn "3.1.1"
 
-tsickle@0.46.0:
-  version "0.46.0"
-  resolved "https://registry.yarnpkg.com/tsickle/-/tsickle-0.46.0.tgz#73f42d028e166627756006e42a395e6bc7865253"
-  integrity sha512-pEkomf35SZMlCyHJH2A5/4Li8KZprvGcVUz8jcZVArZNBKVOY7YEvDRJcaEWMTOaEzvjcaeDvE95VDyDka0i2Q==
+tsickle@0.46.3:
+  version "0.46.3"
+  resolved "https://registry.yarnpkg.com/tsickle/-/tsickle-0.46.3.tgz#b74918a77e3ca1310a2ce4d019f5d6294360b56d"
+  integrity sha512-9PDXxOrtn2AdpvDin6FLGveXVGg8ec3ga8fh8mPR5lz9KtitW6riVgxgagicdfF1rgiBxDeH+5hVowPXhmZbYQ==
   dependencies:
     "@types/minimist" "^1.2.1"
 
