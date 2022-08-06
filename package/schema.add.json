@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "SchematicsRouterKitNgAdd",
+  "$id": "SchematicsRouterKitNgAdd",
   "title": "@routerkit/core ng-add schema",
   "type": "object",
   "properties": {
