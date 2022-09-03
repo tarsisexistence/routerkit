@@ -47,7 +47,7 @@
     "zone.js": "0.11.8"
   },
   "devDependencies": {
-    "@angular-builders/jest": "14.0.0",
+    "@angular-builders/jest": "14.0.1",
     "@angular-devkit/build-angular": "14.2.1",
     "@angular-devkit/core": "14.2.1",
     "@angular-devkit/schematics": "14.2.1",
