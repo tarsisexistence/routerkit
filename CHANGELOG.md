@@ -1,3 +1,9 @@
+# 0.10.0 2022-08-06
+
+- Added support for angular v13
+- Added support for angular v14
+- Updated dependencies
+
 # 0.9.2 2021-09-05
 
 - Updated dependencies
