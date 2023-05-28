@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "crosspath": "2.0.0",
-    "ora": "5.4.1",
+    "ora": "6.3.1",
     "picocolors": "1.0.0",
     "ts-evaluator": "0.2.0",
     "ts-morph": "16.0.0",
