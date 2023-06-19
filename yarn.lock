@@ -15,14 +15,14 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@angular-builders/jest@14.0.1":
-  version "14.0.1"
-  resolved "https://registry.yarnpkg.com/@angular-builders/jest/-/jest-14.0.1.tgz#43bc9ad2709abcf9af3f2b9b15e02fbb91c5b0e4"
-  integrity sha512-ol+/u6KD7kX0AyQ8Mr6pPmsptNh89p+PJtXhcU9epzjJw1y1Y+SlXHGVWg8JseaGRfxo3FVshS/ZvTxoGsstTA==
+"@angular-builders/jest@14.1.0":
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/@angular-builders/jest/-/jest-14.1.0.tgz#04c19959021f8462d0027ec895059c7a720e8016"
+  integrity sha512-uGXyJ40F7HXfoWwW1EK5U75sUUQ4zVireLYPUYWT1/t1vqizss0mIPR026bMWwScWJhetdopxlWcql4wfNuXyQ==
   dependencies:
     "@angular-devkit/architect" ">=0.1400.0 < 0.1500.0"
     "@angular-devkit/core" "^14.0.0"
-    jest-preset-angular "12.2.0"
+    jest-preset-angular "12.2.2"
     lodash "^4.17.15"
 
 "@angular-devkit/architect@0.1402.10":
@@ -5701,10 +5701,10 @@ jest-pnp-resolver@^1.2.2:
   resolved "https://registry.yarnpkg.com/jest-pnp-resolver/-/jest-pnp-resolver-1.2.2.tgz#b704ac0ae028a89108a4d040b3f919dfddc8e33c"
   integrity sha512-olV41bKSMm8BdnuMsewT4jqlZ8+3TCARAXjZGT9jcoSnrfUnRCqnMoF9XEeoWjbzObpqF9dRhHQj0Xb9QdF6/w==
 
-jest-preset-angular@12.2.0:
-  version "12.2.0"
-  resolved "https://registry.yarnpkg.com/jest-preset-angular/-/jest-preset-angular-12.2.0.tgz#05515d751feda968161db29569e59ff20b888090"
-  integrity sha512-dXnPdcglVcJeXdnxrws3M/gxLlYWaZGU7JS+ffuiCfMzG0AO3EDo/wpsPsxvnjCZiov1uV7g7UD1dHtmOW/sEw==
+jest-preset-angular@12.2.2:
+  version "12.2.2"
+  resolved "https://registry.yarnpkg.com/jest-preset-angular/-/jest-preset-angular-12.2.2.tgz#f7414e15e165e34efdc4fd8404a19e8e4856441e"
+  integrity sha512-aj5ZwVW6cGGzZKUn6e/jDwFgQh6FHy1zCCXWOeqFCuM3WODrbdUJ93zKrex18e9K1+PvOcP0e20yKbj3gwhfFg==
   dependencies:
     bs-logger "^0.2.6"
     esbuild-wasm ">=0.13.8"
